@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Zahlungseingänge – Ginggu Cup</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    th { background: #eee; }
+  </style>
+</head>
+<body>
+
+<h1>Zahlungseingänge</h1>
+<table id="zahlungstabelle">
+  <thead>
+    <tr>
+      <th>Zeit</th>
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>Tel.</th>
+      <th>E-Mail</th>
+      <th>Kennzeichen</th>
+      <th>Betrag (CHF)</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+  fetch('zahlungen.json')
+    .then(response => response.json())
+    .then(data => {
+      const tbody = document.querySelector("#zahlungstabelle tbody");
+      data.forEach(entry => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${entry.Time}</td>
+          <td>${entry.Vorname}</td>
+          <td>${entry.Nachname}</td>
+          <td>${entry.Telefon}</td>
+          <td>${entry['E-Mail']}</td>
+          <td>${entry.Kennzeichen}</td>
+          <td>${parseFloat(entry.Betrag).toFixed(2)}</td>
+          <td>${entry.Status}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    })
+    .catch(error => {
+      document.getElementById('zahlungstabelle').innerHTML =
+        '<tr><td colspan="8">Fehler beim Laden der Daten</td></tr>';
+      console.error(error);
+    });
+</script>
+
+</body>
+</html>
