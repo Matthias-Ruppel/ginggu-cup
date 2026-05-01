@@ -1,69 +1,374 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ginggu-Cup – TC Gerlafingen</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background: white;
-            padding: 1rem;
-        }
-        header img {
-            max-width: 200px;
-        }
-        main {
-            padding: 2rem;
-        }
-        footer {
-            background: #225faa;
-            color: white;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        a {
-            color: #225faa;
-            text-decoration: none;
-        }
-        .turnier-box {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 2rem auto;
-            max-width: 500px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TC Gerlafingen – Turniere & Interclub</title>
+
+<style>
+:root {
+  --blau: #225faa;
+  --blau-dunkel: #163f73;
+  --gelb: #f6c343;
+  --hell: #f4f7fb;
+  --text: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--hell);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--blau);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--blau), var(--blau-dunkel));
+  color: white;
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.hero img {
+  max-width: 160px;
+  background: white;
+  padding: 12px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  margin: 0;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 18px auto 0;
+  font-size: 1.15rem;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 30px 18px;
+}
+
+.highlight {
+  background: white;
+  border-left: 8px solid var(--gelb);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.highlight h2 {
+  margin-top: 0;
+  color: var(--blau-dunkel);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border-top: 6px solid var(--blau);
+}
+
+.card.featured {
+  border-top-color: var(--gelb);
+}
+
+.date {
+  display: inline-block;
+  background: var(--blau);
+  color: white;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.card.featured .date {
+  background: var(--gelb);
+  color: #222;
+}
+
+.card h3 {
+  margin: 8px 0;
+  color: var(--blau-dunkel);
+  font-size: 1.35rem;
+}
+
+.day {
+  font-weight: bold;
+  color: #555;
+}
+
+.section-title {
+  margin-top: 45px;
+  margin-bottom: 16px;
+  color: var(--blau-dunkel);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.results {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+th {
+  background: var(--blau);
+  color: white;
+  text-align: left;
+  padding: 12px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.win {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.loss {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.open {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.info-box {
+  margin-top: 28px;
+  background: #eef4ff;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+}
+
+footer {
+  background: var(--blau-dunkel);
+  color: white;
+  text-align: center;
+  padding: 24px 18px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 32px 18px;
+  }
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <img src="logo.png" alt="TC Gerlafingen Logo">
-    </header>
-    <main>
-        <h1>Willkommen beim Ginggu-Cup</h1>
-        <p>Diese Seite gehört dem <a href="https://www.tc-gerlafingen.ch" target="_blank">TC Gerlafingen</a> und wird für Turnierinformationen verwendet.</p>
 
-        <div class="turnier-box">
-            <h2>Anstehende Turniere</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li>🎾 Ginggu-Tagesturnier – 10. August 2025</li>
-                <li>🎾 Ginggu-Tagesturnier – 17. August 2025</li>
-                <li>🏆 Ginggu-Cup – von 26. bis 28. September 2025</li>
-            </ul>
-        </div>
+<header class="hero">
+  <img src="logo.png" alt="TC Gerlafingen Logo">
+  <h1>Turniere & Interclub beim TC Gerlafingen</h1>
+  <p>
+    Hier findest Du die wichtigsten Turnierdaten, Clubanlässe und laufend aktualisierte
+    Resultate unserer Interclub-Begegnungen.
+  </p>
+</header>
 
-        <p>Kontakt: <a href="mailto:info@ginggu-cup.ch">info@ginggu-cup.ch</a></p>
-    </main>
-    <footer>
-        &copy; 2025 TC Gerlafingen – Ginggu-Cup
-    </footer>
+<main class="container">
+
+  <section class="highlight">
+    <h2>Willkommen auf der Ginggu-Cup-Seite des TC Gerlafingen</h2>
+    <p>
+      Diese Seite dient nicht nur dem offiziellen Ginggu-Cup, sondern auch als zentrale
+      Informationsseite für weitere Turniere, Clubanlässe und Interclub-Resultate.
+      So bleiben Spielerinnen, Spieler, Captains, Mitglieder und Gäste jederzeit auf dem Laufenden.
+    </p>
+  </section>
+
+  <h2 class="section-title">Termine 2026</h2>
+
+  <section class="grid">
+
+    <article class="card">
+      <span class="date">19. Juni</span>
+      <div class="day">Freitag</div>
+      <h3>4. Crazy-Tennis Turnier</h3>
+      <p>
+        Das etwas andere Clubturnier mit Spass, Überraschungen und viel Bewegung auf dem Platz.
+      </p>
+    </article>
+
+    <article class="card featured">
+      <span class="date">09. August</span>
+      <div class="day">Sonntag</div>
+      <h3>Ginggu-Tagesturnier</h3>
+      <p>
+        Damen, Herren und Mixed – kompakt an einem Tag, sportlich und gesellig.
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="date">06. September</span>
+      <div class="day">Sonntag</div>
+      <h3>Finaltag Einzel-Clubmeisterschaften</h3>
+      <p>
+        Auf allen Plätzen. Die besten Einzelspielerinnen und Einzelspieler des Clubs kämpfen um die Titel.
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="date">02./03. Mai – 27./28. Juni</span>
+      <div class="day">Wochenenden</div>
+      <h3>Interclub Saison 2026</h3>
+      <p>
+        Die Begegnungen unserer Mannschaften werden nach der Auslosung im TCG-Kalender publiziert.
+      </p>
+    </article>
+
+    <article class="card featured">
+      <span class="date">25.–27. September</span>
+      <div class="day">Freitag bis Sonntag</div>
+      <h3>5. Ginggu-Cup</h3>
+      <p>
+        Swiss Tennis Turnier auf allen Plätzen – mit spannenden Matches, guter Stimmung und Clubleben pur.
+      </p>
+    </article>
+
+  </section>
+
+  <h2 class="section-title">Interclub-Resultate 2026</h2>
+
+  <section class="results">
+    <table>
+      <thead>
+        <tr>
+          <th>Datum</th>
+          <th>Mannschaft</th>
+          <th>Begegnung</th>
+          <th>Resultat</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>folgt</td>
+          <td>Damen 2L</td>
+          <td>TC Gerlafingen – Gegner</td>
+          <td>-</td>
+          <td><span class="status open">geplant</span></td>
+        </tr>
+        <tr>
+          <td>folgt</td>
+          <td>Herren 3L</td>
+          <td>TC Gerlafingen – Gegner</td>
+          <td>-</td>
+          <td><span class="status open">geplant</span></td>
+        </tr>
+        <tr>
+          <td>folgt</td>
+          <td>35+ Herren 2L</td>
+          <td>TC Gerlafingen – Gegner</td>
+          <td>-</td>
+          <td><span class="status open">geplant</span></td>
+        </tr>
+        <tr>
+          <td>folgt</td>
+          <td>35+ Herren 3L</td>
+          <td>TC Gerlafingen – Gegner</td>
+          <td>-</td>
+          <td><span class="status open">geplant</span></td>
+        </tr>
+        <tr>
+          <td>folgt</td>
+          <td>40+ Damen 2L</td>
+          <td>TC Gerlafingen – Gegner</td>
+          <td>-</td>
+          <td><span class="status open">geplant</span></td>
+        </tr>
+        <tr>
+          <td>folgt</td>
+          <td>45+ Herren 3L</td>
+          <td>TC Gerlafingen – Gegner</td>
+          <td>-</td>
+          <td><span class="status open">geplant</span></td>
+        </tr>
+        <tr>
+          <td>folgt</td>
+          <td>65+ Herren 2L</td>
+          <td>TC Gerlafingen – Gegner</td>
+          <td>-</td>
+          <td><span class="status open">geplant</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="info-box">
+    <h2>Kontakt & Informationen</h2>
+    <p>
+      Fragen zu Turnieren, Interclub oder zum Ginggu-Cup?
+      Schreib uns an <a href="mailto:info@ginggu-cup.ch">info@ginggu-cup.ch</a>.
+    </p>
+    <p>
+      Weitere Informationen zum Club findest Du auf
+      <a href="https://www.tc-gerlafingen.ch" target="_blank">www.tc-gerlafingen.ch</a>.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 TC Gerlafingen – Turniere, Ginggu-Cup & Interclub
+</footer>
+
 </body>
 </html>
