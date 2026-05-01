@@ -40,16 +40,7 @@
   margin:0;
   padding:0;
 }
-.screen-match-list li{
-  position:relative;
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:1vw;
-  align-items:center;
-  padding:.65vw 0;
-  border-bottom:1px solid rgba(255,255,255,.16);
-  font-size:1.45vw;
-}
+
 .screen-match-list li:last-child{border-bottom:none}
 .screen-result{
   font-weight:900;
@@ -73,12 +64,7 @@
   font-size:1.35vw;
   padding:.45vw 1vw;
 }
-.screen-match-list .home{
-  background:rgba(246,195,67,.08);
-  border-radius:12px;
-  padding-left:.8vw;
-  padding-right:.8vw;
-}
+
 @keyframes homePulse{
   0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(246,195,67,.55)}
   50%{transform:scale(1.04);box-shadow:0 0 0 8px rgba(246,195,67,0)}
@@ -87,7 +73,7 @@
   .screen-grid.lower{grid-template-columns:1fr}
   .screen-team-name{font-size:7vw}
   .screen-team-group{font-size:2.4vw}
-  .screen-card.next-match p,.screen-match-list li{font-size:3.2vw}
+  .screen-card.next-match p,
 }
 
 
@@ -122,4 +108,29 @@
   color: #1f2937 !important;
   border-color: var(--yellow);
   box-shadow: 0 0 0 3px rgba(246,195,67,.25);
+}
+
+
+/* Verbesserte Darstellung Heim/Auswärts */
+.screen-match-list li{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:1vw;
+  align-items:center;
+  padding:.65vw 1vw;
+  border-bottom:1px solid rgba(255,255,255,.16);
+  font-size:1.45vw;
+  background:rgba(255,255,255,.04);
+  border-radius:12px;
+  border-left:6px solid rgba(255,255,255,.15);
+}
+
+.screen-match-list .home{
+  background:rgba(246,195,67,.12);
+  border-left:6px solid var(--yellow);
+}
+
+.screen-match-list .away{
+  border-left:6px solid rgba(255,255,255,.25);
 }
