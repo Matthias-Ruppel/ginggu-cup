@@ -41,16 +41,26 @@ function teamCard(team) {
   const rank = tcgRank(team);
   const name = team.name || team.title || '';
   const group = cleanGroup(team);
+  const slug = team.slug || team.id || '';
 
   return `<article class="team-card">
-    <h3>${name}</h3>
-    <p class="team-meta">${group}</p>
-    <p><strong>Nächstes TCG-Spiel:</strong><br>
-      ${n.home || ''} - ${n.away || ''}<br>
-      ${n.date || ''}${n.time ? ' um ' + n.time : ''}
-    </p>
-    <p><strong>Aktueller Rang TCG:</strong> ${rank ? rank.rank : '-'}</p>
-    <a class="button primary" href="#${team.slug || team.id || ''}">Details anzeigen</a>
+    <div class="team-card-head">
+      <h3>${name}</h3>
+      <p class="team-meta">${group}</p>
+    </div>
+
+    <div class="team-card-next">
+      <p><strong>Nächstes TCG-Spiel:</strong><br>
+        ${n.home || ''} - ${n.away || ''}<br>
+        ${n.date || ''}${n.time ? ' um ' + n.time : ''}
+      </p>
+    </div>
+
+    <div class="team-card-rank">
+      <p><strong>Aktueller Rang TCG:</strong> ${rank ? rank.rank : '-'}</p>
+    </div>
+
+    <a class="button primary team-card-button" href="#${slug}">Details anzeigen</a>
   </article>`;
 }
 
@@ -68,6 +78,7 @@ function teamDetail(team) {
         <p>Captain: ${captain}</p>
       </div>
     </div>
+
     <div class="tables">
       <div class="table-wrap">
         <h3>Spielplan & Resultate</h3>
@@ -76,6 +87,7 @@ function teamDetail(team) {
           <tbody>${team.matches.map(matchRow).join('')}</tbody>
         </table>
       </div>
+
       <div class="table-wrap">
         <h3>Rangliste</h3>
         <table>
@@ -83,6 +95,10 @@ function teamDetail(team) {
           <tbody>${team.ranking.map(rankingRow).join('')}</tbody>
         </table>
       </div>
+    </div>
+
+    <div class="detail-bottom-actions">
+      <a class="button primary top-button" href="#top">Nach oben</a>
     </div>
   </article>`;
 }

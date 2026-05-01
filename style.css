@@ -71,6 +71,7 @@ a{
   display:inline-block;
   border-radius:999px;
   padding:12px 18px;
+  text-align:center;
 }
 
 .button.primary,
@@ -145,6 +146,7 @@ a{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:18px;
+  align-items:stretch;
 }
 
 .event-card,.team-card,.detail-card{
@@ -185,6 +187,42 @@ a{
 .team-meta{
   color:var(--muted);
   font-weight:700;
+}
+
+/* Übersichtskacheln: gleiche Höhe und ruhige Ausrichtung */
+.team-card{
+  min-height:340px;
+  display:grid;
+  grid-template-rows:auto 1fr auto auto;
+  gap:14px;
+}
+
+.team-card-head h3{
+  font-size:1.35rem;
+  margin-bottom:22px;
+}
+
+.team-card-head .team-meta{
+  margin:0;
+}
+
+.team-card-next{
+  align-self:start;
+}
+
+.team-card-next p,
+.team-card-rank p{
+  margin:0;
+}
+
+.team-card-rank{
+  align-self:end;
+}
+
+.team-card-button{
+  justify-self:start;
+  align-self:end;
+  min-width:180px;
 }
 
 /* Interclub Detailseite: Rangliste immer unter Spielplan */
@@ -232,24 +270,16 @@ tr.home-match td{background:#f8fbff}
   flex-wrap:wrap;
 }
 
-.team-grid{align-items:stretch}
-
-.team-card{
-  min-height:320px;
+.detail-bottom-actions{
   display:flex;
-  flex-direction:column;
-}
-
-.team-card-content{flex:1}
-
-.team-card-button{
-  align-self:flex-start;
-  margin-top:auto;
+  justify-content:center;
+  padding-top:24px;
+  margin-top:18px;
+  border-top:1px solid var(--line);
 }
 
 .top-button{
-  white-space:nowrap;
-  margin-top:4px;
+  min-width:150px;
 }
 
 footer{
@@ -265,10 +295,7 @@ footer a{
   text-decoration:underline;
 }
 
-/* ============================================================
-   CLUBHAUS-SCREEN: 16:9, eine Seite, oben 10% Abstand
-   ============================================================ */
-
+/* Clubhaus-Screen */
 .screen-body{
   background:#07182e;
   color:#fff;
@@ -277,15 +304,13 @@ footer a{
   height:100vh;
 }
 
-.screen-body *{
-  box-sizing:border-box;
-}
+.screen-body *{box-sizing:border-box}
 
 .screen-slide{
   width:100vw;
   height:100vh;
   overflow:hidden;
-  padding:10vh 4.2vw 4.5vh 4.2vw; /* oben bewusst ca. 10% Luft */
+  padding:10vh 4.2vw 4.5vh 4.2vw;
   display:grid;
   grid-template-rows:auto 1fr;
   gap:1.8vh;
@@ -344,9 +369,7 @@ footer a{
   overflow:hidden;
 }
 
-.screen-card.compact{
-  max-width:40vw;
-}
+.screen-card.compact{max-width:40vw}
 
 .screen-grid{
   display:grid;
@@ -381,35 +404,24 @@ footer a{
   text-shadow:0 2px 8px rgba(0,0,0,.35);
 }
 
-/* Startfolie */
 .welcome-slide{
   grid-template-rows:auto auto;
   align-content:center;
 }
 
-.welcome-slide h1{
-  font-size:4.8vw;
-}
+.welcome-slide h1{font-size:4.8vw}
 
-.welcome-slide p{
-  font-size:1.9vw;
-}
+.welcome-slide p{font-size:1.9vw}
 
-/* Terminfolie */
 .dates-slide .screen-grid{
   grid-template-columns:repeat(4,1fr);
   align-items:stretch;
 }
 
-.dates-slide .screen-card h3{
-  font-size:1.55vw;
-}
+.dates-slide .screen-card h3{font-size:1.55vw}
 
-.dates-slide .screen-card p{
-  font-size:1.25vw;
-}
+.dates-slide .screen-card p{font-size:1.25vw}
 
-/* Teamfolien */
 .team-slide{
   grid-template-rows:auto auto 1fr;
 }
@@ -443,7 +455,7 @@ footer a{
 
 .screen-card.next-match{
   position:relative;
-  min-height:16vh;
+  height:18vh;
 }
 
 .screen-card.next-match p{
@@ -457,6 +469,14 @@ footer a{
   grid-template-columns:1.35fr .65fr;
   align-items:stretch;
   min-height:0;
+  height:42vh;
+}
+
+.screen-grid.lower .screen-card{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
 }
 
 .screen-match-list{
@@ -466,6 +486,7 @@ footer a{
   display:grid;
   gap:.55vh;
   min-height:0;
+  overflow:hidden;
 }
 
 .screen-match-list li{
@@ -483,9 +504,7 @@ footer a{
   min-height:4.9vh;
 }
 
-.screen-match-list strong{
-  font-size:1.02vw;
-}
+.screen-match-list strong{font-size:1.02vw}
 
 .screen-match-list .home{
   background:rgba(246,195,67,.12);
@@ -536,17 +555,10 @@ footer a{
   }
 }
 
-/* Falls der Browser nicht exakt 16:9 ist, bleibt es trotzdem auf einer Seite */
 @media(max-aspect-ratio:16/9){
-  .screen-slide{
-    padding-top:10vh;
-  }
-
+  .screen-slide{padding-top:10vh}
   .screen-slide p,
-  .screen-slide li{
-    font-size:1.35vw;
-  }
-
+  .screen-slide li{font-size:1.35vw}
   .screen-match-list li{
     font-size:.95vw;
     min-height:4.5vh;
@@ -556,26 +568,11 @@ footer a{
 @media(max-width:800px){
   .hero,.subhero{padding:34px 18px}
   .tables{grid-template-columns:1fr !important}
-  .team-card{min-height:0}
-}
-
-
-/* FIX: Einheitliche Höhen für Screen-Boxen */
-.screen-card.next-match{
-  height: 18vh;
-}
-
-.screen-grid.lower{
-  height: 42vh;
-}
-
-.screen-grid.lower .screen-card{
-  height: 100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-}
-
-.screen-match-list{
-  overflow:hidden;
+  .team-card{
+    min-height:0;
+    grid-template-rows:auto;
+  }
+  .team-card-button{
+    justify-self:start;
+  }
 }
