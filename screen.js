@@ -1,1 +1,151 @@
-const TCG='Gerlafingen';let slides=[];let current=0;function nextMatch(team){return team.matches.find(m=>m.result==='0:0')||team.matches[team.matches.length-1]}function tcgRank(team){return team.ranking.find(r=>r.team.includes(TCG))}function renderSlide(){document.getElementById('screen-root').innerHTML=slides[current]+`<div class="screen-footer"><span>TC Gerlafingen · Interclub 2026</span><span>${current+1}/${slides.length}</span></div>`}function start(){renderSlide();setInterval(()=>{current=(current+1)%slides.length;renderSlide()},14000)}fetch('data/interclub.json').then(r=>r.json()).then(data=>{slides.push(`<section class="screen-slide"><span class="screen-badge">Willkommen</span><h1>TC Gerlafingen</h1><p>Turniere · Interclub · Clubleben</p><div class="screen-card"><p>Aktualisiert: ${data.updated}</p></div></section>`);slides.push(`<section class="screen-slide"><span class="screen-badge">Termine 2026</span><h2>Was läuft im Club?</h2><div class="screen-grid"><div class="screen-card"><h3>19. Juni</h3><p>4. Crazy-Tennis Turnier</p></div><div class="screen-card"><h3>09. August</h3><p>Ginggu-Tagesturnier</p></div><div class="screen-card"><h3>06. September</h3><p>Finaltag Einzel-Clubmeisterschaften</p></div><div class="screen-card"><h3>25.–27. September</h3><p>5. Ginggu-Cup</p></div></div></section>`);data.teams.forEach(team=>{const n=nextMatch(team);const rank=tcgRank(team);slides.push(`<section class="screen-slide"><span class="screen-badge">${team.group}</span><h2>${team.name}</h2><div class="screen-card"><h3>Nächstes TCG-Spiel</h3><p>${n.home} – ${n.away}<br>${n.date}${n.time?' · '+n.time+' Uhr':''}</p></div><div class="screen-card"><h3>Aktueller Stand</h3><p>Rang ${rank?rank.rank:'-'} · ${rank?rank.points:'-'} Punkte · Sätze ${rank?rank.sets:'-'}</p></div></section>`) });start()}).catch(()=>{document.getElementById('screen-root').innerHTML='<section class="screen-slide"><h1>Daten konnten nicht geladen werden.</h1></section>'});
+const TCG = 'Gerlafingen';
+let slides = [];
+let current = 0;
+let timer = null;
+
+function isTcgMatch(m) {
+  return (m.home || '').includes(TCG) || (m.away || '').includes(TCG);
+}
+
+function isHomeMatch(m) {
+  return (m.home || '').includes(TCG);
+}
+
+function tcgMatches(team) {
+  return (team.matches || []).filter(isTcgMatch);
+}
+
+function nextTcgMatch(team) {
+  const list = tcgMatches(team);
+  return list.find(m => m.result === '0:0') || list[list.length - 1];
+}
+
+function tcgRank(team) {
+  return (team.ranking || []).find(r => (r.team || '').includes(TCG));
+}
+
+function cleanGroup(team) {
+  const name = team.name || team.title || '';
+  const group = team.group || '';
+  return group.replace(name + ' - ', '');
+}
+
+function matchLine(m) {
+  const home = isHomeMatch(m);
+  return `<li class="${home ? 'home' : ''}">
+    <span>
+      <strong>${m.date || ''}${m.time ? ' · ' + m.time : ''}</strong><br>
+      ${m.home || ''} – ${m.away || ''}
+    </span>
+    <span class="screen-result">${m.result || '-'}</span>
+    ${home ? '<span class="home-badge">Heimspiel</span>' : ''}
+  </li>`;
+}
+
+function slideDuration(slide) {
+  // Startseite kurz, Terminseite mittel, Teamseiten abhängig von Anzahl TCG-Spielen
+  if (slide.type === 'welcome') return 6000;
+  if (slide.type === 'dates') return 10000;
+  if (slide.type === 'team') return Math.min(22000, 10000 + (slide.matchCount || 1) * 1800);
+  return 12000;
+}
+
+function renderSlide() {
+  const slide = slides[current];
+  document.getElementById('screen-root').innerHTML =
+    slide.html +
+    `<div class="screen-footer">
+      <span>TC Gerlafingen · Interclub 2026</span>
+      <span>${current + 1}/${slides.length}</span>
+    </div>`;
+}
+
+function scheduleNext() {
+  clearTimeout(timer);
+  const duration = slideDuration(slides[current]);
+  timer = setTimeout(() => {
+    current = (current + 1) % slides.length;
+    renderSlide();
+    scheduleNext();
+  }, duration);
+}
+
+function start() {
+  renderSlide();
+  scheduleNext();
+}
+
+fetch('data/interclub.json')
+  .then(r => r.json())
+  .then(data => {
+    slides.push({
+      type: 'welcome',
+      html: `<section class="screen-slide welcome-slide">
+        <span class="screen-badge">Willkommen</span>
+        <h1>TC Gerlafingen</h1>
+        <p>Turniere · Interclub · Clubleben</p>
+        <div class="screen-card compact"><p>Aktualisiert: ${data.updated || ''}</p></div>
+      </section>`
+    });
+
+    slides.push({
+      type: 'dates',
+      html: `<section class="screen-slide">
+        <span class="screen-badge">Termine 2026</span>
+        <h2>Was läuft im Club?</h2>
+        <div class="screen-grid">
+          <div class="screen-card"><h3>19. Juni</h3><p>4. Crazy-Tennis Turnier</p></div>
+          <div class="screen-card"><h3>09. August</h3><p>Ginggu-Tagesturnier</p></div>
+          <div class="screen-card"><h3>06. September</h3><p>Finaltag Einzel-Clubmeisterschaften</p></div>
+          <div class="screen-card"><h3>25.–27. September</h3><p>5. Ginggu-Cup</p></div>
+        </div>
+      </section>`
+    });
+
+    data.teams.forEach(team => {
+      const name = team.name || team.title || '';
+      const group = cleanGroup(team);
+      const n = nextTcgMatch(team);
+      const rank = tcgRank(team);
+      const matches = tcgMatches(team);
+      const home = n && isHomeMatch(n);
+
+      slides.push({
+        type: 'team',
+        matchCount: matches.length,
+        html: `<section class="screen-slide team-slide">
+          <div class="screen-team-header">
+            <div class="screen-team-name">${name}</div>
+            <div class="screen-team-group">${group}</div>
+          </div>
+
+          <div class="screen-card next-match">
+            <h3>Nächstes TCG-Spiel</h3>
+            <p>
+              ${n ? `${n.home || ''} – ${n.away || ''}<br>${n.date || ''}${n.time ? ' · ' + n.time + ' Uhr' : ''}` : 'Noch kein Spiel erfasst'}
+            </p>
+            ${home ? '<span class="home-badge big">Heimspiel</span>' : ''}
+          </div>
+
+          <div class="screen-grid lower">
+            <div class="screen-card">
+              <h3>TCG-Spiele</h3>
+              <ul class="screen-match-list">
+                ${matches.map(matchLine).join('')}
+              </ul>
+            </div>
+            <div class="screen-card">
+              <h3>Aktueller Stand</h3>
+              <p>Rang ${rank ? rank.rank : '-'}<br>${rank ? rank.points : '-'} Punkte<br>Sätze ${rank ? rank.sets : '-'}</p>
+            </div>
+          </div>
+        </section>`
+      });
+    });
+
+    start();
+  })
+  .catch(() => {
+    document.getElementById('screen-root').innerHTML =
+      '<section class="screen-slide"><h1>Daten konnten nicht geladen werden.</h1></section>';
+  });
