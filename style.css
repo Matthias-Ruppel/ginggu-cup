@@ -558,3 +558,24 @@ footer a{
   .tables{grid-template-columns:1fr !important}
   .team-card{min-height:0}
 }
+
+
+/* FIX: Einheitliche Höhen für Screen-Boxen */
+.screen-card.next-match{
+  height: 18vh;
+}
+
+.screen-grid.lower{
+  height: 42vh;
+}
+
+.screen-grid.lower .screen-card{
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+.screen-match-list{
+  overflow:hidden;
+}
