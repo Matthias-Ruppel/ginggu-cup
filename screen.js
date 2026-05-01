@@ -3,6 +3,24 @@ let slides = [];
 let current = 0;
 let timer = null;
 
+function getDateTime() {
+  const now = new Date();
+
+  const date = now.toLocaleDateString('de-CH', {
+    weekday: 'short',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
+
+  const time = now.toLocaleTimeString('de-CH', {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
+  return `${date} · ${time}`;
+}
+
 function isTcgMatch(m) {
   return (m.home || '').includes(TCG) || (m.away || '').includes(TCG);
 }
@@ -32,7 +50,8 @@ function cleanGroup(team) {
 
 function matchLine(m) {
   const home = isHomeMatch(m);
-  return `<li class="${home ? 'home' : ''}">
+
+  return `<li class="${home ? 'home' : 'away'}">
     <span>
       <strong>${m.date || ''}${m.time ? ' · ' + m.time : ''}</strong><br>
       ${m.home || ''} – ${m.away || ''}
@@ -43,7 +62,6 @@ function matchLine(m) {
 }
 
 function slideDuration(slide) {
-  // Startseite kurz, Terminseite mittel, Teamseiten abhängig von Anzahl TCG-Spielen
   if (slide.type === 'welcome') return 6000;
   if (slide.type === 'dates') return 10000;
   if (slide.type === 'team') return Math.min(22000, 10000 + (slide.matchCount || 1) * 1800);
@@ -52,7 +70,9 @@ function slideDuration(slide) {
 
 function renderSlide() {
   const slide = slides[current];
+
   document.getElementById('screen-root').innerHTML =
+    `<div class="screen-datetime">${getDateTime()}</div>` +
     slide.html +
     `<div class="screen-footer">
       <span>TC Gerlafingen · Interclub 2026</span>
@@ -62,7 +82,9 @@ function renderSlide() {
 
 function scheduleNext() {
   clearTimeout(timer);
+
   const duration = slideDuration(slides[current]);
+
   timer = setTimeout(() => {
     current = (current + 1) % slides.length;
     renderSlide();
@@ -73,6 +95,11 @@ function scheduleNext() {
 function start() {
   renderSlide();
   scheduleNext();
+
+  setInterval(() => {
+    const el = document.querySelector('.screen-datetime');
+    if (el) el.textContent = getDateTime();
+  }, 60000);
 }
 
 fetch('data/interclub.json')
