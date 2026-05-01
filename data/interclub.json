@@ -5,8 +5,8 @@
     {
       "id": "damen-2l",
       "title": "2L Damen",
-      "group": "Gruppe 26",
-      "captain": "",
+      "group": "2L Damen - Gruppe 26",
+      "captain": "Corinne Burri",
       "homeMatches": 2,
       "matches": [
         {
@@ -167,13 +167,15 @@
           "points": 0,
           "sets": "0 - 0"
         }
-      ]
+      ],
+      "name": "2L Damen",
+      "slug": "damen-2l"
     },
     {
       "id": "herren-3l",
       "title": "3L Herren",
-      "group": "Gruppe 39",
-      "captain": "",
+      "group": "3L Herren - Gruppe 39",
+      "captain": "Jeton Morina",
       "homeMatches": 2,
       "matches": [
         {
@@ -288,13 +290,15 @@
           "points": 0,
           "sets": "0 - 0"
         }
-      ]
+      ],
+      "name": "3L Herren",
+      "slug": "herren-3l"
     },
     {
       "id": "herren-35-2l",
       "title": "35+ 2L Herren",
-      "group": "Gruppe 41",
-      "captain": "",
+      "group": "35+ 2L Herren - Gruppe 41",
+      "captain": "Daniel Cramer",
       "homeMatches": 1,
       "matches": [
         {
@@ -371,13 +375,15 @@
           "points": 0,
           "sets": "0 - 0"
         }
-      ]
+      ],
+      "name": "35+ 2L Herren",
+      "slug": "herren-35-2l"
     },
     {
       "id": "herren-35-3l",
       "title": "35+ 3L Herren",
-      "group": "Gruppe 18",
-      "captain": "",
+      "group": "35+ 3L Herren - Gruppe 18",
+      "captain": "Claudio Jud",
       "homeMatches": 2,
       "matches": [
         {
@@ -492,13 +498,15 @@
           "points": 0,
           "sets": "0 - 0"
         }
-      ]
+      ],
+      "name": "35+ 3L Herren",
+      "slug": "herren-35-3l"
     },
     {
       "id": "damen-40-2l",
       "title": "40+ 2L Damen",
-      "group": "Gruppe 26",
-      "captain": "",
+      "group": "40+ 2L Damen - Gruppe 26",
+      "captain": "noch offen",
       "homeMatches": 2,
       "matches": [
         {
@@ -575,13 +583,15 @@
           "points": 0,
           "sets": "0 - 0"
         }
-      ]
+      ],
+      "name": "40+ 2L Damen",
+      "slug": "damen-40-2l"
     },
     {
       "id": "herren-45-3l",
       "title": "45+ 3L Herren",
-      "group": "Gruppe 19",
-      "captain": "",
+      "group": "45+ 3L Herren - Gruppe 19",
+      "captain": "Marco Gurtner",
       "homeMatches": 2,
       "matches": [
         {
@@ -696,13 +706,15 @@
           "points": 0,
           "sets": "0 - 0"
         }
-      ]
+      ],
+      "name": "45+ 3L Herren",
+      "slug": "herren-45-3l"
     },
     {
       "id": "herren-65-2l",
       "title": "65+ 2L Herren",
-      "group": "Gruppe 13",
-      "captain": "",
+      "group": "65+ 2L Herren - Gruppe 13",
+      "captain": "Bruno Schenk",
       "homeMatches": 1,
       "matches": [
         {
@@ -779,7 +791,9 @@
           "points": 0,
           "sets": "0 - 0"
         }
-      ]
+      ],
+      "name": "65+ 2L Herren",
+      "slug": "herren-65-2l"
     }
   ]
 }
