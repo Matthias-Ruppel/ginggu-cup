@@ -57,15 +57,15 @@ function matchLine(m) {
       ${m.home || ''} – ${m.away || ''}
     </span>
     <span class="screen-result">${m.result || '-'}</span>
-    ${home ? '<span class="home-badge">Heimspiel</span>' : ''}
+    ${home ? '<span class="home-badge">Heimspiel</span>' : '<span></span>'}
   </li>`;
 }
 
 function slideDuration(slide) {
-  if (slide.type === 'welcome') return 6000;
-  if (slide.type === 'dates') return 10000;
-  if (slide.type === 'team') return Math.min(22000, 10000 + (slide.matchCount || 1) * 1800);
-  return 12000;
+  if (slide.type === 'welcome') return 5500;
+  if (slide.type === 'dates') return 9000;
+  if (slide.type === 'team') return Math.min(19000, 9000 + (slide.matchCount || 1) * 1500);
+  return 11000;
 }
 
 function renderSlide() {
@@ -108,18 +108,22 @@ fetch('data/interclub.json')
     slides.push({
       type: 'welcome',
       html: `<section class="screen-slide welcome-slide">
-        <span class="screen-badge">Willkommen</span>
-        <h1>TC Gerlafingen</h1>
-        <p>Turniere · Interclub · Clubleben</p>
-        <div class="screen-card compact"><p>Aktualisiert: ${data.updated || ''}</p></div>
+        <div>
+          <span class="screen-badge">Willkommen</span>
+          <h1>TC Gerlafingen</h1>
+          <p>Turniere · Interclub · Clubleben</p>
+          <div class="screen-card compact"><p>Aktualisiert: ${data.updated || ''}</p></div>
+        </div>
       </section>`
     });
 
     slides.push({
       type: 'dates',
-      html: `<section class="screen-slide">
-        <span class="screen-badge">Termine 2026</span>
-        <h2>Was läuft im Club?</h2>
+      html: `<section class="screen-slide dates-slide">
+        <div>
+          <span class="screen-badge">Termine 2026</span>
+          <h2>Was läuft im Club?</h2>
+        </div>
         <div class="screen-grid">
           <div class="screen-card"><h3>19. Juni</h3><p>4. Crazy-Tennis Turnier</p></div>
           <div class="screen-card"><h3>09. August</h3><p>Ginggu-Tagesturnier</p></div>
