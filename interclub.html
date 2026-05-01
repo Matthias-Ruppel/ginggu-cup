@@ -7,19 +7,26 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="subhero">
-  <a class="backlink" href="index.html">← Startseite</a>
-  <h1>Interclub 2026</h1>
+<header class="hero">
+  <img src="logo.png" alt="TC Gerlafingen Logo">
+  <h1>Turniere, Ginggu-Cup & Interclub</h1>
   <p>Spielpläne, Resultate und Ranglisten aller TCG-Mannschaften.</p>
+  <nav class="hero-actions" aria-label="Hauptnavigation">
+    <a class="button nav" href="index.html">Übersicht</a>
+    <a class="button nav active" href="interclub.html">Interclub 2026</a>
+    <a class="button nav" href="screen.html">Clubhaus-Screen</a>
+  </nav>
 </header>
 
 <main class="container">
+  <h2 class="section-title">Interclub 2026</h2>
   <section id="team-overview" class="team-grid"></section>
   <section id="team-details"></section>
 </main>
 
 <footer>
-  <p>&copy; 2026 TC Gerlafingen</p>
+  <p>&copy; 2026 TC Gerlafingen – Turniere, Ginggu-Cup & Interclub</p>
+  <p><a href="mailto:info@ginggu-cup.ch">info@ginggu-cup.ch</a></p>
 </footer>
 <script src="app.js"></script>
 </body>
