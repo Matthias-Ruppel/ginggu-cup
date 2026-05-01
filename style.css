@@ -134,3 +134,32 @@
 .screen-match-list .away{
   border-left:6px solid rgba(255,255,255,.25);
 }
+
+
+/* FINAL FIX: Interclub Detailseite - Rangliste immer unter Spielplan */
+.tables {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 26px !important;
+  width: 100%;
+}
+
+.detail-card .table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.detail-card table {
+  width: 100%;
+}
+
+/* Etwas mehr Abstand zwischen Spielplan und Rangliste */
+.detail-card .table-wrap + .table-wrap {
+  margin-top: 10px;
+}
+
+/* Detailkarten sollen nicht rechts auslaufen */
+.detail-card {
+  overflow: hidden;
+}
