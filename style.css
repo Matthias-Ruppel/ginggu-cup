@@ -89,3 +89,37 @@
   .screen-team-group{font-size:2.4vw}
   .screen-card.next-match p,.screen-match-list li{font-size:3.2vw}
 }
+
+
+/* Fix: Navigation im blauen Kopfbereich bleibt oval und korrekt lesbar */
+.hero .hero-actions .button.nav,
+.subhero .hero-actions .button.nav,
+.hero a.button.nav,
+.subhero a.button.nav {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: rgba(255,255,255,.14);
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,.4);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hero .hero-actions .button.nav:hover,
+.subhero .hero-actions .button.nav:hover,
+.hero a.button.nav:hover,
+.subhero a.button.nav:hover {
+  background: rgba(255,255,255,.24);
+  color: #fff !important;
+}
+
+.hero .hero-actions .button.nav.active,
+.subhero .hero-actions .button.nav.active,
+.hero a.button.nav.active,
+.subhero a.button.nav.active {
+  background: var(--yellow);
+  color: #1f2937 !important;
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(246,195,67,.25);
+}
