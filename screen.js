@@ -48,6 +48,16 @@ function cleanGroup(team) {
   return group.replace(name + ' - ', '');
 }
 
+function rankingLine(r) {
+  const isTcg = (r.team || '').includes(TCG);
+  return `<li class="${isTcg ? 'tcg-rank' : ''}">
+    <span class="rank-number">${r.rank ?? ''}</span>
+    <span class="rank-team">${r.team || ''}</span>
+    <span class="rank-points">${r.points ?? ''}</span>
+    <span class="rank-sets">${r.sets || ''}</span>
+  </li>`;
+}
+
 function matchLine(m) {
   const home = isHomeMatch(m);
 
@@ -137,7 +147,6 @@ fetch('data/interclub.json')
       const name = team.name || team.title || '';
       const group = cleanGroup(team);
       const n = nextTcgMatch(team);
-      const rank = tcgRank(team);
       const matches = tcgMatches(team);
       const home = n && isHomeMatch(n);
 
@@ -166,8 +175,13 @@ fetch('data/interclub.json')
               </ul>
             </div>
             <div class="screen-card">
-              <h3>Aktueller Stand</h3>
-              <p>Rang ${rank ? rank.rank : '-'}<br>${rank ? rank.points : '-'} Punkte<br>Sätze ${rank ? rank.sets : '-'}</p>
+              <h3>Rangliste</h3>
+              <div class="screen-ranking-head">
+                <span>Rang</span><span>Team</span><span>PT</span><span>Sätze</span>
+              </div>
+              <ul class="screen-ranking-list">
+                ${(team.ranking || []).map(rankingLine).join('')}
+              </ul>
             </div>
           </div>
         </section>`

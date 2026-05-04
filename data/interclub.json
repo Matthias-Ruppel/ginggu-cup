@@ -1,110 +1,784 @@
 {
-  "updated": "05.05.2026",
+  "season": "Interclub 2026",
+  "updated": "04.05.2026",
   "teams": [
     {
-      "name": "2L Damen",
+      "id": "damen-2l",
+      "title": "2L Damen",
       "group": "Gruppe 26",
       "captain": "Corina Parpan",
+      "homeMatches": 2,
       "matches": [
-        {"round": 1, "date": "02.05.", "time": "09:00", "home": "Gerlafingen", "away": "Bally Schönenwerd 1", "result": "2:4"},
-        {"round": 2, "date": "09.05.", "time": "10:00", "home": "Born Kappel", "away": "Gerlafingen", "result": "0:0"},
-        {"round": 3, "date": "17.05.", "time": "09:00", "home": "Gerlafingen", "away": "Worbenbad", "result": "0:0"},
-        {"round": 4, "date": "06.06.", "time": "", "home": "Scheuren 2", "away": "Gerlafingen", "result": "0:0"},
-        {"round": 5, "date": "13.06.", "time": "", "home": "Belchen 1", "away": "Gerlafingen", "result": "0:0"}
+        {
+          "round": 1,
+          "date": "02.05.",
+          "time": "",
+          "home": "Gerlafingen",
+          "away": "Bally Schönenwerd 1",
+          "result": "2:4"
+        },
+        {
+          "round": 1,
+          "date": "02.05.",
+          "time": "",
+          "home": "Worbenbad",
+          "away": "Born Kappel",
+          "result": "4:2"
+        },
+        {
+          "round": 1,
+          "date": "02.05.",
+          "time": "",
+          "home": "Scheuren 2",
+          "away": "Belchen 1",
+          "result": "1:5"
+        },
+        {
+          "round": 2,
+          "date": "10.05.",
+          "time": "15:00",
+          "home": "Belchen 1",
+          "away": "Bally Schönenwerd 1",
+          "result": "0:0"
+        },
+        {
+          "round": 2,
+          "date": "09.05.",
+          "time": "10:00",
+          "home": "Born Kappel",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 2,
+          "date": "10.05.",
+          "time": "09:30",
+          "home": "Worbenbad",
+          "away": "Scheuren 2",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "16.05.",
+          "time": "09:00",
+          "home": "Bally Schönenwerd 1",
+          "away": "Scheuren 2",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "16.05.",
+          "time": "09:00",
+          "home": "Belchen 1",
+          "away": "Born Kappel",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "17.05.",
+          "time": "09:00",
+          "home": "Gerlafingen",
+          "away": "Worbenbad",
+          "result": "0:0"
+        },
+        {
+          "round": 4,
+          "date": "06.06.",
+          "time": "09:00",
+          "home": "Born Kappel",
+          "away": "Bally Schönenwerd 1",
+          "result": "0:0"
+        },
+        {
+          "round": 4,
+          "date": "06.06.",
+          "time": "09:30",
+          "home": "Worbenbad",
+          "away": "Belchen 1",
+          "result": "0:0"
+        },
+        {
+          "round": 4,
+          "date": "06.06.",
+          "time": "",
+          "home": "Scheuren 2",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 5,
+          "date": "13.06.",
+          "time": "",
+          "home": "Bally Schönenwerd 1",
+          "away": "Worbenbad",
+          "result": "0:0"
+        },
+        {
+          "round": 5,
+          "date": "13.06.",
+          "time": "",
+          "home": "Belchen 1",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 5,
+          "date": "14.06.",
+          "time": "15:00",
+          "home": "Born Kappel",
+          "away": "Scheuren 2",
+          "result": "0:0"
+        }
       ],
       "ranking": [
-        {"rank": 1, "team": "Belchen 1", "points": 5, "sets": "11-4"},
-        {"rank": 2, "team": "Bally Schönenwerd 1", "points": 4, "sets": "8-4"},
-        {"rank": 3, "team": "Worbenbad", "points": 4, "sets": "9-5"},
-        {"rank": 4, "team": "Born Kappel", "points": 2, "sets": "5-9"},
-        {"rank": 5, "team": "Gerlafingen", "points": 2, "sets": "4-8"},
-        {"rank": 6, "team": "Scheuren 2", "points": 1, "sets": "4-11"}
+        {
+          "rank": 1,
+          "team": "Belchen 1",
+          "points": 5,
+          "sets": "11 - 4"
+        },
+        {
+          "rank": 2,
+          "team": "Bally Schönenwerd 1",
+          "points": 4,
+          "sets": "8 - 4"
+        },
+        {
+          "rank": 3,
+          "team": "Worbenbad",
+          "points": 4,
+          "sets": "9 - 5"
+        },
+        {
+          "rank": 4,
+          "team": "Born Kappel",
+          "points": 2,
+          "sets": "5 - 9"
+        },
+        {
+          "rank": 5,
+          "team": "Gerlafingen",
+          "points": 2,
+          "sets": "4 - 8"
+        },
+        {
+          "rank": 6,
+          "team": "Scheuren 2",
+          "points": 1,
+          "sets": "4 - 11"
+        }
       ]
     },
-
     {
-      "name": "3L Herren",
+      "id": "herren-3l",
+      "title": "3L Herren",
       "group": "Gruppe 39",
-      "captain": "Jeton Morina",
+      "captain": "",
+      "homeMatches": 2,
       "matches": [
-        {"round": 1, "date": "03.05.", "time": "13:00", "home": "Gerlafingen", "away": "Tela 2", "result": "7:2"},
-        {"round": 2, "date": "09.05.", "time": "09:00", "home": "Aarberg", "away": "Gerlafingen", "result": "0:0"},
-        {"round": 3, "date": "17.05.", "time": "13:00", "home": "Olten 1", "away": "Gerlafingen", "result": "0:0"},
-        {"round": 4, "date": "07.06.", "time": "09:00", "home": "Gerlafingen", "away": "Schützenmatt SO", "result": "0:0"}
+        {
+          "round": 1,
+          "date": "03.05.",
+          "time": "",
+          "home": "Gerlafingen",
+          "away": "Tela 2",
+          "result": "7:2"
+        },
+        {
+          "round": 1,
+          "date": "02.05.",
+          "time": "",
+          "home": "Schützenmatt SO",
+          "away": "Olten 1",
+          "result": "6:3"
+        },
+        {
+          "round": 2,
+          "date": "09.05.",
+          "time": "09:00",
+          "home": "Aarberg",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 2,
+          "date": "09.05.",
+          "time": "10:00",
+          "home": "Tela 2",
+          "away": "Olten 1",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "17.05.",
+          "time": "13:00",
+          "home": "Olten 1",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "16.05.",
+          "time": "09:00",
+          "home": "Schützenmatt SO",
+          "away": "Aarberg",
+          "result": "0:0"
+        },
+        {
+          "round": 4,
+          "date": "06.06.",
+          "time": "",
+          "home": "Aarberg",
+          "away": "Tela 2",
+          "result": "0:0"
+        },
+        {
+          "round": 4,
+          "date": "07.06.",
+          "time": "09:00",
+          "home": "Gerlafingen",
+          "away": "Schützenmatt SO",
+          "result": "0:0"
+        },
+        {
+          "round": 5,
+          "date": "13.06.",
+          "time": "10:00",
+          "home": "Tela 2",
+          "away": "Schützenmatt SO",
+          "result": "0:0"
+        },
+        {
+          "round": 5,
+          "date": "13.06.",
+          "time": "",
+          "home": "Olten 1",
+          "away": "Aarberg",
+          "result": "0:0"
+        }
       ],
       "ranking": [
-        {"rank": 1, "team": "Gerlafingen", "points": 7, "sets": "15-4"},
-        {"rank": 2, "team": "Schützenmatt SO", "points": 6, "sets": "13-7"},
-        {"rank": 3, "team": "Olten 1", "points": 3, "sets": "7-13"},
-        {"rank": 4, "team": "Tela 2", "points": 2, "sets": "4-15"},
-        {"rank": 5, "team": "Aarberg", "points": 0, "sets": "0-0"}
+        {
+          "rank": 1,
+          "team": "Gerlafingen",
+          "points": 7,
+          "sets": "15 - 4"
+        },
+        {
+          "rank": 2,
+          "team": "Schützenmatt SO",
+          "points": 6,
+          "sets": "13 - 7"
+        },
+        {
+          "rank": 3,
+          "team": "Olten 1",
+          "points": 3,
+          "sets": "7 - 13"
+        },
+        {
+          "rank": 4,
+          "team": "Tela 2",
+          "points": 2,
+          "sets": "4 - 15"
+        },
+        {
+          "rank": 5,
+          "team": "Aarberg",
+          "points": 0,
+          "sets": "0 - 0"
+        }
       ]
     },
-
     {
-      "name": "35+ 2L Herren",
+      "id": "herren-35-2l",
+      "title": "35+ 2L Herren",
       "group": "Gruppe 41",
-      "captain": "Daniel Cramer",
+      "captain": "",
+      "homeMatches": 1,
       "matches": [
-        {"round": 1, "date": "02.05.", "time": "09:00", "home": "Saignelégier", "away": "Gerlafingen", "result": "8:1"},
-        {"round": 2, "date": "09.05.", "time": "14:00", "home": "Wangen", "away": "Gerlafingen", "result": "0:0"},
-        {"round": 3, "date": "17.05.", "time": "13:00", "home": "Gerlafingen", "away": "Derendingen-Zuchwil", "result": "0:0"}
+        {
+          "round": 1,
+          "date": "02.05.",
+          "time": "",
+          "home": "Saignelégier",
+          "away": "Gerlafingen",
+          "result": "8:1"
+        },
+        {
+          "round": 1,
+          "date": "02.05.",
+          "time": "",
+          "home": "Derendingen-Zuchwil",
+          "away": "Wangen",
+          "result": "3:6"
+        },
+        {
+          "round": 2,
+          "date": "09.05.",
+          "time": "14:00",
+          "home": "Wangen",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 2,
+          "date": "09.05.",
+          "time": "10:00",
+          "home": "Saignelégier",
+          "away": "Derendingen-Zuchwil",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "16.05.",
+          "time": "09:00",
+          "home": "Wangen",
+          "away": "Saignelégier",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "17.05.",
+          "time": "13:00",
+          "home": "Gerlafingen",
+          "away": "Derendingen-Zuchwil",
+          "result": "0:0"
+        }
       ],
       "ranking": [
-        {"rank": 1, "team": "Saignelégier", "points": 8, "sets": "16-5"},
-        {"rank": 2, "team": "Wangen", "points": 6, "sets": "13-7"},
-        {"rank": 3, "team": "Derendingen-Zuchwil", "points": 3, "sets": "7-13"},
-        {"rank": 4, "team": "Gerlafingen", "points": 1, "sets": "5-16"}
+        {
+          "rank": 1,
+          "team": "Saignelégier",
+          "points": 8,
+          "sets": "16 - 5"
+        },
+        {
+          "rank": 2,
+          "team": "Wangen",
+          "points": 6,
+          "sets": "13 - 7"
+        },
+        {
+          "rank": 3,
+          "team": "Derendingen-Zuchwil",
+          "points": 3,
+          "sets": "7 - 13"
+        },
+        {
+          "rank": 4,
+          "team": "Gerlafingen",
+          "points": 1,
+          "sets": "5 - 16"
+        }
       ]
     },
-
     {
-      "name": "35+ 3L Herren",
+      "id": "herren-35-3l",
+      "title": "35+ 3L Herren",
       "group": "Gruppe 18",
-      "captain": "Claudio Jud",
+      "captain": "",
+      "homeMatches": 2,
       "matches": [
-        {"round": 1, "date": "02.05.", "time": "09:00", "home": "Lyss", "away": "Gerlafingen", "result": "4:5"},
-        {"round": 2, "date": "09.05.", "time": "14:00", "home": "Dufour 2", "away": "Gerlafingen", "result": "0:0"},
-        {"round": 3, "date": "16.05.", "time": "13:30", "home": "Gerlafingen", "away": "Saignelégier", "result": "0:0"}
+        {
+          "round": 1,
+          "date": "03.05.",
+          "time": "10:00",
+          "home": "Saignelégier",
+          "away": "Dufour 2",
+          "result": "0:0"
+        },
+        {
+          "round": 1,
+          "date": "02.05.",
+          "time": "",
+          "home": "Lyss",
+          "away": "Gerlafingen",
+          "result": "4:5"
+        },
+        {
+          "round": 2,
+          "date": "10.05.",
+          "time": "13:00",
+          "home": "Wander BE 1",
+          "away": "Saignelégier",
+          "result": "0:0"
+        },
+        {
+          "round": 2,
+          "date": "09.05.",
+          "time": "14:00",
+          "home": "Dufour 2",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "16.05.",
+          "time": "13:30",
+          "home": "Gerlafingen",
+          "away": "Saignelégier",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "16.05.",
+          "time": "09:00",
+          "home": "Lyss",
+          "away": "Wander BE 1",
+          "result": "0:0"
+        },
+        {
+          "round": 4,
+          "date": "06.06.",
+          "time": "10:00",
+          "home": "Saignelégier",
+          "away": "Lyss",
+          "result": "0:0"
+        },
+        {
+          "round": 4,
+          "date": "07.06.",
+          "time": "13:00",
+          "home": "Wander BE 1",
+          "away": "Dufour 2",
+          "result": "0:0"
+        },
+        {
+          "round": 5,
+          "date": "13.06.",
+          "time": "",
+          "home": "Dufour 2",
+          "away": "Lyss",
+          "result": "0:0"
+        },
+        {
+          "round": 5,
+          "date": "14.06.",
+          "time": "13:00",
+          "home": "Gerlafingen",
+          "away": "Wander BE 1",
+          "result": "0:0"
+        }
       ],
       "ranking": [
-        {"rank": 1, "team": "Gerlafingen", "points": 5, "sets": "11-9"},
-        {"rank": 2, "team": "Lyss", "points": 4, "sets": "9-11"},
-        {"rank": 3, "team": "Saignelégier", "points": 0, "sets": "0-0"},
-        {"rank": 3, "team": "Wander BE 1", "points": 0, "sets": "0-0"},
-        {"rank": 3, "team": "Dufour 2", "points": 0, "sets": "0-0"}
+        {
+          "rank": 1,
+          "team": "Gerlafingen",
+          "points": 5,
+          "sets": "11 - 9"
+        },
+        {
+          "rank": 2,
+          "team": "Lyss",
+          "points": 4,
+          "sets": "9 - 11"
+        },
+        {
+          "rank": 3,
+          "team": "Saignelégier",
+          "points": 0,
+          "sets": "0 - 0"
+        },
+        {
+          "rank": 3,
+          "team": "Wander BE 1",
+          "points": 0,
+          "sets": "0 - 0"
+        },
+        {
+          "rank": 3,
+          "team": "Dufour 2",
+          "points": 0,
+          "sets": "0 - 0"
+        }
       ]
     },
-
     {
-      "name": "40+ 2L Damen",
+      "id": "damen-40-2l",
+      "title": "40+ 2L Damen",
       "group": "Gruppe 26",
+      "captain": "",
+      "homeMatches": 2,
       "matches": [
-        {"round": 1, "date": "02.05.", "time": "13:30", "home": "Gerlafingen", "away": "Evilard", "result": "5:1"},
-        {"round": 2, "date": "09.05.", "time": "09:00", "home": "Gerlafingen", "away": "Sporting Derendingen", "result": "0:0"}
+        {
+          "round": 1,
+          "date": "02.05.",
+          "time": "",
+          "home": "Gerlafingen",
+          "away": "Evilard",
+          "result": "5:1"
+        },
+        {
+          "round": 1,
+          "date": "03.05.",
+          "time": "10:00",
+          "home": "Sporting Derendingen",
+          "away": "Bally Schönenwerd",
+          "result": "0:0"
+        },
+        {
+          "round": 2,
+          "date": "09.05.",
+          "time": "09:00",
+          "home": "Gerlafingen",
+          "away": "Sporting Derendingen",
+          "result": "0:0"
+        },
+        {
+          "round": 2,
+          "date": "10.05.",
+          "time": "12:00",
+          "home": "Bally Schönenwerd",
+          "away": "Evilard",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "16.05.",
+          "time": "12:00",
+          "home": "Bally Schönenwerd",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "17.05.",
+          "time": "09:00",
+          "home": "Evilard",
+          "away": "Sporting Derendingen",
+          "result": "0:0"
+        }
       ],
       "ranking": [
-        {"rank": 1, "team": "Gerlafingen", "points": 5, "sets": "10-6"},
-        {"rank": 2, "team": "Evilard", "points": 1, "sets": "6-10"},
-        {"rank": 3, "team": "Bally Schönenwerd", "points": 0, "sets": "0-0"},
-        {"rank": 3, "team": "Sporting Derendingen", "points": 0, "sets": "0-0"}
+        {
+          "rank": 1,
+          "team": "Gerlafingen",
+          "points": 5,
+          "sets": "10 - 6"
+        },
+        {
+          "rank": 2,
+          "team": "Evilard",
+          "points": 1,
+          "sets": "6 - 10"
+        },
+        {
+          "rank": 3,
+          "team": "Bally Schönenwerd",
+          "points": 0,
+          "sets": "0 - 0"
+        },
+        {
+          "rank": 3,
+          "team": "Sporting Derendingen",
+          "points": 0,
+          "sets": "0 - 0"
+        }
       ]
     },
-
     {
-      "name": "45+ 3L Herren",
+      "id": "herren-45-3l",
+      "title": "45+ 3L Herren",
       "group": "Gruppe 19",
-      "captain": "Marco Gurtner",
+      "captain": "",
+      "homeMatches": 2,
       "matches": [
-        {"round": 1, "date": "03.05.", "time": "10:00", "home": "Delémont", "away": "SO-ACTIVE SPORTZENTRUM SOLOTHURN", "result": "6:1"},
-        {"round": 2, "date": "09.05.", "time": "13:30", "home": "Gerlafingen", "away": "Delémont", "result": "0:0"}
+        {
+          "round": 1,
+          "date": "02.05.",
+          "time": "",
+          "home": "Estavayer-le-Lac",
+          "away": "Grolley",
+          "result": "5:2"
+        },
+        {
+          "round": 1,
+          "date": "03.05.",
+          "time": "",
+          "home": "Delémont",
+          "away": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
+          "result": "6:1"
+        },
+        {
+          "round": 2,
+          "date": "09.05.",
+          "time": "13:30",
+          "home": "Gerlafingen",
+          "away": "Delémont",
+          "result": "0:0"
+        },
+        {
+          "round": 2,
+          "date": "09.05.",
+          "time": "09:00",
+          "home": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
+          "away": "Grolley",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "17.05.",
+          "time": "09:30",
+          "home": "Grolley",
+          "away": "Delémont",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "17.05.",
+          "time": "09:00",
+          "home": "Estavayer-le-Lac",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 4,
+          "date": "06.06.",
+          "time": "09:00",
+          "home": "Gerlafingen",
+          "away": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
+          "result": "0:0"
+        },
+        {
+          "round": 4,
+          "date": "07.06.",
+          "time": "09:00",
+          "home": "Delémont",
+          "away": "Estavayer-le-Lac",
+          "result": "0:0"
+        },
+        {
+          "round": 5,
+          "date": "13.06.",
+          "time": "",
+          "home": "Grolley",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 5,
+          "date": "13.06.",
+          "time": "09:00",
+          "home": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
+          "away": "Estavayer-le-Lac",
+          "result": "0:0"
+        }
       ],
       "ranking": [
-        {"rank": 1, "team": "Delémont", "points": 6, "sets": "13-2"},
-        {"rank": 2, "team": "Estavayer-le-Lac", "points": 5, "sets": "10-5"},
-        {"rank": 3, "team": "Grolley", "points": 2, "sets": "5-10"},
-        {"rank": 4, "team": "SO-ACTIVE SPORTZENTRUM SOLOTHURN", "points": 1, "sets": "2-13"},
-        {"rank": 5, "team": "Gerlafingen", "points": 0, "sets": "0-0"}
+        {
+          "rank": 1,
+          "team": "Delémont",
+          "points": 6,
+          "sets": "13 - 2"
+        },
+        {
+          "rank": 2,
+          "team": "Estavayer-le-Lac",
+          "points": 5,
+          "sets": "10 - 5"
+        },
+        {
+          "rank": 3,
+          "team": "Grolley",
+          "points": 2,
+          "sets": "5 - 10"
+        },
+        {
+          "rank": 4,
+          "team": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
+          "points": 1,
+          "sets": "2 - 13"
+        },
+        {
+          "rank": 5,
+          "team": "Gerlafingen",
+          "points": 0,
+          "sets": "0 - 0"
+        }
+      ]
+    },
+    {
+      "id": "herren-65-2l",
+      "title": "65+ 2L Herren",
+      "group": "Gruppe 13",
+      "captain": "",
+      "homeMatches": 1,
+      "matches": [
+        {
+          "round": 1,
+          "date": "01.05.",
+          "time": "10:00",
+          "home": "Tela",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 1,
+          "date": "27.04.",
+          "time": "",
+          "home": "Langenthal",
+          "away": "Wangen",
+          "result": "4:2"
+        },
+        {
+          "round": 2,
+          "date": "06.05.",
+          "time": "10:00",
+          "home": "Tela",
+          "away": "Langenthal",
+          "result": "0:0"
+        },
+        {
+          "round": 2,
+          "date": "06.05.",
+          "time": "09:30",
+          "home": "Wangen",
+          "away": "Gerlafingen",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "13.05.",
+          "time": "09:30",
+          "home": "Wangen",
+          "away": "Tela",
+          "result": "0:0"
+        },
+        {
+          "round": 3,
+          "date": "12.05.",
+          "time": "10:00",
+          "home": "Gerlafingen",
+          "away": "Langenthal",
+          "result": "0:0"
+        }
+      ],
+      "ranking": [
+        {
+          "rank": 1,
+          "team": "Langenthal",
+          "points": 4,
+          "sets": "10 - 4"
+        },
+        {
+          "rank": 2,
+          "team": "Wangen",
+          "points": 2,
+          "sets": "4 - 10"
+        },
+        {
+          "rank": 3,
+          "team": "Tela",
+          "points": 0,
+          "sets": "0 - 0"
+        },
+        {
+          "rank": 3,
+          "team": "Gerlafingen",
+          "points": 0,
+          "sets": "0 - 0"
+        }
       ]
     }
   ]

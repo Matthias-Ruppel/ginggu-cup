@@ -576,3 +576,58 @@ footer a{
     justify-self:start;
   }
 }
+
+
+/* Screen-Rangliste rechts */
+.screen-ranking-head,
+.screen-ranking-list li{
+  display:grid;
+  grid-template-columns:2.7vw 1fr 2.4vw 4.2vw;
+  gap:.55vw;
+  align-items:center;
+}
+
+.screen-ranking-head{
+  color:rgba(255,255,255,.72);
+  font-size:.75vw;
+  font-weight:900;
+  text-transform:uppercase;
+  padding:.2vw .55vw .45vw .55vw;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.screen-ranking-list{
+  list-style:none;
+  margin:.35vw 0 0 0;
+  padding:0;
+  display:grid;
+  gap:.35vh;
+  overflow:hidden;
+}
+
+.screen-ranking-list li{
+  font-size:.92vw;
+  line-height:1.08;
+  padding:.42vw .55vw;
+  border-radius:.7vw;
+  background:rgba(255,255,255,.045);
+}
+
+.screen-ranking-list li.tcg-rank{
+  background:rgba(246,195,67,.16);
+  border-left:5px solid var(--yellow);
+  font-weight:900;
+}
+
+.rank-number,
+.rank-points,
+.rank-sets{
+  text-align:right;
+  white-space:nowrap;
+}
+
+.rank-team{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
