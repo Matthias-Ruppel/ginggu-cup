@@ -72,8 +72,8 @@ function matchLine(m) {
 }
 
 function slideDuration(slide) {
-  if (slide.type === 'welcome') return 5500;
-  if (slide.type === 'dates') return 9000;
+  if (slide.type === 'welcome') return 7000;
+  if (slide.type === 'dates') return 16000;
   if (slide.type === 'team') return Math.min(19000, 9000 + (slide.matchCount || 1) * 1500);
   return 11000;
 }
@@ -117,28 +117,32 @@ fetch('data/interclub.json')
   .then(data => {
     slides.push({
       type: 'welcome',
-      html: `<section class="screen-slide welcome-slide">
-        <div>
-          <span class="screen-badge">Willkommen</span>
+      html: `<section class="screen-slide welcome-slide screen-light-slide">
+        <div class="welcome-panel">
+          <img class="welcome-logo" src="logo.png" alt="TC Gerlafingen Logo">
+          <span class="screen-badge">Willkommen im Clubhaus</span>
           <h1>TC Gerlafingen</h1>
-          <p>Turniere · Interclub · Clubleben</p>
-          <div class="screen-card compact"><p>Aktualisiert: ${data.updated || ''}</p></div>
+          <p>Turniere · Interclub · Clubleben · Termine 2026</p>
+          <div class="welcome-update">Aktualisiert: ${data.updated || ''}</div>
         </div>
       </section>`
     });
 
     slides.push({
       type: 'dates',
-      html: `<section class="screen-slide dates-slide">
-        <div>
-          <span class="screen-badge">Termine 2026</span>
-          <h2>Was läuft im Club?</h2>
+      html: `<section class="screen-slide dates-slide screen-light-slide">
+        <div class="dates-header">
+          <div class="dates-brand"><img src="logo.png" alt="TC Gerlafingen Logo"><span>TC Gerlafingen</span></div>
+          <div class="dates-title"><h2>Termine 2026</h2><p>Wichtige Anlaesse, Turniere und Clubaktivitaeten</p></div>
+          <div></div>
         </div>
-        <div class="screen-grid">
-          <div class="screen-card"><h3>19. Juni</h3><p>4. Crazy-Tennis Turnier</p></div>
-          <div class="screen-card"><h3>09. August</h3><p>Ginggu-Tagesturnier</p></div>
-          <div class="screen-card"><h3>06. September</h3><p>Finaltag Einzel-Clubmeisterschaften</p></div>
-          <div class="screen-card"><h3>25.–27. September</h3><p>5. Ginggu-Cup</p></div>
+        <div class="dates-card-grid">
+          <article class="date-card blue"><span class="date-pill">02. Juni</span><p class="date-day">Dienstag</p><h3>Naechster Clubabend mit Essen</h3><p><strong>Chrigu's Kaese-Risotto</strong> mit Grillbeilage.<br>Organisiert von <strong>35+ 3L</strong>.</p></article>
+          <article class="date-card blue"><span class="date-pill">19. Juni</span><p class="date-day">Freitag</p><h3>4. Crazy-Tennis Turnier</h3><p>Spass, Bewegung und ein etwas anderes Tennis-Erlebnis fuer unsere Mitglieder.</p></article>
+          <article class="date-card yellow"><span class="date-pill">09. August</span><p class="date-day">Sonntag</p><h3>Ginggu-Tagesturnier</h3><p>Damen, Herren und Mixed – kompakt, sportlich und gesellig an einem Tag.</p></article>
+          <article class="date-card blue"><span class="date-pill">06. September</span><p class="date-day">Sonntag</p><h3>Finaltag Einzel-Clubmeisterschaften</h3><p>Auf allen Plaetzen. Die Finalspiele der Einzel-Clubmeisterschaften.</p></article>
+          <article class="date-card blue"><span class="date-pill">02./03. Mai – 27./28. Juni</span><p class="date-day">Wochenenden</p><h3>Interclub Saison 2026</h3><p>Details nach der Auslosung im TCG-Kalender. Resultate und Ranglisten findest Du unter Interclub 2026.</p></article>
+          <article class="date-card yellow"><span class="date-pill">25.–27. September</span><p class="date-day">Freitag bis Sonntag</p><h3>5. Ginggu-Cup</h3><p>Swiss Tennis Turnier auf allen Plaetzen – mit starken Matches und Clubleben pur.</p></article>
         </div>
       </section>`
     });
