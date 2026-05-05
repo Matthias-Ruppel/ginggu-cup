@@ -1,11 +1,13 @@
 {
   "season": "Interclub 2026",
-  "updated": "04.05.2026",
+  "updated": "05.05.2026",
   "teams": [
     {
       "id": "damen-2l",
+      "slug": "damen-2l",
+      "name": "2L Damen",
       "title": "2L Damen",
-      "group": "Gruppe 26",
+      "group": "2L Damen - Gruppe 26",
       "captain": "Corina Parpan",
       "homeMatches": 2,
       "matches": [
@@ -171,9 +173,11 @@
     },
     {
       "id": "herren-3l",
+      "slug": "herren-3l",
+      "name": "3L Herren",
       "title": "3L Herren",
-      "group": "Gruppe 39",
-      "captain": "",
+      "group": "3L Herren - Gruppe 39",
+      "captain": "Jeton Morina",
       "homeMatches": 2,
       "matches": [
         {
@@ -292,9 +296,11 @@
     },
     {
       "id": "herren-35-2l",
+      "slug": "herren-35-2l",
+      "name": "35+ 2L Herren",
       "title": "35+ 2L Herren",
-      "group": "Gruppe 41",
-      "captain": "",
+      "group": "35+ 2L Herren - Gruppe 41",
+      "captain": "Daniel Cramer",
       "homeMatches": 1,
       "matches": [
         {
@@ -375,9 +381,11 @@
     },
     {
       "id": "herren-35-3l",
+      "slug": "herren-35-3l",
+      "name": "35+ 3L Herren",
       "title": "35+ 3L Herren",
-      "group": "Gruppe 18",
-      "captain": "",
+      "group": "35+ 3L Herren - Gruppe 18",
+      "captain": "Claudio Jud",
       "homeMatches": 2,
       "matches": [
         {
@@ -386,7 +394,7 @@
           "time": "10:00",
           "home": "Saignelégier",
           "away": "Dufour 2",
-          "result": "0:0"
+          "result": "6:3"
         },
         {
           "round": 1,
@@ -464,31 +472,31 @@
       "ranking": [
         {
           "rank": 1,
+          "team": "Saignelégier",
+          "points": 6,
+          "sets": "12 - 8"
+        },
+        {
+          "rank": 2,
           "team": "Gerlafingen",
           "points": 5,
           "sets": "11 - 9"
         },
         {
-          "rank": 2,
+          "rank": 3,
           "team": "Lyss",
           "points": 4,
           "sets": "9 - 11"
         },
         {
-          "rank": 3,
-          "team": "Saignelégier",
-          "points": 0,
-          "sets": "0 - 0"
-        },
-        {
-          "rank": 3,
-          "team": "Wander BE 1",
-          "points": 0,
-          "sets": "0 - 0"
-        },
-        {
-          "rank": 3,
+          "rank": 4,
           "team": "Dufour 2",
+          "points": 3,
+          "sets": "8 - 12"
+        },
+        {
+          "rank": 5,
+          "team": "Wander BE 1",
           "points": 0,
           "sets": "0 - 0"
         }
@@ -496,9 +504,11 @@
     },
     {
       "id": "damen-40-2l",
+      "slug": "damen-40-2l",
+      "name": "40+ 2L Damen",
       "title": "40+ 2L Damen",
-      "group": "Gruppe 26",
-      "captain": "",
+      "group": "40+ 2L Damen - Gruppe 26",
+      "captain": "noch offen",
       "homeMatches": 2,
       "matches": [
         {
@@ -512,10 +522,10 @@
         {
           "round": 1,
           "date": "03.05.",
-          "time": "10:00",
+          "time": "",
           "home": "Sporting Derendingen",
           "away": "Bally Schönenwerd",
-          "result": "0:0"
+          "result": "1:5"
         },
         {
           "round": 2,
@@ -553,35 +563,37 @@
       "ranking": [
         {
           "rank": 1,
+          "team": "Bally Schönenwerd",
+          "points": 5,
+          "sets": "10 - 4"
+        },
+        {
+          "rank": 2,
           "team": "Gerlafingen",
           "points": 5,
           "sets": "10 - 6"
         },
         {
-          "rank": 2,
+          "rank": 3,
           "team": "Evilard",
           "points": 1,
           "sets": "6 - 10"
         },
         {
-          "rank": 3,
-          "team": "Bally Schönenwerd",
-          "points": 0,
-          "sets": "0 - 0"
-        },
-        {
-          "rank": 3,
+          "rank": 4,
           "team": "Sporting Derendingen",
-          "points": 0,
-          "sets": "0 - 0"
+          "points": 1,
+          "sets": "4 - 10"
         }
       ]
     },
     {
       "id": "herren-45-3l",
+      "slug": "herren-45-3l",
+      "name": "45+ 3L Herren",
       "title": "45+ 3L Herren",
-      "group": "Gruppe 19",
-      "captain": "",
+      "group": "45+ 3L Herren - Gruppe 19",
+      "captain": "Marco Gurtner",
       "homeMatches": 2,
       "matches": [
         {
@@ -700,18 +712,20 @@
     },
     {
       "id": "herren-65-2l",
+      "slug": "herren-65-2l",
+      "name": "65+ 2L Herren",
       "title": "65+ 2L Herren",
-      "group": "Gruppe 13",
-      "captain": "",
+      "group": "65+ 2L Herren - Gruppe 13",
+      "captain": "Bruno Schenk",
       "homeMatches": 1,
       "matches": [
         {
           "round": 1,
           "date": "01.05.",
-          "time": "10:00",
+          "time": "",
           "home": "Tela",
           "away": "Gerlafingen",
-          "result": "0:0"
+          "result": "5:1"
         },
         {
           "round": 1,
@@ -757,27 +771,27 @@
       "ranking": [
         {
           "rank": 1,
+          "team": "Tela",
+          "points": 5,
+          "sets": "10 - 3"
+        },
+        {
+          "rank": 2,
           "team": "Langenthal",
           "points": 4,
           "sets": "10 - 4"
         },
         {
-          "rank": 2,
+          "rank": 3,
           "team": "Wangen",
           "points": 2,
           "sets": "4 - 10"
         },
         {
-          "rank": 3,
-          "team": "Tela",
-          "points": 0,
-          "sets": "0 - 0"
-        },
-        {
-          "rank": 3,
+          "rank": 4,
           "team": "Gerlafingen",
-          "points": 0,
-          "sets": "0 - 0"
+          "points": 1,
+          "sets": "3 - 10"
         }
       ]
     }
