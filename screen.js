@@ -7,7 +7,7 @@ function getDateTime() {
   const now = new Date();
 
   const date = now.toLocaleDateString('de-CH', {
-    weekday: 'short',
+    weekday: 'long',
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
