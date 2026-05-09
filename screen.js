@@ -73,6 +73,7 @@ function matchLine(m) {
 
 function slideDuration(slide) {
   if (slide.type === 'welcome') return 7000;
+  if (slide.type === 'risotto') return 15000;
   if (slide.type === 'dates') return 16000;
   if (slide.type === 'team') return Math.min(19000, 9000 + (slide.matchCount || 1) * 1500);
   return 11000;
@@ -124,6 +125,45 @@ fetch('data/interclub.json')
           <h1>TC Gerlafingen</h1>
           <p>Turniere · Interclub · Clubleben · Termine 2026</p>
           <div class="welcome-update">Aktualisiert: ${data.updated || ''}</div>
+        </div>
+      </section>`
+    });
+
+
+
+    slides.push({
+      type: 'risotto',
+      html: `<section class="screen-slide risotto-screen-slide">
+        <div class="risotto-screen-bg">
+          <img src="/assets/risotto-clubabend-20260602.jpeg" alt="Chrigu's Spezial-Risotto">
+        </div>
+        <div class="risotto-screen-overlay"></div>
+
+        <div class="risotto-screen-content">
+          <div class="risotto-screen-card">
+            <div class="risotto-screen-kicker">Clubabend · Dienstag, 02. Juni 2026</div>
+
+            <h1>Chrigu's Spezial-Risotto</h1>
+
+            <p class="risotto-screen-lead">
+              Die Herren 35+ 3. Liga laden euch herzlich zum Essen ein.
+            </p>
+
+            <div class="risotto-screen-menu">
+              <div class="risotto-screen-menu-label">Auf dem Menüplan</div>
+              <div class="risotto-screen-menu-main">
+                Feines Risotto mit Weisswein, Zwiebeln und Raclettekäse
+              </div>
+              <div class="risotto-screen-menu-plus">
+                Dazu gibt es etwas Feines vom Grill.
+              </div>
+            </div>
+
+            <div class="risotto-screen-bottom">
+              <div class="risotto-screen-host">Gastgeber: Herren 35+ · 3. Liga</div>
+              <div class="risotto-screen-cta">Jetzt auf tc-gerlafingen.ch anmelden</div>
+            </div>
+          </div>
         </div>
       </section>`
     });
