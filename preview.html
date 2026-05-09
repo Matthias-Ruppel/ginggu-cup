@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clubabend · Chrigu's Spezial-Risotto</title>
+  <style>
+    :root {
+      --tcg-blue: #14335f;
+      --tcg-blue-dark: #0a1f44;
+      --tcg-gold: #ffb703;
+      --tcg-orange: #b55d00;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--tcg-blue-dark);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .tcg-risotto-slide {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      min-height: 720px;
+      overflow: hidden;
+      background: var(--tcg-blue-dark);
+      color: var(--white);
+    }
+
+    .tcg-risotto-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .tcg-risotto-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.03);
+    }
+
+    .tcg-risotto-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(10, 31, 68, 0.94) 0%, rgba(10, 31, 68, 0.76) 43%, rgba(10, 31, 68, 0.24) 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.10));
+    }
+
+    .tcg-risotto-content {
+      position: relative;
+      z-index: 3;
+      max-width: 850px;
+      height: 100%;
+      padding: 7vh 6vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tcg-risotto-kicker {
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 24px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--tcg-blue);
+      font-size: clamp(22px, 2vw, 34px);
+      font-weight: 850;
+      letter-spacing: 0.03em;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+    }
+
+    .tcg-risotto-content h1 {
+      margin: 0 0 20px;
+      font-size: clamp(62px, 7vw, 118px);
+      line-height: 0.95;
+      font-weight: 950;
+      letter-spacing: -0.055em;
+      text-shadow: 0 8px 28px rgba(0, 0, 0, 0.38);
+    }
+
+    .tcg-risotto-lead {
+      margin: 0 0 34px;
+      max-width: 780px;
+      font-size: clamp(28px, 2.8vw, 44px);
+      line-height: 1.12;
+      font-weight: 750;
+      color: #f2f6ff;
+      text-shadow: 0 5px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .tcg-risotto-menu {
+      max-width: 800px;
+      margin-bottom: 36px;
+      padding: 30px 34px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--tcg-blue);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.32);
+    }
+
+    .tcg-risotto-menu-main {
+      font-size: clamp(30px, 3.2vw, 52px);
+      line-height: 1.08;
+      font-weight: 950;
+    }
+
+    .tcg-risotto-menu-plus {
+      margin-top: 18px;
+      font-size: clamp(24px, 2.4vw, 38px);
+      line-height: 1.15;
+      font-weight: 850;
+      color: var(--tcg-orange);
+    }
+
+    .tcg-risotto-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .tcg-risotto-team,
+    .tcg-risotto-cta {
+      padding: 16px 24px;
+      border-radius: 22px;
+      font-size: clamp(22px, 2vw, 34px);
+      font-weight: 850;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    }
+
+    .tcg-risotto-team {
+      background: rgba(255, 255, 255, 0.18);
+      border: 2px solid rgba(255, 255, 255, 0.34);
+      color: #fff;
+    }
+
+    .tcg-risotto-cta {
+      background: var(--tcg-gold);
+      color: #102b50;
+      animation: tcgRisottoPulse 1.8s ease-in-out infinite;
+    }
+
+    .tcg-risotto-hint {
+      position: absolute;
+      right: 28px;
+      bottom: 22px;
+      z-index: 4;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.82);
+      color: var(--tcg-blue);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    @keyframes tcgRisottoPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+      }
+      50% {
+        transform: scale(1.035);
+        box-shadow: 0 18px 46px rgba(255, 183, 3, 0.38);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="tcg-risotto-slide">
+    <div class="tcg-risotto-bg">
+      <img src="assets/risotto-clubabend-20260602.jpg" alt="Chrigu's Spezial-Risotto">
+    </div>
+
+    <div class="tcg-risotto-content">
+      <div class="tcg-risotto-kicker">Clubabend · Dienstag, 02. Juni 2026</div>
+
+      <h1>Chrigu's Spezial-Risotto</h1>
+
+      <p class="tcg-risotto-lead">
+        Die Herren 35+ 3. Liga laden euch herzlich zum Essen ein.
+      </p>
+
+      <div class="tcg-risotto-menu">
+        <div class="tcg-risotto-menu-main">
+          Feines Risotto mit Weisswein, Zwiebeln und Raclettekaese
+        </div>
+        <div class="tcg-risotto-menu-plus">
+          Dazu gibt es etwas Feines vom Grill.
+        </div>
+      </div>
+
+      <div class="tcg-risotto-footer">
+        <div class="tcg-risotto-team">Gastgeber: Herren 35+ · 3. Liga</div>
+        <div class="tcg-risotto-cta">Jetzt auf tc-gerlafingen.ch anmelden</div>
+      </div>
+    </div>
+
+    <div class="tcg-risotto-hint">Preview-Datei · Bildpfad: assets/risotto-clubabend-20260602.jpg</div>
+  </section>
+</body>
+</html>
