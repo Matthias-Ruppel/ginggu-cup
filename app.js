@@ -5,7 +5,12 @@ function isHomeMatch(m) {
 }
 
 function nextMatch(team) {
-  return team.matches.find(m => m.result === '0:0') || team.matches[team.matches.length - 1];
+  const matches = (team.matches || []).filter(isHomeMatch);
+  return matches.find(m => m.result === '0:0') || matches[matches.length - 1] || null;
+}
+
+function displayValue(value) {
+  return value === undefined || value === null ? '' : value;
 }
 
 function tcgRank(team) {
@@ -29,9 +34,9 @@ function matchRow(m) {
 
 function rankingRow(r) {
   return `<tr class="${(r.team || '').includes(TCG) ? 'home-match' : ''}">
-    <td>${r.rank ?? ''}</td>
+    <td>${displayValue(r.rank)}</td>
     <td>${r.team || ''}</td>
-    <td>${r.points ?? ''}</td>
+    <td>${displayValue(r.points)}</td>
     <td>${r.sets || ''}</td>
   </tr>`;
 }
@@ -42,6 +47,10 @@ function teamCard(team) {
   const name = team.name || team.title || '';
   const group = cleanGroup(team);
   const slug = team.slug || team.id || '';
+  const nextInfo = n
+    ? `${n.home || ''} - ${n.away || ''}<br>
+        ${n.date || ''}${n.time ? ' um ' + n.time : ''}`
+    : 'Noch kein TCG-Spiel erfasst';
 
   return `<article class="team-card">
     <div class="team-card-head">
@@ -51,8 +60,7 @@ function teamCard(team) {
 
     <div class="team-card-next">
       <p><strong>Nächstes TCG-Spiel:</strong><br>
-        ${n.home || ''} - ${n.away || ''}<br>
-        ${n.date || ''}${n.time ? ' um ' + n.time : ''}
+        ${nextInfo}
       </p>
     </div>
 
