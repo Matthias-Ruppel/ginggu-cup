@@ -984,3 +984,94 @@ footer a{
     box-shadow:0 16px 40px rgba(255,183,3,.42);
   }
 }
+
+/* Interclub: dezente Hinweise bei offenen oder nachzutragenden Resultaten */
+tr.missing-result td{
+  background:#fff8e6 !important;
+}
+
+.missing-result-note{
+  display:inline-block;
+  margin-left:.45rem;
+  padding:.16rem .5rem;
+  border-radius:999px;
+  background:#fff3cd;
+  color:#7c4a03;
+  border:1px solid #f6d68a;
+  font-size:.76rem;
+  line-height:1;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+.data-hint{
+  display:inline-block;
+  margin:.4rem 0 0;
+  padding:.5rem .75rem;
+  border-radius:999px;
+  background:#fff8e6;
+  color:#7c4a03;
+  border:1px solid #f6d68a;
+  font-weight:800;
+}
+
+.phase-pill,
+.screen-phase-pill{
+  display:inline-block;
+  width:max-content;
+  border-radius:999px;
+  background:var(--yellow);
+  color:#102f59;
+  font-weight:900;
+  line-height:1;
+  white-space:nowrap;
+}
+
+.phase-pill{
+  padding:.18rem .55rem;
+  margin-right:.25rem;
+  font-size:.78rem;
+}
+
+.phase-table h3{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+
+.phase-table h3::before{
+  content:"";
+  width:.75rem;
+  height:.75rem;
+  border-radius:999px;
+  background:var(--yellow);
+  display:inline-block;
+}
+
+.screen-phase-pill{
+  padding:.18vw .5vw;
+  font-size:.72vw;
+  vertical-align:middle;
+}
+
+.screen-phase-pill.big{
+  padding:.32vw .75vw;
+  font-size:.95vw;
+  margin-right:.35vw;
+}
+
+.screen-match-list li.missing-screen-result{
+  background:rgba(255, 243, 205, .13);
+  border-left-color:#f6c343;
+}
+
+.screen-match-list li.missing-screen-result em{
+  color:#ffe7a3;
+  font-style:normal;
+  font-size:.82vw;
+  font-weight:800;
+}
+
+.screen-match-list li.missing-screen-result .screen-result{
+  color:#ffe7a3;
+}

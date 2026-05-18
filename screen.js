@@ -1,7 +1,22 @@
 const TCG = 'Gerlafingen';
+const DEFAULT_SEASON_YEAR = 2026;
 let slides = [];
 let current = 0;
 let timer = null;
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+}
+
+function seasonYear(data) {
+  const match = String(data?.season || '').match(/20\d{2}/);
+  return match ? Number(match[0]) : DEFAULT_SEASON_YEAR;
+}
 
 function getDateTime() {
   const now = new Date();
@@ -29,13 +44,51 @@ function isHomeMatch(m) {
   return (m.home || '').includes(TCG);
 }
 
-function tcgMatches(team) {
-  return (team.matches || []).filter(isTcgMatch);
+function isOpenResult(m) {
+  const result = String(m.result ?? '').trim();
+  return result === '' || result === '-' || result === '0:0';
 }
 
-function nextTcgMatch(team) {
-  const list = tcgMatches(team);
-  return list.find(m => m.result === '0:0') || list[list.length - 1];
+function parseMatchDate(m, year = DEFAULT_SEASON_YEAR) {
+  const match = String(m.date || '').match(/(\d{1,2})\.(\d{1,2})\.?/);
+  if (!match) return null;
+
+  const day = Number(match[1]);
+  const month = Number(match[2]);
+  const [hour = 23, minute = 59] = String(m.time || '').match(/\d{1,2}/g)?.map(Number) || [];
+
+  return new Date(year, month - 1, day, hour, minute, 0, 0);
+}
+
+function startOfToday() {
+  const now = new Date();
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+}
+
+function isPastOpenResult(m, year = DEFAULT_SEASON_YEAR) {
+  const date = parseMatchDate(m, year);
+  if (!date || !isOpenResult(m)) return false;
+  return date < startOfToday();
+}
+
+function matchSortValue(m, year = DEFAULT_SEASON_YEAR) {
+  const date = parseMatchDate(m, year);
+  return date ? date.getTime() : Number.MAX_SAFE_INTEGER;
+}
+
+function tcgMatches(team) {
+  return [...(team.matches || []), ...(team.playoffs || [])].filter(isTcgMatch);
+}
+
+function nextTcgMatch(team, year = DEFAULT_SEASON_YEAR) {
+  const futureOpen = tcgMatches(team)
+    .filter(m => isOpenResult(m) && !isPastOpenResult(m, year))
+    .sort((a, b) => matchSortValue(a, year) - matchSortValue(b, year));
+
+  if (futureOpen.length) return futureOpen[0];
+
+  const all = tcgMatches(team).sort((a, b) => matchSortValue(a, year) - matchSortValue(b, year));
+  return all[all.length - 1] || null;
 }
 
 function tcgRank(team) {
@@ -52,21 +105,30 @@ function rankingLine(r) {
   const isTcg = (r.team || '').includes(TCG);
   return `<li class="${isTcg ? 'tcg-rank' : ''}">
     <span class="rank-number">${r.rank ?? ''}</span>
-    <span class="rank-team">${r.team || ''}</span>
+    <span class="rank-team">${escapeHtml(r.team || '')}</span>
     <span class="rank-points">${r.points ?? ''}</span>
-    <span class="rank-sets">${r.sets || ''}</span>
+    <span class="rank-sets">${escapeHtml(r.sets || '')}</span>
   </li>`;
 }
 
-function matchLine(m) {
-  const home = isHomeMatch(m);
+function screenResult(m, year = DEFAULT_SEASON_YEAR) {
+  if (isPastOpenResult(m, year)) return 'offen';
+  const result = String(m.result ?? '').trim();
+  return result === '' || result === '-' ? '-' : escapeHtml(result);
+}
 
-  return `<li class="${home ? 'home' : 'away'}">
+function matchLine(m, year = DEFAULT_SEASON_YEAR) {
+  const home = isHomeMatch(m);
+  const missing = isPastOpenResult(m, year);
+  const phase = m.phase ? `<span class="screen-phase-pill">${escapeHtml(m.phase)}</span> ` : '';
+
+  return `<li class="${home ? 'home' : 'away'} ${missing ? 'missing-screen-result' : ''}">
     <span>
-      <strong>${m.date || ''}${m.time ? ' · ' + m.time : ''}</strong><br>
-      ${m.home || ''} – ${m.away || ''}
+      <strong>${phase}${escapeHtml(m.date || '')}${m.time ? ' · ' + escapeHtml(m.time) : ''}</strong><br>
+      ${escapeHtml(m.home || '')} – ${escapeHtml(m.away || '')}
+      ${missing ? '<br><em>Resultat noch nicht nachgetragen</em>' : ''}
     </span>
-    <span class="screen-result">${m.result || '-'}</span>
+    <span class="screen-result">${screenResult(m, year)}</span>
     ${home ? '<span class="home-badge">Heimspiel</span>' : '<span></span>'}
   </li>`;
 }
@@ -75,7 +137,7 @@ function slideDuration(slide) {
   if (slide.type === 'welcome') return 7000;
   if (slide.type === 'risotto') return 15000;
   if (slide.type === 'dates') return 16000;
-  if (slide.type === 'team') return Math.min(19000, 9000 + (slide.matchCount || 1) * 1500);
+  if (slide.type === 'team') return Math.min(21000, 9500 + (slide.matchCount || 1) * 1500);
   return 11000;
 }
 
@@ -116,6 +178,8 @@ function start() {
 fetch('data/interclub.json')
   .then(r => r.json())
   .then(data => {
+    const year = seasonYear(data);
+
     slides.push({
       type: 'welcome',
       html: `<section class="screen-slide welcome-slide screen-light-slide">
@@ -124,12 +188,10 @@ fetch('data/interclub.json')
           <span class="screen-badge">Willkommen im Clubhaus</span>
           <h1>TC Gerlafingen</h1>
           <p>Turniere · Interclub · Clubleben · Termine 2026</p>
-          <div class="welcome-update">Aktualisiert: ${data.updated || ''}</div>
+          <div class="welcome-update">Aktualisiert: ${escapeHtml(data.updated || '')}</div>
         </div>
       </section>`
     });
-
-
 
     slides.push({
       type: 'risotto',
@@ -187,35 +249,38 @@ fetch('data/interclub.json')
       </section>`
     });
 
-    data.teams.forEach(team => {
+    (data.teams || []).forEach(team => {
       const name = team.name || team.title || '';
       const group = cleanGroup(team);
-      const n = nextTcgMatch(team);
-      const matches = tcgMatches(team);
+      const n = nextTcgMatch(team, year);
+      const matches = tcgMatches(team).sort((a, b) => matchSortValue(a, year) - matchSortValue(b, year));
       const home = n && isHomeMatch(n);
+      const rank = tcgRank(team);
+      const missingCount = matches.filter(m => isPastOpenResult(m, year)).length;
+      const phase = n?.phase ? `<span class="screen-phase-pill big">${escapeHtml(n.phase)}</span> ` : '';
 
       slides.push({
         type: 'team',
         matchCount: matches.length,
         html: `<section class="screen-slide team-slide">
           <div class="screen-team-header">
-            <div class="screen-team-name">${name}</div>
-            <div class="screen-team-group">${group}</div>
+            <div class="screen-team-name">${escapeHtml(name)}</div>
+            <div class="screen-team-group">${escapeHtml(group)}${rank ? ` · TCG Rang ${rank.rank}` : ''}</div>
           </div>
 
           <div class="screen-card next-match">
             <h3>Nächstes TCG-Spiel</h3>
             <p>
-              ${n ? `${n.home || ''} – ${n.away || ''}<br>${n.date || ''}${n.time ? ' · ' + n.time + ' Uhr' : ''}` : 'Noch kein Spiel erfasst'}
+              ${n ? `${phase}${escapeHtml(n.home || '')} – ${escapeHtml(n.away || '')}<br>${escapeHtml(n.date || '')}${n.time ? ' · ' + escapeHtml(n.time) + ' Uhr' : ''}` : 'Noch kein Spiel erfasst'}
             </p>
             ${home ? '<span class="home-badge big">Heimspiel</span>' : ''}
           </div>
 
           <div class="screen-grid lower">
             <div class="screen-card">
-              <h3>TCG-Spiele</h3>
+              <h3>TCG-Spiele${missingCount ? ` · ${missingCount} Resultat offen` : ''}</h3>
               <ul class="screen-match-list">
-                ${matches.map(matchLine).join('')}
+                ${matches.map(m => matchLine(m, year)).join('')}
               </ul>
             </div>
             <div class="screen-card">
