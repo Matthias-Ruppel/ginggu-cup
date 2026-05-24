@@ -1,0 +1,64 @@
+# Ginggu Cup - Arbeitsnotizen fuer Codex
+
+## Projekt
+- Repo: `Matthias-Ruppel/ginggu-cup`
+- Lokaler Pfad: `C:\Users\zinma\Documents\HW-SW-Projekte\TCG Sachen\Screen`
+- GitHub: `https://github.com/Matthias-Ruppel/ginggu-cup`
+- `main` ist der stabile Stand. Fuer inhaltliche oder funktionale Aenderungen
+  bevorzugt einen kurzen Feature-Branch verwenden, ausser der Nutzer verlangt
+  ausdruecklich direkte Arbeit auf `main`.
+- Das Projekt ist eine statische Web-App. Wichtige Einstiege:
+  - `index.html`
+  - `screen.html`
+  - `preview.html`
+  - `app.js`
+  - `screen.js`
+  - `style.css`
+  - `data/interclub.json`
+
+## Arbeitsweise
+- Vor Aenderungen kurz die betroffenen Dateien lesen und bestehende Struktur respektieren.
+- Keine unrelated Refactorings oder Formatierungsaktionen.
+- Keine bestehenden Inhalte/Assets loeschen, ausser der Nutzer verlangt es ausdruecklich.
+- Bei UI-Aenderungen immer Desktop- und Screen-/Anzeige-Nutzung mitdenken.
+- Display-Texte in Deutsch halten, sofern der bestehende Kontext nichts anderes vorgibt.
+
+## Versionierung
+- Die Projektversion steht in `VERSION`.
+- Bei jeder abgeschlossenen inhaltlichen, visuellen oder funktionalen Aenderung
+  die Version erhoehen.
+- Kleine Aenderungen: Patch/Dezimal erhoehen, z.B. `0.1` -> `0.2`.
+- Groessere stabile Releases: auf die naechste ganze Version erhoehen, z.B.
+  `0.7` -> `1.0`.
+- Wenn eine Version sichtbar in der Web-App eingebaut wird, muss sie mit
+  `VERSION` uebereinstimmen.
+- Bei stabilen Releases ein Git-Tag passend zur Version verwenden, z.B. `v1.0`.
+
+## Lokales Testen
+- Da es statische HTML-Dateien sind, kann meist direkt im Browser getestet werden.
+- Falls ein lokaler Server noetig ist:
+
+```powershell
+cd "C:\Users\zinma\Documents\HW-SW-Projekte\TCG Sachen\Screen"
+python -m http.server 8080
+```
+
+- Danach im Browser:
+  - `http://localhost:8080/`
+  - `http://localhost:8080/screen.html`
+  - `http://localhost:8080/preview.html`
+
+## Git
+- Vor groesseren Aenderungen `git status --short --branch` pruefen.
+- Lokale Nutzer-Aenderungen nie ungefragt zuruecksetzen.
+- Commits, Pushes, Tags, Releases und Pull Requests nur machen, wenn der Nutzer
+  es ausdruecklich verlangt oder nach der Test-Zusammenfassung freigibt.
+- Nach jeder abgeschlossenen Aenderung vor GitHub-Aktionen kurz zusammenfassen:
+  - Version vorher und Version jetzt.
+  - Was geaendert wurde.
+  - Wie getestet wurde.
+  - Worauf der Nutzer beim Anschauen achten soll.
+- Danach explizit fragen, ob die Aenderungen nach GitHub committed/gepusht,
+  getaggt oder als Release/PR veroeffentlicht werden sollen.
+- Direkter Push auf `main` nur nach ausdruecklicher Zustimmung. Bei riskanten
+  Aenderungen einen Feature-Branch und optional Pull Request nach `main` nutzen.

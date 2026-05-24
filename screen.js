@@ -207,22 +207,36 @@ fetch('data/interclub.json')
 
             <h1>Chrigu's Spezial-Risotto</h1>
 
+            <p class="risotto-screen-subtitle">
+              Risotto mit Weisswein, Zwiebeln und Raclettekäse
+            </p>
+
             <p class="risotto-screen-lead">
-              Die Herren 35+ 3. Liga laden euch herzlich zum Essen ein.
+              Die Herren 35+ 3. Liga<br>
+              laden euch herzlich zum italienischen Clubabend ein.
             </p>
 
             <div class="risotto-screen-menu">
-              <div class="risotto-screen-menu-label">Auf dem Menüplan</div>
-              <div class="risotto-screen-menu-main">
-                Feines Risotto mit Weisswein, Zwiebeln und Raclettekäse
+              <div class="risotto-screen-course">
+                <strong>Vorspeise</strong>
+                <span>Tomaten-Mozzarella-Salat</span>
               </div>
-              <div class="risotto-screen-menu-plus">
-                Dazu gibt es etwas Feines vom Grill.
+              <div class="risotto-screen-course featured">
+                <strong>Hauptrolle</strong>
+                <span>Chrigu's Risotto</span>
+              </div>
+              <div class="risotto-screen-course">
+                <strong>Vom Grill</strong>
+                <span>Poulet vom Grill</span>
+              </div>
+              <div class="risotto-screen-course">
+                <strong>Dessert</strong>
+                <span>Tiramisu</span>
               </div>
             </div>
 
             <div class="risotto-screen-bottom">
-              <div class="risotto-screen-host">Gastgeber: Herren 35+ · 3. Liga</div>
+              <div class="risotto-screen-price">Menu: CHF 17.50</div>
               <div class="risotto-screen-cta">Jetzt auf tc-gerlafingen.ch anmelden</div>
             </div>
           </div>
