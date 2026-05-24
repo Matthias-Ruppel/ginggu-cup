@@ -1,5 +1,6 @@
 const TCG = 'Gerlafingen';
 const DEFAULT_SEASON_YEAR = 2026;
+const LAST_PUSH_DATE = '24.05.2026';
 let slides = [];
 let current = 0;
 let timer = null;
@@ -188,7 +189,7 @@ fetch('data/interclub.json')
           <span class="screen-badge">Willkommen im Clubhaus</span>
           <h1>TC Gerlafingen</h1>
           <p>Turniere · Interclub · Clubleben · Termine 2026</p>
-          <div class="welcome-update">Aktualisiert: ${escapeHtml(data.updated || '')}</div>
+          <div class="welcome-update">Letzter Push: ${LAST_PUSH_DATE}</div>
         </div>
       </section>`
     });
