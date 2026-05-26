@@ -1,6 +1,6 @@
 const TCG = 'Gerlafingen';
 const DEFAULT_SEASON_YEAR = 2026;
-const LAST_PUSH_DATE = '24.05.2026';
+const LAST_PUSH_DATE = '26.05.2026';
 let slides = [];
 let current = 0;
 let timer = null;
@@ -113,9 +113,9 @@ function rankingLine(r) {
 }
 
 function screenResult(m, year = DEFAULT_SEASON_YEAR) {
-  if (isPastOpenResult(m, year)) return 'offen';
+  if (isPastOpenResult(m, year)) return 'prüfen';
   const result = String(m.result ?? '').trim();
-  return result === '' || result === '-' ? '-' : escapeHtml(result);
+  return isOpenResult(m) ? '-' : escapeHtml(result);
 }
 
 function matchLine(m, year = DEFAULT_SEASON_YEAR) {
@@ -127,7 +127,7 @@ function matchLine(m, year = DEFAULT_SEASON_YEAR) {
     <span>
       <strong>${phase}${escapeHtml(m.date || '')}${m.time ? ' · ' + escapeHtml(m.time) : ''}</strong><br>
       ${escapeHtml(m.home || '')} – ${escapeHtml(m.away || '')}
-      ${missing ? '<br><em>Resultat noch nicht nachgetragen</em>' : ''}
+      ${missing ? '<br><em>Resultat offen / prüfen</em>' : ''}
     </span>
     <span class="screen-result">${screenResult(m, year)}</span>
     ${home ? '<span class="home-badge">Heimspiel</span>' : '<span></span>'}
@@ -189,7 +189,7 @@ fetch('data/interclub.json')
           <span class="screen-badge">Willkommen im Clubhaus</span>
           <h1>TC Gerlafingen</h1>
           <p>Turniere · Interclub · Clubleben · Termine 2026</p>
-          <div class="welcome-update">Letzter Push: ${LAST_PUSH_DATE}</div>
+          <div class="welcome-update">Aktualisiert: ${LAST_PUSH_DATE}</div>
         </div>
       </section>`
     });

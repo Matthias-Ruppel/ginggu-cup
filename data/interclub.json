@@ -1,6 +1,6 @@
 {
   "season": "Interclub 2026",
-  "updated": "11.05.2026",
+  "updated": "26.05.2026",
   "teams": [
     {
       "id": "damen-2l",
@@ -38,7 +38,7 @@
         {
           "round": 2,
           "date": "10.05.",
-          "time": "15:00",
+          "time": "",
           "home": "Belchen 1",
           "away": "Bally Schönenwerd 1",
           "result": "2:4"
@@ -46,7 +46,7 @@
         {
           "round": 2,
           "date": "09.05.",
-          "time": "10:00",
+          "time": "",
           "home": "Born Kappel",
           "away": "Gerlafingen",
           "result": "6:0"
@@ -54,7 +54,7 @@
         {
           "round": 2,
           "date": "10.05.",
-          "time": "09:30",
+          "time": "",
           "home": "Worbenbad",
           "away": "Scheuren 2",
           "result": "6:0"
@@ -62,26 +62,26 @@
         {
           "round": 3,
           "date": "16.05.",
-          "time": "09:00",
+          "time": "",
           "home": "Bally Schönenwerd 1",
           "away": "Scheuren 2",
-          "result": "0:0"
+          "result": "5:1"
         },
         {
           "round": 3,
           "date": "16.05.",
-          "time": "09:00",
+          "time": "",
           "home": "Belchen 1",
           "away": "Born Kappel",
-          "result": "0:0"
+          "result": "5:1"
         },
         {
           "round": 3,
           "date": "17.05.",
-          "time": "09:00",
+          "time": "",
           "home": "Gerlafingen",
           "away": "Worbenbad",
-          "result": "0:0"
+          "result": "0:6"
         },
         {
           "round": 4,
@@ -136,38 +136,38 @@
         {
           "rank": 1,
           "team": "Worbenbad",
-          "points": 10,
-          "sets": "21 - 5"
+          "points": 16,
+          "sets": "33 - 7"
         },
         {
           "rank": 2,
-          "team": "Born Kappel",
-          "points": 8,
-          "sets": "17 - 9"
+          "team": "Bally Schönenwerd 1",
+          "points": 13,
+          "sets": "27 - 12"
         },
         {
           "rank": 3,
-          "team": "Bally Schönenwerd 1",
-          "points": 8,
-          "sets": "17 - 10"
+          "team": "Belchen 1",
+          "points": 12,
+          "sets": "27 - 15"
         },
         {
           "rank": 4,
-          "team": "Belchen 1",
-          "points": 7,
-          "sets": "17 - 13"
+          "team": "Born Kappel",
+          "points": 9,
+          "sets": "19 - 19"
         },
         {
           "rank": 5,
           "team": "Gerlafingen",
           "points": 2,
-          "sets": "4 - 20"
+          "sets": "6 - 32"
         },
         {
           "rank": 6,
           "team": "Scheuren 2",
-          "points": 1,
-          "sets": "4 - 23"
+          "points": 2,
+          "sets": "6 - 33"
         }
       ]
     },
@@ -199,7 +199,7 @@
         {
           "round": 2,
           "date": "09.05.",
-          "time": "09:00",
+          "time": "",
           "home": "Aarberg",
           "away": "Gerlafingen",
           "result": "5:4"
@@ -207,7 +207,7 @@
         {
           "round": 2,
           "date": "09.05.",
-          "time": "10:00",
+          "time": "",
           "home": "Tela 2",
           "away": "Olten 1",
           "result": "5:4"
@@ -215,23 +215,23 @@
         {
           "round": 3,
           "date": "17.05.",
-          "time": "13:00",
+          "time": "",
           "home": "Olten 1",
           "away": "Gerlafingen",
-          "result": "0:0"
+          "result": "1:8"
         },
         {
           "round": 3,
           "date": "16.05.",
-          "time": "09:00",
+          "time": "",
           "home": "Schützenmatt SO",
           "away": "Aarberg",
-          "result": "0:0"
+          "result": "5:4"
         },
         {
           "round": 4,
           "date": "06.06.",
-          "time": "",
+          "time": "13:00",
           "home": "Aarberg",
           "away": "Tela 2",
           "result": "0:0"
@@ -265,32 +265,32 @@
         {
           "rank": 1,
           "team": "Gerlafingen",
-          "points": 11,
-          "sets": "25 - 14"
+          "points": 19,
+          "sets": "42 - 17"
         },
         {
           "rank": 2,
-          "team": "Tela 2",
-          "points": 7,
-          "sets": "14 - 24"
+          "team": "Schützenmatt SO",
+          "points": 11,
+          "sets": "26 - 17"
         },
         {
           "rank": 3,
-          "team": "Olten 1",
-          "points": 7,
-          "sets": "16 - 23"
+          "team": "Aarberg",
+          "points": 9,
+          "sets": "20 - 23"
         },
         {
           "rank": 4,
-          "team": "Schützenmatt SO",
-          "points": 6,
-          "sets": "13 - 7"
+          "team": "Olten 1",
+          "points": 8,
+          "sets": "19 - 40"
         },
         {
           "rank": 5,
-          "team": "Aarberg",
-          "points": 5,
-          "sets": "10 - 10"
+          "team": "Tela 2",
+          "points": 7,
+          "sets": "14 - 24"
         }
       ]
     },
@@ -301,7 +301,7 @@
       "title": "35+ 2L Herren",
       "group": "35+ 2L Herren - Gruppe 41",
       "captain": "Daniel Cramer",
-      "homeMatches": 1,
+      "homeMatches": 2,
       "matches": [
         {
           "round": 1,
@@ -322,7 +322,7 @@
         {
           "round": 2,
           "date": "09.05.",
-          "time": "14:00",
+          "time": "",
           "home": "Wangen",
           "away": "Gerlafingen",
           "result": "7:2"
@@ -330,7 +330,7 @@
         {
           "round": 2,
           "date": "09.05.",
-          "time": "10:00",
+          "time": "",
           "home": "Saignelégier",
           "away": "Derendingen-Zuchwil",
           "result": "7:2"
@@ -338,44 +338,55 @@
         {
           "round": 3,
           "date": "16.05.",
-          "time": "09:00",
+          "time": "",
           "home": "Wangen",
           "away": "Saignelégier",
-          "result": "0:0"
+          "result": "2:7"
         },
         {
           "round": 3,
           "date": "17.05.",
-          "time": "13:00",
+          "time": "",
           "home": "Gerlafingen",
           "away": "Derendingen-Zuchwil",
-          "result": "0:0"
+          "result": "8:1"
+        }
+      ],
+      "playoffs": [
+        {
+          "phase": "Abstieg",
+          "round": 4,
+          "date": "06.06.",
+          "time": "",
+          "home": "Gerlafingen",
+          "away": "Pratteln",
+          "result": ""
         }
       ],
       "ranking": [
         {
           "rank": 1,
           "team": "Saignelégier",
-          "points": 15,
-          "sets": "32 - 9"
+          "points": 22,
+          "sets": "47 - 13"
         },
         {
           "rank": 2,
           "team": "Wangen",
-          "points": 13,
-          "sets": "28 - 12"
+          "points": 15,
+          "sets": "32 - 27"
         },
         {
           "rank": 3,
-          "team": "Derendingen-Zuchwil",
-          "points": 5,
-          "sets": "11 - 29"
+          "team": "Gerlafingen",
+          "points": 11,
+          "sets": "26 - 36"
         },
         {
           "rank": 4,
-          "team": "Gerlafingen",
-          "points": 3,
-          "sets": "10 - 31"
+          "team": "Derendingen-Zuchwil",
+          "points": 6,
+          "sets": "16 - 45"
         }
       ]
     },
@@ -391,7 +402,7 @@
         {
           "round": 1,
           "date": "03.05.",
-          "time": "10:00",
+          "time": "",
           "home": "Saignelégier",
           "away": "Dufour 2",
           "result": "6:3"
@@ -407,7 +418,7 @@
         {
           "round": 2,
           "date": "10.05.",
-          "time": "13:00",
+          "time": "",
           "home": "Wander BE 1",
           "away": "Saignelégier",
           "result": "9:0"
@@ -415,31 +426,31 @@
         {
           "round": 2,
           "date": "09.05.",
-          "time": "14:00",
+          "time": "",
           "home": "Dufour 2",
           "away": "Gerlafingen",
           "result": "4:5"
         },
         {
           "round": 3,
-          "date": "16.05.",
-          "time": "13:30",
+          "date": "25.05.",
+          "time": "",
           "home": "Gerlafingen",
           "away": "Saignelégier",
-          "result": "0:0"
+          "result": "1:8"
         },
         {
           "round": 3,
-          "date": "16.05.",
-          "time": "09:00",
+          "date": "23.05.",
+          "time": "",
           "home": "Lyss",
           "away": "Wander BE 1",
-          "result": "0:0"
+          "result": "1:8"
         },
         {
           "round": 4,
           "date": "06.06.",
-          "time": "10:00",
+          "time": "13:30",
           "home": "Saignelégier",
           "away": "Lyss",
           "result": "0:0"
@@ -472,33 +483,33 @@
       "ranking": [
         {
           "rank": 1,
-          "team": "Gerlafingen",
-          "points": 10,
-          "sets": "23 - 18"
+          "team": "Wander BE 1",
+          "points": 17,
+          "sets": "34 - 5"
         },
         {
           "rank": 2,
-          "team": "Wander BE 1",
-          "points": 9,
-          "sets": "18 - 2"
+          "team": "Saignelégier",
+          "points": 14,
+          "sets": "30 - 28"
         },
         {
           "rank": 3,
+          "team": "Gerlafingen",
+          "points": 11,
+          "sets": "25 - 34"
+        },
+        {
+          "rank": 4,
           "team": "Dufour 2",
           "points": 7,
           "sets": "17 - 24"
         },
         {
-          "rank": 4,
-          "team": "Saignelégier",
-          "points": 6,
-          "sets": "14 - 26"
-        },
-        {
           "rank": 5,
           "team": "Lyss",
-          "points": 4,
-          "sets": "9 - 11"
+          "points": 5,
+          "sets": "12 - 27"
         }
       ]
     },
@@ -530,7 +541,7 @@
         {
           "round": 2,
           "date": "09.05.",
-          "time": "09:00",
+          "time": "",
           "home": "Gerlafingen",
           "away": "Sporting Derendingen",
           "result": "3:3"
@@ -538,7 +549,7 @@
         {
           "round": 2,
           "date": "10.05.",
-          "time": "12:00",
+          "time": "",
           "home": "Bally Schönenwerd",
           "away": "Evilard",
           "result": "5:1"
@@ -546,44 +557,55 @@
         {
           "round": 3,
           "date": "16.05.",
-          "time": "12:00",
+          "time": "",
           "home": "Bally Schönenwerd",
           "away": "Gerlafingen",
-          "result": "0:0"
+          "result": "6:0"
         },
         {
           "round": 3,
           "date": "17.05.",
-          "time": "09:00",
+          "time": "",
           "home": "Evilard",
           "away": "Sporting Derendingen",
-          "result": "0:0"
+          "result": "2:4"
+        }
+      ],
+      "playoffs": [
+        {
+          "phase": "Aufstieg",
+          "round": 4,
+          "date": "06.06.",
+          "time": "",
+          "home": "Old Boys BS 2",
+          "away": "Gerlafingen",
+          "result": ""
         }
       ],
       "ranking": [
         {
           "rank": 1,
           "team": "Bally Schönenwerd",
-          "points": 10,
-          "sets": "20 - 7"
+          "points": 16,
+          "sets": "32 - 8"
         },
         {
           "rank": 2,
           "team": "Gerlafingen",
           "points": 8,
-          "sets": "16 - 12"
+          "sets": "17 - 24"
         },
         {
           "rank": 3,
           "team": "Sporting Derendingen",
-          "points": 4,
-          "sets": "10 - 16"
+          "points": 8,
+          "sets": "18 - 22"
         },
         {
           "rank": 4,
           "team": "Evilard",
-          "points": 2,
-          "sets": "9 - 20"
+          "points": 4,
+          "sets": "15 - 28"
         }
       ]
     },
@@ -615,7 +637,7 @@
         {
           "round": 2,
           "date": "09.05.",
-          "time": "13:30",
+          "time": "",
           "home": "Gerlafingen",
           "away": "Delémont",
           "result": "2:5"
@@ -623,7 +645,7 @@
         {
           "round": 2,
           "date": "09.05.",
-          "time": "09:00",
+          "time": "",
           "home": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
           "away": "Grolley",
           "result": "6:1"
@@ -631,18 +653,18 @@
         {
           "round": 3,
           "date": "17.05.",
-          "time": "09:30",
+          "time": "",
           "home": "Grolley",
           "away": "Delémont",
-          "result": "0:0"
+          "result": "1:6"
         },
         {
           "round": 3,
           "date": "17.05.",
-          "time": "09:00",
+          "time": "",
           "home": "Estavayer-le-Lac",
           "away": "Gerlafingen",
-          "result": "0:0"
+          "result": "7:0"
         },
         {
           "round": 4,
@@ -681,32 +703,32 @@
         {
           "rank": 1,
           "team": "Delémont",
-          "points": 11,
-          "sets": "23 - 8"
+          "points": 17,
+          "sets": "35 - 10"
         },
         {
           "rank": 2,
+          "team": "Estavayer-le-Lac",
+          "points": 12,
+          "sets": "24 - 7"
+        },
+        {
+          "rank": 3,
           "team": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
           "points": 7,
           "sets": "14 - 16"
         },
         {
-          "rank": 3,
-          "team": "Estavayer-le-Lac",
-          "points": 5,
-          "sets": "10 - 5"
-        },
-        {
           "rank": 4,
           "team": "Grolley",
-          "points": 3,
-          "sets": "8 - 22"
+          "points": 4,
+          "sets": "10 - 34"
         },
         {
           "rank": 5,
           "team": "Gerlafingen",
           "points": 2,
-          "sets": "6 - 10"
+          "sets": "8 - 24"
         }
       ]
     },
@@ -737,7 +759,7 @@
         },
         {
           "round": 2,
-          "date": "18.05.",
+          "date": "27.05.",
           "time": "10:00",
           "home": "Tela",
           "away": "Langenthal",
@@ -746,7 +768,7 @@
         {
           "round": 2,
           "date": "06.05.",
-          "time": "09:30",
+          "time": "",
           "home": "Wangen",
           "away": "Gerlafingen",
           "result": "1:5"
@@ -754,44 +776,44 @@
         {
           "round": 3,
           "date": "13.05.",
-          "time": "09:30",
+          "time": "",
           "home": "Wangen",
           "away": "Tela",
-          "result": "0:0"
+          "result": "0:6"
         },
         {
           "round": 3,
           "date": "12.05.",
-          "time": "10:00",
+          "time": "",
           "home": "Gerlafingen",
           "away": "Langenthal",
-          "result": "0:0"
+          "result": "5:1"
         }
       ],
       "ranking": [
         {
           "rank": 1,
-          "team": "Gerlafingen",
-          "points": 6,
-          "sets": "13 - 12"
+          "team": "Tela",
+          "points": 11,
+          "sets": "22 - 4"
         },
         {
           "rank": 2,
-          "team": "Tela",
-          "points": 5,
-          "sets": "10 - 3"
+          "team": "Gerlafingen",
+          "points": 11,
+          "sets": "23 - 14"
         },
         {
           "rank": 3,
           "team": "Langenthal",
-          "points": 4,
-          "sets": "10 - 4"
+          "points": 5,
+          "sets": "12 - 14"
         },
         {
           "rank": 4,
           "team": "Wangen",
           "points": 3,
-          "sets": "6 - 20"
+          "sets": "7 - 32"
         }
       ]
     }

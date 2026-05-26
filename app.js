@@ -96,13 +96,12 @@ function formatMatchName(m) {
 
 function formatResult(m, year = DEFAULT_SEASON_YEAR) {
   const result = String(m.result ?? '').trim();
-  const shown = result === '' || result === '-' ? '-' : escapeHtml(result);
 
   if (isPastOpenResult(m, year)) {
-    return `${shown} <span class="missing-result-note">Resultat offen</span>`;
+    return '<span class="missing-result-note">Resultat offen / prüfen</span>';
   }
 
-  return shown;
+  return isOpenResult(m) ? '-' : escapeHtml(result);
 }
 
 function matchRow(m, year = DEFAULT_SEASON_YEAR) {

@@ -27,7 +27,7 @@
 - Die Projektversion steht in `VERSION`.
 - Bei jeder abgeschlossenen inhaltlichen, visuellen oder funktionalen Aenderung
   die Version erhoehen.
-- Wenn auf einer Frontseite oder Startfolie ein Datum wie `Letzter Push` steht,
+- Wenn auf einer Frontseite oder Startfolie ein Datum wie `Aktualisiert` steht,
   muss es direkt vor Commit/Push auf das Datum des tatsaechlichen GitHub-Pushes
   aktualisiert werden.
 - Kleine Aenderungen: Patch/Dezimal erhoehen, z.B. `0.1` -> `0.2`.
