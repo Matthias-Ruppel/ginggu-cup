@@ -1398,6 +1398,11 @@ tr.missing-result td{
   box-shadow:0 18px 42px rgba(0,0,0,.22);
 }
 
+.screen-v2-event-media{
+  position:relative;
+  margin:0 0 1.45vh;
+}
+
 .screen-v2-event-image{
   width:100%;
   aspect-ratio:16/10;
@@ -1405,7 +1410,7 @@ tr.missing-result td{
   object-position:center;
   border-radius:.9vw;
   padding:.7vw;
-  margin:0 0 1.45vh;
+  margin:0;
   background:#fff;
   box-shadow:0 12px 30px rgba(0,0,0,.28);
 }
@@ -1413,11 +1418,23 @@ tr.missing-result td{
 .screen-v2-kicker{
   margin:0 0 1vh !important;
   color:#f6c343 !important;
-  font-size:1.02vw !important;
+  font-size:1vw !important;
   line-height:1 !important;
   font-weight:950;
   text-transform:uppercase;
   letter-spacing:.08em;
+}
+
+.screen-v2-event-media .screen-v2-kicker{
+  position:absolute;
+  top:.7vw;
+  left:.7vw;
+  margin:0 !important;
+  padding:.45vw .7vw;
+  border-radius:999px;
+  background:rgba(7,24,46,.86);
+  color:#f6c343 !important;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 .screen-v2-event h2{
