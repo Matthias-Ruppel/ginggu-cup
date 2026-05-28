@@ -180,10 +180,8 @@ function renderSlide() {
           </div>
 
           <section class="screen-v2-event">
-            <div class="screen-v2-event-media">
-              <img class="screen-v2-event-image" src="assets/Spezial-Risotto.png" alt="Chrigu's Spezial-Risotto">
-              <p class="screen-v2-kicker">Nächstes Event</p>
-            </div>
+            <p class="screen-v2-kicker">Nächstes Event</p>
+            <img class="screen-v2-event-image" src="assets/Spezial-Risotto.png" alt="Chrigu's Spezial-Risotto">
             <h2>Chrigu's Spezial-Risotto</h2>
             <p class="screen-v2-date">Dienstag, 02. Juni 2026</p>
             <p class="screen-v2-teaser">Italienischer Clubabend mit Salat, Risotto, Poulet vom Grill und Tiramisu.</p>
