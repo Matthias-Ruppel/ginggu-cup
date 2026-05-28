@@ -251,9 +251,10 @@ fetch('data/interclub.json')
       </section>`
     });
 
-    slides.push({
-      type: 'risotto',
-      html: `<section class="screen-slide risotto-screen-slide">
+    if (SCREEN_VARIANT !== '2') {
+      slides.push({
+        type: 'risotto',
+        html: `<section class="screen-slide risotto-screen-slide">
         <div class="risotto-screen-bg">
           <img src="/assets/risotto-clubabend-20260602.jpeg" alt="Chrigu's Spezial-Risotto">
         </div>
@@ -300,7 +301,8 @@ fetch('data/interclub.json')
           </div>
         </div>
       </section>`
-    });
+      });
+    }
 
     slides.push({
       type: 'dates',

@@ -1093,16 +1093,16 @@ tr.missing-result td{
 
 /* Clubhaus-Screen Variante 2: dauerhafte Event-Spalte */
 .screen-v2-body{
-  background:#eef3f8;
+  background:#06182d;
 }
 
 .screen-v2-shell{
   width:100vw;
   height:100vh;
   display:grid;
-  grid-template-columns:minmax(0, 72vw) 28vw;
-  background:#eef3f8;
-  color:#102f59;
+  grid-template-columns:minmax(0, 70vw) 30vw;
+  background:#06182d;
+  color:#fff;
 }
 
 .screen-v2-main{
@@ -1114,9 +1114,19 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-slide{
-  width:72vw;
+  width:70vw;
   height:100vh;
   padding:6.8vh 2.4vw 4.8vh;
+}
+
+.screen-v2-main .screen-light-slide{
+  background:#0c2a4e;
+  color:#fff;
+}
+
+.screen-v2-main .screen-badge{
+  background:#f6c343;
+  color:#07182e;
 }
 
 .screen-v2-main .welcome-slide.screen-light-slide{
@@ -1127,18 +1137,41 @@ tr.missing-result td{
   width:100%;
   min-height:58vh;
   border-radius:1.4vw;
+  background:#fff;
+  border-top-color:#f6c343;
+  box-shadow:0 20px 54px rgba(0,0,0,.32);
 }
 
 .screen-v2-main .welcome-panel h1{
   font-size:4.4vw;
+  color:#082f5f;
+}
+
+.screen-v2-main .welcome-panel p{
+  color:#223f66;
+}
+
+.screen-v2-main .welcome-update{
+  background:#102f59;
+  color:#fff;
 }
 
 .screen-v2-main .dates-slide.screen-light-slide{
   padding:2.2vh 1.6vw 4.8vh;
+  background:#08284d;
 }
 
 .screen-v2-main .dates-header{
   grid-template-columns:16vw 1fr 16vw;
+}
+
+.screen-v2-main .dates-brand,
+.screen-v2-main .dates-title h2{
+  color:#fff;
+}
+
+.screen-v2-main .dates-title p{
+  color:#d7e8ff;
 }
 
 .screen-v2-main .dates-card-grid{
@@ -1150,16 +1183,22 @@ tr.missing-result td{
 .screen-v2-main .date-card{
   border-radius:1.1vw;
   padding:1.1vw 1.25vw;
+  background:#fff;
+  color:#06182d;
+  border-top-width:.48vw;
+  box-shadow:0 18px 42px rgba(0,0,0,.28);
 }
 
 .screen-v2-main .date-card h3{
   font-size:1.23vw;
   margin-bottom:1.1vh;
+  color:#062d5a;
 }
 
 .screen-v2-main .date-card p{
   font-size:.98vw;
   line-height:1.27;
+  color:#101827;
 }
 
 .screen-v2-main .date-pill{
@@ -1170,18 +1209,42 @@ tr.missing-result td{
 
 .screen-v2-main .team-slide{
   grid-template-rows:auto auto 1fr;
+  background:#06182d;
 }
 
 .screen-v2-main .screen-team-name{
   font-size:2.65vw;
 }
 
+.screen-v2-main .screen-team-header{
+  background:#f6c343;
+  color:#06182d;
+  box-shadow:0 14px 38px rgba(0,0,0,.38);
+}
+
+.screen-v2-main .screen-team-group{
+  color:#06182d;
+}
+
+.screen-v2-main .screen-card{
+  background:#fff;
+  color:#06182d;
+  border:1px solid #d5e1ef;
+  box-shadow:0 16px 44px rgba(0,0,0,.24);
+}
+
+.screen-v2-main .screen-card h3{
+  color:#082f5f;
+}
+
 .screen-v2-main .screen-card.next-match{
   height:17vh;
+  border-top:.48vw solid #f6c343;
 }
 
 .screen-v2-main .screen-card.next-match p{
   font-size:1.35vw;
+  color:#06182d;
 }
 
 .screen-v2-main .screen-grid.lower{
@@ -1194,14 +1257,37 @@ tr.missing-result td{
   min-height:4.55vh;
   font-size:.83vw;
   padding:.42vw .55vw;
+  background:#eef4fb;
+  color:#06182d;
+  border-left-color:#8aa7c9;
 }
 
 .screen-v2-main .screen-match-list li .home-badge{
   display:none;
 }
 
+.screen-v2-main .screen-match-list .home{
+  background:#fff3c4;
+  border-left-color:#f6c343;
+}
+
+.screen-v2-main .screen-match-list .away{
+  background:#edf4fb;
+  border-left-color:#8aa7c9;
+}
+
 .screen-v2-main .screen-match-list strong{
   font-size:.84vw;
+  color:#082f5f;
+}
+
+.screen-v2-main .screen-result{
+  color:#082f5f;
+}
+
+.screen-v2-main .screen-ranking-head{
+  color:#44617f;
+  border-bottom-color:#cddbed;
 }
 
 .screen-v2-main .screen-ranking-head,
@@ -1211,6 +1297,24 @@ tr.missing-result td{
 
 .screen-v2-main .screen-ranking-list li{
   font-size:.8vw;
+  background:#edf4fb;
+  color:#06182d;
+}
+
+.screen-v2-main .screen-ranking-list li.tcg-rank{
+  background:#fff3c4;
+  color:#06182d;
+  border-left-color:#f6c343;
+}
+
+.screen-v2-main .screen-match-list li.missing-screen-result{
+  background:#fff1bd;
+  border-left-color:#d99a00;
+}
+
+.screen-v2-main .screen-match-list li.missing-screen-result em,
+.screen-v2-main .screen-match-list li.missing-screen-result .screen-result{
+  color:#8a5600;
 }
 
 .screen-v2-main .risotto-screen-content{
@@ -1245,19 +1349,19 @@ tr.missing-result td{
 
 .screen-v2-rail{
   height:100vh;
-  padding:2.2vh 1.7vw;
+  padding:2.2vh 1.9vw;
   display:grid;
   grid-template-rows:auto auto 1fr auto auto;
   gap:2vh;
-  background:#fff;
-  border-left:1px solid #d7e0ec;
-  box-shadow:-18px 0 46px rgba(16,47,89,.13);
+  background:#ffffff;
+  border-left:1px solid rgba(255,255,255,.2);
+  box-shadow:-20px 0 52px rgba(0,0,0,.38);
   overflow:hidden;
 }
 
 .screen-v2-clock{
   justify-self:end;
-  color:#617088;
+  color:#3f556f;
   font-size:1vw;
   line-height:1;
   font-weight:900;
@@ -1267,7 +1371,7 @@ tr.missing-result td{
   display:flex;
   align-items:center;
   gap:.75vw;
-  color:#123c70;
+  color:#082f5f;
   font-size:1.15vw;
   line-height:1;
   font-weight:950;
@@ -1287,9 +1391,9 @@ tr.missing-result td{
   min-height:0;
   padding:2vw;
   border-radius:1.2vw;
-  background:#123c70;
+  background:#082f5f;
   color:#fff;
-  box-shadow:0 18px 42px rgba(18,60,112,.22);
+  box-shadow:0 18px 42px rgba(0,0,0,.26);
 }
 
 .screen-v2-kicker{
@@ -1311,7 +1415,7 @@ tr.missing-result td{
 
 .screen-v2-date{
   margin:0 0 2vh !important;
-  color:#dbeafe !important;
+  color:#e7f2ff !important;
   font-size:1.32vw !important;
   line-height:1.18 !important;
   font-weight:900;
@@ -1319,7 +1423,7 @@ tr.missing-result td{
 
 .screen-v2-teaser{
   margin:0 0 2.4vh !important;
-  color:#eef6ff !important;
+  color:#fff !important;
   font-size:1.25vw !important;
   line-height:1.28 !important;
   font-weight:750;
@@ -1341,8 +1445,8 @@ tr.missing-result td{
 .screen-v2-mini{
   padding:1.15vw;
   border-radius:1vw;
-  background:#f2f6fb;
-  border:1px solid #dbe5f1;
+  background:#fff8df;
+  border:1px solid #f1d37d;
 }
 
 .screen-v2-mini h3{
@@ -1354,7 +1458,7 @@ tr.missing-result td{
 
 .screen-v2-mini p{
   margin:0 !important;
-  color:#607088;
+  color:#314966;
   font-size:1.05vw !important;
   line-height:1.15 !important;
   font-weight:850;
@@ -1364,7 +1468,7 @@ tr.missing-result td{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  color:#64748b;
+  color:#3f556f;
   font-size:.95vw;
   line-height:1;
   font-weight:900;
