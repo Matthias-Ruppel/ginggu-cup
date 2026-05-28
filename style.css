@@ -1360,16 +1360,17 @@ tr.missing-result td{
 }
 
 .screen-v2-clock{
-  justify-self:end;
   color:rgba(255,255,255,.74);
   font-size:1vw;
   line-height:1;
   font-weight:900;
+  text-align:right;
 }
 
 .screen-v2-brand{
   display:flex;
   align-items:center;
+  justify-content:space-between;
   gap:.75vw;
   color:#fff;
   font-size:1.15vw;

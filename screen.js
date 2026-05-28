@@ -174,10 +174,9 @@ function renderSlide() {
           ${slide.html}
         </main>
         <aside class="screen-v2-rail">
-          <div class="screen-v2-clock">${getDateTime()}</div>
           <div class="screen-v2-brand">
             <img src="assets/Logo_transparent_weiss.png" alt="TC Gerlafingen Logo">
-            <span>TC Gerlafingen</span>
+            <span class="screen-v2-clock">${getDateTime()}</span>
           </div>
 
           <section class="screen-v2-event">
