@@ -1093,7 +1093,7 @@ tr.missing-result td{
 
 /* Clubhaus-Screen Variante 2: dauerhafte Event-Spalte */
 .screen-v2-body{
-  background:#06182d;
+  background:#07182e;
 }
 
 .screen-v2-shell{
@@ -1101,7 +1101,7 @@ tr.missing-result td{
   height:100vh;
   display:grid;
   grid-template-columns:minmax(0, 70vw) 30vw;
-  background:#06182d;
+  background:#07182e;
   color:#fff;
 }
 
@@ -1120,7 +1120,7 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-light-slide{
-  background:#0c2a4e;
+  background:#0b213d;
   color:#fff;
 }
 
@@ -1137,9 +1137,9 @@ tr.missing-result td{
   width:100%;
   min-height:58vh;
   border-radius:1.4vw;
-  background:#fff;
+  background:#edf1f5;
   border-top-color:#f6c343;
-  box-shadow:0 20px 54px rgba(0,0,0,.32);
+  box-shadow:0 18px 48px rgba(0,0,0,.28);
 }
 
 .screen-v2-main .welcome-panel h1{
@@ -1158,7 +1158,7 @@ tr.missing-result td{
 
 .screen-v2-main .dates-slide.screen-light-slide{
   padding:2.2vh 1.6vw 4.8vh;
-  background:#08284d;
+  background:#0b213d;
 }
 
 .screen-v2-main .dates-header{
@@ -1183,10 +1183,10 @@ tr.missing-result td{
 .screen-v2-main .date-card{
   border-radius:1.1vw;
   padding:1.1vw 1.25vw;
-  background:#fff;
+  background:#f5f8fc;
   color:#06182d;
   border-top-width:.48vw;
-  box-shadow:0 18px 42px rgba(0,0,0,.28);
+  box-shadow:0 12px 28px rgba(0,0,0,.22);
 }
 
 .screen-v2-main .date-card h3{
@@ -1209,7 +1209,7 @@ tr.missing-result td{
 
 .screen-v2-main .team-slide{
   grid-template-rows:auto auto 1fr;
-  background:#06182d;
+  background:#07182e;
 }
 
 .screen-v2-main .screen-team-name{
@@ -1227,14 +1227,14 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-card{
-  background:#fff;
-  color:#06182d;
-  border:1px solid #d5e1ef;
-  box-shadow:0 16px 44px rgba(0,0,0,.24);
+  background:rgba(255,255,255,.11);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:none;
 }
 
 .screen-v2-main .screen-card h3{
-  color:#082f5f;
+  color:#fff;
 }
 
 .screen-v2-main .screen-card.next-match{
@@ -1244,7 +1244,7 @@ tr.missing-result td{
 
 .screen-v2-main .screen-card.next-match p{
   font-size:1.35vw;
-  color:#06182d;
+  color:#fff;
 }
 
 .screen-v2-main .screen-grid.lower{
@@ -1257,9 +1257,9 @@ tr.missing-result td{
   min-height:4.55vh;
   font-size:.83vw;
   padding:.42vw .55vw;
-  background:#eef4fb;
-  color:#06182d;
-  border-left-color:#8aa7c9;
+  background:rgba(255,255,255,.075);
+  color:#fff;
+  border-left-color:rgba(255,255,255,.28);
 }
 
 .screen-v2-main .screen-match-list li .home-badge{
@@ -1267,27 +1267,27 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-match-list .home{
-  background:#fff3c4;
+  background:rgba(246,195,67,.16);
   border-left-color:#f6c343;
 }
 
 .screen-v2-main .screen-match-list .away{
-  background:#edf4fb;
-  border-left-color:#8aa7c9;
+  background:rgba(255,255,255,.07);
+  border-left-color:rgba(255,255,255,.28);
 }
 
 .screen-v2-main .screen-match-list strong{
   font-size:.84vw;
-  color:#082f5f;
+  color:#fff;
 }
 
 .screen-v2-main .screen-result{
-  color:#082f5f;
+  color:#f6c343;
 }
 
 .screen-v2-main .screen-ranking-head{
-  color:#44617f;
-  border-bottom-color:#cddbed;
+  color:rgba(255,255,255,.76);
+  border-bottom-color:rgba(255,255,255,.2);
 }
 
 .screen-v2-main .screen-ranking-head,
@@ -1297,24 +1297,24 @@ tr.missing-result td{
 
 .screen-v2-main .screen-ranking-list li{
   font-size:.8vw;
-  background:#edf4fb;
-  color:#06182d;
+  background:rgba(255,255,255,.075);
+  color:#fff;
 }
 
 .screen-v2-main .screen-ranking-list li.tcg-rank{
-  background:#fff3c4;
-  color:#06182d;
+  background:rgba(246,195,67,.18);
+  color:#fff;
   border-left-color:#f6c343;
 }
 
 .screen-v2-main .screen-match-list li.missing-screen-result{
-  background:#fff1bd;
-  border-left-color:#d99a00;
+  background:rgba(255, 243, 205, .15);
+  border-left-color:#f6c343;
 }
 
 .screen-v2-main .screen-match-list li.missing-screen-result em,
 .screen-v2-main .screen-match-list li.missing-screen-result .screen-result{
-  color:#8a5600;
+  color:#ffe7a3;
 }
 
 .screen-v2-main .risotto-screen-content{
@@ -1353,15 +1353,15 @@ tr.missing-result td{
   display:grid;
   grid-template-rows:auto auto 1fr auto auto;
   gap:2vh;
-  background:#ffffff;
-  border-left:1px solid rgba(255,255,255,.2);
-  box-shadow:-20px 0 52px rgba(0,0,0,.38);
+  background:#0b213d;
+  border-left:1px solid rgba(255,255,255,.16);
+  box-shadow:-18px 0 44px rgba(0,0,0,.3);
   overflow:hidden;
 }
 
 .screen-v2-clock{
   justify-self:end;
-  color:#3f556f;
+  color:rgba(255,255,255,.74);
   font-size:1vw;
   line-height:1;
   font-weight:900;
@@ -1371,7 +1371,7 @@ tr.missing-result td{
   display:flex;
   align-items:center;
   gap:.75vw;
-  color:#082f5f;
+  color:#fff;
   font-size:1.15vw;
   line-height:1;
   font-weight:950;
@@ -1391,9 +1391,10 @@ tr.missing-result td{
   min-height:0;
   padding:2vw;
   border-radius:1.2vw;
-  background:#082f5f;
+  background:rgba(255,255,255,.09);
   color:#fff;
-  box-shadow:0 18px 42px rgba(0,0,0,.26);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
 }
 
 .screen-v2-kicker{
@@ -1445,20 +1446,20 @@ tr.missing-result td{
 .screen-v2-mini{
   padding:1.15vw;
   border-radius:1vw;
-  background:#fff8df;
-  border:1px solid #f1d37d;
+  background:rgba(246,195,67,.12);
+  border:1px solid rgba(246,195,67,.42);
 }
 
 .screen-v2-mini h3{
   margin:0 0 .8vh;
-  color:#123c70;
+  color:#fff;
   font-size:1.38vw;
   line-height:1.12;
 }
 
 .screen-v2-mini p{
   margin:0 !important;
-  color:#314966;
+  color:#e7f2ff;
   font-size:1.05vw !important;
   line-height:1.15 !important;
   font-weight:850;
@@ -1468,7 +1469,7 @@ tr.missing-result td{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  color:#3f556f;
+  color:rgba(255,255,255,.72);
   font-size:.95vw;
   line-height:1;
   font-weight:900;

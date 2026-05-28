@@ -179,11 +179,11 @@ function renderSlide() {
           </div>
 
           <section class="screen-v2-event">
-            <p class="screen-v2-kicker">Naechstes Event</p>
+            <p class="screen-v2-kicker">Nächstes Event</p>
             <h2>Chrigu's Spezial-Risotto</h2>
             <p class="screen-v2-date">Dienstag, 02. Juni 2026</p>
             <p class="screen-v2-teaser">Italienischer Clubabend mit Risotto, Grillbeilage, Tomaten-Mozzarella-Salat und Tiramisu.</p>
-            <div class="screen-v2-register">Anmeldung moeglich bis 1. Juni</div>
+            <div class="screen-v2-register">Anmeldung möglich bis 1. Juni</div>
           </section>
 
           <section class="screen-v2-mini">
