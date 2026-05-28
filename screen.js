@@ -183,7 +183,7 @@ function renderSlide() {
             <p class="screen-v2-kicker">Nächstes Event</p>
             <h2>Chrigu's Spezial-Risotto</h2>
             <p class="screen-v2-date">Dienstag, 02. Juni 2026</p>
-            <p class="screen-v2-teaser">Italienischer Clubabend mit Risotto, Grillbeilage, Tomaten-Mozzarella-Salat und Tiramisu.</p>
+            <p class="screen-v2-teaser">Italienischer Clubabend mit Salat, Risotto, Poulet vom Grill und Tiramisu.</p>
             <div class="screen-v2-register">Anmeldung möglich bis 1. Juni</div>
           </section>
 

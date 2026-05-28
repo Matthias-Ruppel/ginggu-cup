@@ -1420,8 +1420,9 @@ tr.missing-result td{
 .screen-v2-event h2{
   margin:0 0 1vh !important;
   color:#fff;
-  font-size:2.25vw;
+  font-size:2vw;
   line-height:1;
+  white-space:nowrap;
 }
 
 .screen-v2-date{
@@ -1442,14 +1443,15 @@ tr.missing-result td{
 
 .screen-v2-register{
   margin-top:auto;
-  padding:1vw 1.1vw;
-  border-radius:.9vw;
+  padding:.72vw .95vw;
+  border-radius:.75vw;
   background:#f6c343;
   color:#102f59;
-  font-size:1.35vw;
-  line-height:1.12;
+  font-size:1.08vw;
+  line-height:1;
   font-weight:950;
   text-align:center;
+  white-space:nowrap;
   animation:homePulse 1.8s infinite;
 }
 
