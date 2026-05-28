@@ -1,6 +1,7 @@
 const TCG = 'Gerlafingen';
 const DEFAULT_SEASON_YEAR = 2026;
-const LAST_PUSH_DATE = '26.05.2026';
+const LAST_PUSH_DATE = '28.05.2026';
+const SCREEN_VARIANT = getScreenVariant();
 let slides = [];
 let current = 0;
 let timer = null;
@@ -12,6 +13,18 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#039;');
+}
+
+function getScreenVariant() {
+  const params = new URLSearchParams(window.location.search);
+  const variant = params.get('variant') || params.get('v') || '';
+  const path = window.location.pathname.toLowerCase();
+
+  if (variant === '2' || path.endsWith('/screen2.html') || path.endsWith('/screen-2.html')) {
+    return '2';
+  }
+
+  return '1';
 }
 
 function seasonYear(data) {
@@ -145,6 +158,44 @@ function slideDuration(slide) {
 function renderSlide() {
   const slide = slides[current];
 
+  if (SCREEN_VARIANT === '2') {
+    document.body.classList.add('screen-v2-body');
+    document.getElementById('screen-root').innerHTML =
+      `<div class="screen-v2-shell">
+        <main class="screen-v2-main">
+          ${slide.html}
+        </main>
+        <aside class="screen-v2-rail">
+          <div class="screen-v2-clock">${getDateTime()}</div>
+          <div class="screen-v2-brand">
+            <img src="logo.png" alt="TC Gerlafingen Logo">
+            <span>TC Gerlafingen</span>
+          </div>
+
+          <section class="screen-v2-event">
+            <p class="screen-v2-kicker">Naechstes Event</p>
+            <h2>Chrigu's Spezial-Risotto</h2>
+            <p class="screen-v2-date">Dienstag, 02. Juni 2026</p>
+            <p class="screen-v2-teaser">Italienischer Clubabend mit Risotto, Grillbeilage, Tomaten-Mozzarella-Salat und Tiramisu.</p>
+            <div class="screen-v2-register">Anmeldung moeglich bis 1. Juni</div>
+          </section>
+
+          <section class="screen-v2-mini">
+            <p class="screen-v2-kicker">Danach</p>
+            <h3>4. Crazy-Tennis Turnier</h3>
+            <p>Freitag, 19. Juni 2026</p>
+          </section>
+
+          <div class="screen-v2-progress">
+            <span>Screen 2</span>
+            <span>${current + 1}/${slides.length}</span>
+          </div>
+        </aside>
+      </div>`;
+    return;
+  }
+
+  document.body.classList.remove('screen-v2-body');
   document.getElementById('screen-root').innerHTML =
     `<div class="screen-datetime">${getDateTime()}</div>` +
     slide.html +
@@ -171,7 +222,7 @@ function start() {
   scheduleNext();
 
   setInterval(() => {
-    const el = document.querySelector('.screen-datetime');
+    const el = document.querySelector('.screen-datetime, .screen-v2-clock');
     if (el) el.textContent = getDateTime();
   }, 60000);
 }

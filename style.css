@@ -1090,3 +1090,282 @@ tr.missing-result td{
 .screen-match-list li.missing-screen-result .screen-result{
   color:#ffe7a3;
 }
+
+/* Clubhaus-Screen Variante 2: dauerhafte Event-Spalte */
+.screen-v2-body{
+  background:#eef3f8;
+}
+
+.screen-v2-shell{
+  width:100vw;
+  height:100vh;
+  display:grid;
+  grid-template-columns:minmax(0, 72vw) 28vw;
+  background:#eef3f8;
+  color:#102f59;
+}
+
+.screen-v2-main{
+  position:relative;
+  min-width:0;
+  height:100vh;
+  overflow:hidden;
+  background:#07182e;
+}
+
+.screen-v2-main .screen-slide{
+  width:72vw;
+  height:100vh;
+  padding:6.8vh 2.4vw 4.8vh;
+}
+
+.screen-v2-main .welcome-slide.screen-light-slide{
+  padding:6.5vh 3vw;
+}
+
+.screen-v2-main .welcome-panel{
+  width:100%;
+  min-height:58vh;
+  border-radius:1.4vw;
+}
+
+.screen-v2-main .welcome-panel h1{
+  font-size:4.4vw;
+}
+
+.screen-v2-main .dates-slide.screen-light-slide{
+  padding:2.2vh 1.6vw 4.8vh;
+}
+
+.screen-v2-main .dates-header{
+  grid-template-columns:16vw 1fr 16vw;
+}
+
+.screen-v2-main .dates-card-grid{
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:minmax(22vh, auto);
+  gap:1vw;
+}
+
+.screen-v2-main .date-card{
+  border-radius:1.1vw;
+  padding:1.1vw 1.25vw;
+}
+
+.screen-v2-main .date-card h3{
+  font-size:1.23vw;
+  margin-bottom:1.1vh;
+}
+
+.screen-v2-main .date-card p{
+  font-size:.98vw;
+  line-height:1.27;
+}
+
+.screen-v2-main .date-pill{
+  font-size:.9vw;
+  padding:.5vw .85vw;
+  margin-bottom:1.25vh;
+}
+
+.screen-v2-main .team-slide{
+  grid-template-rows:auto auto 1fr;
+}
+
+.screen-v2-main .screen-team-name{
+  font-size:2.65vw;
+}
+
+.screen-v2-main .screen-card.next-match{
+  height:17vh;
+}
+
+.screen-v2-main .screen-card.next-match p{
+  font-size:1.35vw;
+}
+
+.screen-v2-main .screen-grid.lower{
+  grid-template-columns:1.08fr .92fr;
+  height:48vh;
+}
+
+.screen-v2-main .screen-match-list li{
+  grid-template-columns:1fr auto;
+  min-height:4.55vh;
+  font-size:.83vw;
+  padding:.42vw .55vw;
+}
+
+.screen-v2-main .screen-match-list li .home-badge{
+  display:none;
+}
+
+.screen-v2-main .screen-match-list strong{
+  font-size:.84vw;
+}
+
+.screen-v2-main .screen-ranking-head,
+.screen-v2-main .screen-ranking-list li{
+  grid-template-columns:2.1vw 1fr 2vw 3.5vw;
+}
+
+.screen-v2-main .screen-ranking-list li{
+  font-size:.8vw;
+}
+
+.screen-v2-main .risotto-screen-content{
+  padding:6vh 3vw 5vh;
+}
+
+.screen-v2-main .risotto-screen-card{
+  width:min(52vw, 760px);
+  padding:2.35vw;
+}
+
+.screen-v2-main .risotto-screen-slide h1{
+  white-space:normal;
+  font-size:3.55vw;
+}
+
+.screen-v2-main .risotto-screen-subtitle{
+  font-size:1.72vw !important;
+}
+
+.screen-v2-main .risotto-screen-lead{
+  font-size:1.45vw !important;
+}
+
+.screen-v2-main .risotto-screen-menu{
+  padding:1.25vw;
+}
+
+.screen-v2-main .risotto-screen-course span{
+  font-size:1.22vw;
+}
+
+.screen-v2-rail{
+  height:100vh;
+  padding:2.2vh 1.7vw;
+  display:grid;
+  grid-template-rows:auto auto 1fr auto auto;
+  gap:2vh;
+  background:#fff;
+  border-left:1px solid #d7e0ec;
+  box-shadow:-18px 0 46px rgba(16,47,89,.13);
+  overflow:hidden;
+}
+
+.screen-v2-clock{
+  justify-self:end;
+  color:#617088;
+  font-size:1vw;
+  line-height:1;
+  font-weight:900;
+}
+
+.screen-v2-brand{
+  display:flex;
+  align-items:center;
+  gap:.75vw;
+  color:#123c70;
+  font-size:1.15vw;
+  line-height:1;
+  font-weight:950;
+}
+
+.screen-v2-brand img{
+  width:4.5vw;
+  height:4.5vw;
+  object-fit:contain;
+}
+
+.screen-v2-event{
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:0;
+  padding:2vw;
+  border-radius:1.2vw;
+  background:#123c70;
+  color:#fff;
+  box-shadow:0 18px 42px rgba(18,60,112,.22);
+}
+
+.screen-v2-kicker{
+  margin:0 0 1.3vh !important;
+  color:#f6c343 !important;
+  font-size:1.02vw !important;
+  line-height:1 !important;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.screen-v2-event h2{
+  margin:0 0 1.3vh !important;
+  color:#fff;
+  font-size:2.65vw;
+  line-height:1;
+}
+
+.screen-v2-date{
+  margin:0 0 2vh !important;
+  color:#dbeafe !important;
+  font-size:1.32vw !important;
+  line-height:1.18 !important;
+  font-weight:900;
+}
+
+.screen-v2-teaser{
+  margin:0 0 2.4vh !important;
+  color:#eef6ff !important;
+  font-size:1.25vw !important;
+  line-height:1.28 !important;
+  font-weight:750;
+}
+
+.screen-v2-register{
+  margin-top:auto;
+  padding:1vw 1.1vw;
+  border-radius:.9vw;
+  background:#f6c343;
+  color:#102f59;
+  font-size:1.35vw;
+  line-height:1.12;
+  font-weight:950;
+  text-align:center;
+  animation:homePulse 1.8s infinite;
+}
+
+.screen-v2-mini{
+  padding:1.15vw;
+  border-radius:1vw;
+  background:#f2f6fb;
+  border:1px solid #dbe5f1;
+}
+
+.screen-v2-mini h3{
+  margin:0 0 .8vh;
+  color:#123c70;
+  font-size:1.38vw;
+  line-height:1.12;
+}
+
+.screen-v2-mini p{
+  margin:0 !important;
+  color:#607088;
+  font-size:1.05vw !important;
+  line-height:1.15 !important;
+  font-weight:850;
+}
+
+.screen-v2-progress{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#64748b;
+  font-size:.95vw;
+  line-height:1;
+  font-weight:900;
+}

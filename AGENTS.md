@@ -2,7 +2,7 @@
 
 ## Projekt
 - Repo: `Matthias-Ruppel/ginggu-cup`
-- Lokaler Pfad: `C:\Users\zinma\Documents\HW-SW-Projekte\TCG Sachen\Screen`
+- Lokaler Pfad: `C:\Users\zinma\Documents\HW-SW-Projekte\TCG Sachen\ginggu-cup`
 - GitHub: `https://github.com/Matthias-Ruppel/ginggu-cup`
 - `main` ist der stabile Stand. Fuer inhaltliche oder funktionale Aenderungen
   bevorzugt einen kurzen Feature-Branch verwenden, ausser der Nutzer verlangt
@@ -42,7 +42,7 @@
 - Falls ein lokaler Server noetig ist:
 
 ```powershell
-cd "C:\Users\zinma\Documents\HW-SW-Projekte\TCG Sachen\Screen"
+cd "C:\Users\zinma\Documents\HW-SW-Projekte\TCG Sachen\ginggu-cup"
 python -m http.server 8080
 ```
 
