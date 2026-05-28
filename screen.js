@@ -22,6 +22,8 @@ function getScreenVariant() {
 
   if (
     variant === '2' ||
+    path.endsWith('/screen') ||
+    path.endsWith('/screen.html') ||
     path.endsWith('/screen2') ||
     path.endsWith('/screen2.html') ||
     path.endsWith('/screen-2') ||
