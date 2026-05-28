@@ -195,7 +195,7 @@ function renderSlide() {
           </section>
 
           <div class="screen-v2-progress">
-            <span>Screen 2</span>
+            <span></span>
             <span>${current + 1}/${slides.length}</span>
           </div>
         </aside>
