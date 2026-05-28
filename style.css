@@ -1401,10 +1401,12 @@ tr.missing-result td{
 .screen-v2-event-image{
   width:100%;
   aspect-ratio:16/10;
-  object-fit:cover;
+  object-fit:contain;
   object-position:center;
   border-radius:.9vw;
+  padding:.7vw;
   margin:0 0 1.45vh;
+  background:#fff;
   box-shadow:0 12px 30px rgba(0,0,0,.28);
 }
 
