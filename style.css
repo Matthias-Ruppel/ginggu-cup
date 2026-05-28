@@ -1378,8 +1378,8 @@ tr.missing-result td{
 }
 
 .screen-v2-brand img{
-  width:4.5vw;
-  height:4.5vw;
+  width:4.9vw;
+  height:4.9vw;
   object-fit:contain;
 }
 
@@ -1387,9 +1387,9 @@ tr.missing-result td{
   align-self:stretch;
   display:flex;
   flex-direction:column;
-  justify-content:center;
+  justify-content:flex-start;
   min-height:0;
-  padding:2vw;
+  padding:1.35vw;
   border-radius:1.2vw;
   background:rgba(255,255,255,.09);
   color:#fff;
@@ -1397,8 +1397,18 @@ tr.missing-result td{
   box-shadow:0 18px 42px rgba(0,0,0,.22);
 }
 
+.screen-v2-event-image{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  object-position:center;
+  border-radius:.9vw;
+  margin:0 0 1.45vh;
+  box-shadow:0 12px 30px rgba(0,0,0,.28);
+}
+
 .screen-v2-kicker{
-  margin:0 0 1.3vh !important;
+  margin:0 0 1vh !important;
   color:#f6c343 !important;
   font-size:1.02vw !important;
   line-height:1 !important;
@@ -1408,14 +1418,14 @@ tr.missing-result td{
 }
 
 .screen-v2-event h2{
-  margin:0 0 1.3vh !important;
+  margin:0 0 1vh !important;
   color:#fff;
-  font-size:2.65vw;
+  font-size:2.25vw;
   line-height:1;
 }
 
 .screen-v2-date{
-  margin:0 0 2vh !important;
+  margin:0 0 1.45vh !important;
   color:#e7f2ff !important;
   font-size:1.32vw !important;
   line-height:1.18 !important;
@@ -1423,7 +1433,7 @@ tr.missing-result td{
 }
 
 .screen-v2-teaser{
-  margin:0 0 2.4vh !important;
+  margin:0 0 1.8vh !important;
   color:#fff !important;
   font-size:1.25vw !important;
   line-height:1.28 !important;
