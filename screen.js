@@ -20,7 +20,13 @@ function getScreenVariant() {
   const variant = params.get('variant') || params.get('v') || '';
   const path = window.location.pathname.toLowerCase();
 
-  if (variant === '2' || path.endsWith('/screen2.html') || path.endsWith('/screen-2.html')) {
+  if (
+    variant === '2' ||
+    path.endsWith('/screen2') ||
+    path.endsWith('/screen2.html') ||
+    path.endsWith('/screen-2') ||
+    path.endsWith('/screen-2.html')
+  ) {
     return '2';
   }
 
