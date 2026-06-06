@@ -24,10 +24,11 @@
   --tcg-color-border:#d4e1ea;
   --tcg-color-shadow:rgba(0,43,73,.10);
 
-  --tcg-screen-bg:#071b2c;
-  --tcg-screen-surface:#0d2a42;
-  --tcg-screen-surface-muted:#123653;
-  --tcg-screen-border:#244963;
+  --tcg-screen-bg:#00508a;
+  --tcg-screen-surface:#003f6b;
+  --tcg-screen-surface-muted:#1f6f9f;
+  --tcg-screen-border:#d4e1ea;
+  --tcg-screen-border-soft:rgba(212,225,234,.32);
   --tcg-screen-text:#f4f8fb;
   --tcg-screen-text-muted:#b8c8d4;
   --tcg-screen-shadow:rgba(0,0,0,.35);
