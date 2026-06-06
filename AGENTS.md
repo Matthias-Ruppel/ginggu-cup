@@ -49,6 +49,20 @@ python -m http.server 8080
   - `http://localhost:8080/`
   - `http://localhost:8080/screen.html`
 
+## Infoscreen / Kiosk-Layout
+- Infoscreen- und Raspberry-Pi-Kiosk-Seiten muessen fuer 16:9 optimiert sein.
+- Primaeres Zielformat: 1920 x 1080 px.
+- Die gesamte Ansicht muss ohne Scrollen funktionieren.
+- Wichtige Inhalte duerfen nicht abgeschnitten werden.
+- Footer, Eventleiste und Statusbereiche muessen vollstaendig sichtbar sein.
+- Vertikale Abstaende sind bewusst knapp und ruhig zu waehlen.
+- Keine grossen Leerflaechen zwischen Hauptinhalt und Footer.
+- Bei CSS Grid/Flex sind `min-height: 0` und saubere Reihenhoehen Pflicht.
+- Vor jedem Push nach Screen-Layout-Aenderungen einen Screenshot bei
+  1920 x 1080 pruefen.
+- Zusaetzlich 1366 x 768 pruefen, sofern die Seite auf kleineren Bildschirmen
+  laufen kann.
+
 ## Git
 - Vor groesseren Aenderungen `git status --short --branch` pruefen.
 - Lokale Nutzer-Aenderungen nie ungefragt zuruecksetzen.
