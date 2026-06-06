@@ -10,7 +10,6 @@
 - Das Projekt ist eine statische Web-App. Wichtige Einstiege:
   - `index.html`
   - `screen.html`
-  - `preview.html`
   - `app.js`
   - `screen.js`
   - `style.css`
@@ -49,7 +48,6 @@ python -m http.server 8080
 - Danach im Browser:
   - `http://localhost:8080/`
   - `http://localhost:8080/screen.html`
-  - `http://localhost:8080/preview.html`
 
 ## Git
 - Vor groesseren Aenderungen `git status --short --branch` pruefen.
