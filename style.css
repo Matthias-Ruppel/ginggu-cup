@@ -1,20 +1,4 @@
 ﻿:root{
-  --tcg-color-primary:#00508a;
-  --tcg-color-primary-dark:#003f6b;
-  --tcg-color-primary-light:#e7f1f8;
-  --tcg-color-secondary:#1f6f9f;
-  --tcg-color-secondary-light:#d9ecf7;
-  --tcg-color-interclub:#f6c343;
-  --tcg-color-interclub-rgb:246,195,67;
-  --tcg-color-interclub-muted:#fff3cd;
-  --tcg-color-bg:#f4f8fb;
-  --tcg-color-surface:#fff;
-  --tcg-color-surface-muted:#eef5f9;
-  --tcg-color-text:#002b49;
-  --tcg-color-text-muted:#5c6f7d;
-  --tcg-color-border:#d4e1ea;
-  --tcg-color-navy:#071b2c;
-  --tcg-color-navy-surface:#0d2a42;
   --blue:var(--tcg-color-primary);
   --blue-dark:var(--tcg-color-primary-dark);
   --yellow:var(--tcg-color-interclub);
@@ -22,7 +6,7 @@
   --text:var(--tcg-color-text);
   --muted:var(--tcg-color-text-muted);
   --line:var(--tcg-color-border);
-  --white:#fff;
+  --white:var(--tcg-color-surface);
   --green:#dcfce7;
   --green-text:#166534;
   --red:#fee2e2;
@@ -321,8 +305,8 @@ footer a{
 
 /* Clubhaus-Screen */
 .screen-body{
-  background:var(--tcg-color-navy);
-  color:#fff;
+  background:var(--tcg-screen-bg);
+  color:var(--tcg-screen-text);
   overflow:hidden;
   width:100vw;
   height:100vh;
@@ -386,7 +370,7 @@ footer a{
 
 .screen-card{
   background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.18);
+  border:1px solid rgba(36,73,99,.78);
   border-radius:1.55vw;
   padding:1.25vw;
   min-height:0;
@@ -452,7 +436,7 @@ footer a{
 
 .screen-team-header{
   background:var(--yellow);
-  color:var(--tcg-color-navy);
+  color:var(--tcg-screen-bg);
   border-radius:999px;
   padding:1vw 2vw;
   box-shadow:0 10px 30px rgba(0,0,0,.18);
@@ -550,7 +534,7 @@ footer a{
   display:inline-block;
   width:max-content;
   background:var(--yellow);
-  color:var(--tcg-color-navy);
+  color:var(--tcg-screen-bg);
   border-radius:999px;
   padding:.23vw .62vw;
   font-size:.78vw;
@@ -617,7 +601,7 @@ footer a{
   font-weight:900;
   text-transform:uppercase;
   padding:.2vw .55vw .45vw .55vw;
-  border-bottom:1px solid rgba(255,255,255,.18);
+  border-bottom:1px solid rgba(36,73,99,.78);
 }
 
 .screen-ranking-list{
@@ -951,7 +935,7 @@ tr.missing-result td{
 
 /* Clubhaus-Screen Variante 2: dauerhafte Event-Spalte */
 .screen-v2-body{
-  background:var(--tcg-color-navy);
+  background:var(--tcg-screen-bg);
   width:100vw;
   height:100vh;
   overflow:hidden;
@@ -963,8 +947,8 @@ tr.missing-result td{
   display:grid;
   grid-template-columns:minmax(0, 70vw) 30vw;
   grid-template-rows:minmax(0, 1fr) var(--screen-v2-footer-height);
-  background:var(--tcg-color-navy);
-  color:#fff;
+  background:var(--tcg-screen-bg);
+  color:var(--tcg-screen-text);
   overflow:hidden;
 }
 
@@ -974,7 +958,7 @@ tr.missing-result td{
   min-height:0;
   height:100%;
   overflow:hidden;
-  background:var(--tcg-color-navy);
+  background:var(--tcg-screen-bg);
 }
 
 .screen-v2-main .screen-slide{
@@ -985,8 +969,8 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-light-slide{
-  background:var(--tcg-color-navy-surface);
-  color:#fff;
+  background:var(--tcg-screen-surface);
+  color:var(--tcg-screen-text);
 }
 
 .screen-v2-main .screen-badge{
@@ -1023,7 +1007,7 @@ tr.missing-result td{
 
 .screen-v2-main .dates-slide.screen-light-slide{
   padding:1.6vh 1.6vw 2.6vh;
-  background:var(--tcg-color-navy-surface);
+  background:var(--tcg-screen-surface);
 }
 
 .screen-v2-main .dates-header{
@@ -1074,7 +1058,7 @@ tr.missing-result td{
 
 .screen-v2-main .team-slide{
   grid-template-rows:auto auto 1fr;
-  background:var(--tcg-color-navy);
+  background:var(--tcg-screen-bg);
 }
 
 .screen-v2-main .screen-team-name{
@@ -1093,8 +1077,8 @@ tr.missing-result td{
 
 .screen-v2-main .screen-card{
   background:rgba(255,255,255,.11);
-  color:#fff;
-  border:1px solid rgba(255,255,255,.22);
+  color:var(--tcg-screen-text);
+  border:1px solid rgba(36,73,99,.85);
   box-shadow:none;
 }
 
@@ -1189,8 +1173,8 @@ tr.missing-result td{
   display:grid;
   grid-template-rows:auto minmax(0, 1fr) auto;
   gap:.9vh;
-  background:var(--tcg-color-navy-surface);
-  border-left:1px solid rgba(255,255,255,.16);
+  background:var(--tcg-screen-surface);
+  border-left:1px solid rgba(36,73,99,.72);
   box-shadow:-18px 0 44px rgba(0,0,0,.3);
   overflow:hidden;
 }
@@ -1226,7 +1210,7 @@ tr.missing-result td{
   border-radius:1vw;
   background:rgba(255,255,255,.08);
   color:#fff;
-  border:1px solid rgba(255,255,255,.16);
+  border:1px solid rgba(36,73,99,.72);
   box-shadow:0 18px 40px rgba(0,0,0,.2);
   overflow:hidden;
 }
@@ -1251,7 +1235,7 @@ tr.missing-result td{
   justify-content:center;
   border-radius:999px;
   background:var(--yellow);
-  color:var(--tcg-color-navy);
+  color:var(--tcg-screen-bg);
   font-size:.8vw;
   font-weight:950;
 }
@@ -1352,7 +1336,7 @@ tr.missing-result td{
 
 .screen-v2-interclub .screen-v2-kicker{
   background:var(--yellow);
-  color:var(--tcg-color-navy) !important;
+  color:var(--tcg-screen-bg) !important;
 }
 
 .screen-v2-progress{
@@ -1374,8 +1358,8 @@ tr.missing-result td{
   align-items:center;
   gap:1.2vw;
   padding:.55vh 2vw;
-  background:var(--tcg-color-navy);
-  border-top:1px solid rgba(255,255,255,.16);
+  background:var(--tcg-screen-bg);
+  border-top:1px solid rgba(36,73,99,.72);
   box-shadow:0 -16px 36px rgba(0,0,0,.24);
   overflow:hidden;
 }
@@ -1430,5 +1414,6 @@ tr.missing-result td{
   font-weight:850;
   text-align:center;
 }
+
 
 

@@ -1,0 +1,34 @@
+:root{
+  color-scheme:light;
+
+  --tcg-color-primary:#00508a;
+  --tcg-color-primary-dark:#003f6b;
+  --tcg-color-primary-light:#e7f1f8;
+  --tcg-color-on-primary:#ffffff;
+
+  --tcg-color-secondary:#1f6f9f;
+  --tcg-color-secondary-light:#d9ecf7;
+  --tcg-color-accent:#d6a72c;
+  --tcg-color-accent-muted:#fff7dc;
+  --tcg-color-interclub:#f6c343;
+  --tcg-color-interclub-rgb:246,195,67;
+  --tcg-color-interclub-muted:#fff3cd;
+
+  --tcg-color-bg:#f4f8fb;
+  --tcg-color-surface:#ffffff;
+  --tcg-color-surface-muted:#eef5f9;
+
+  --tcg-color-text:#002b49;
+  --tcg-color-text-muted:#5c6f7d;
+
+  --tcg-color-border:#d4e1ea;
+  --tcg-color-shadow:rgba(0,43,73,.10);
+
+  --tcg-screen-bg:#071b2c;
+  --tcg-screen-surface:#0d2a42;
+  --tcg-screen-surface-muted:#123653;
+  --tcg-screen-border:#244963;
+  --tcg-screen-text:#f4f8fb;
+  --tcg-screen-text-muted:#b8c8d4;
+  --tcg-screen-shadow:rgba(0,0,0,.35);
+}
