@@ -1,6 +1,6 @@
 {
   "season": "Interclub 2026",
-  "updated": "26.05.2026",
+  "updated": "06.06.2026",
   "teams": [
     {
       "id": "damen-2l",
@@ -89,7 +89,7 @@
           "time": "09:00",
           "home": "Born Kappel",
           "away": "Bally Schönenwerd 1",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 4,
@@ -97,31 +97,31 @@
           "time": "09:30",
           "home": "Worbenbad",
           "away": "Belchen 1",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 4,
           "date": "06.06.",
-          "time": "",
+          "time": "09:00",
           "home": "Scheuren 2",
           "away": "Gerlafingen",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 5,
-          "date": "13.06.",
-          "time": "",
+          "date": "14.06.",
+          "time": "14:00",
           "home": "Bally Schönenwerd 1",
           "away": "Worbenbad",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 5,
           "date": "13.06.",
-          "time": "",
+          "time": "09:00",
           "home": "Belchen 1",
           "away": "Gerlafingen",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 5,
@@ -129,7 +129,7 @@
           "time": "15:00",
           "home": "Born Kappel",
           "away": "Scheuren 2",
-          "result": "0:0"
+          "result": ""
         }
       ],
       "ranking": [
@@ -234,7 +234,7 @@
           "time": "13:00",
           "home": "Aarberg",
           "away": "Tela 2",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 4,
@@ -242,7 +242,7 @@
           "time": "09:00",
           "home": "Gerlafingen",
           "away": "Schützenmatt SO",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 5,
@@ -250,7 +250,7 @@
           "time": "10:00",
           "home": "Tela 2",
           "away": "Schützenmatt SO",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 5,
@@ -258,7 +258,7 @@
           "time": "",
           "home": "Olten 1",
           "away": "Aarberg",
-          "result": "0:0"
+          "result": ""
         }
       ],
       "ranking": [
@@ -354,13 +354,15 @@
       ],
       "playoffs": [
         {
-          "phase": "Abstieg",
           "round": 4,
-          "date": "06.06.",
-          "time": "",
+          "date": "07.06.",
+          "time": "13:00",
           "home": "Gerlafingen",
           "away": "Pratteln",
-          "result": ""
+          "result": "",
+          "phase": "Abstieg",
+          "homeMarkedWithStar": true,
+          "awayMarkedWithStar": false
         }
       ],
       "ranking": [
@@ -453,7 +455,7 @@
           "time": "13:30",
           "home": "Saignelégier",
           "away": "Lyss",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 4,
@@ -461,7 +463,7 @@
           "time": "13:00",
           "home": "Wander BE 1",
           "away": "Dufour 2",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 5,
@@ -469,7 +471,7 @@
           "time": "",
           "home": "Dufour 2",
           "away": "Lyss",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 5,
@@ -477,7 +479,7 @@
           "time": "13:00",
           "home": "Gerlafingen",
           "away": "Wander BE 1",
-          "result": "0:0"
+          "result": ""
         }
       ],
       "ranking": [
@@ -573,13 +575,15 @@
       ],
       "playoffs": [
         {
-          "phase": "Aufstieg",
           "round": 4,
           "date": "06.06.",
-          "time": "",
+          "time": "09:00",
           "home": "Old Boys BS 2",
           "away": "Gerlafingen",
-          "result": ""
+          "result": "",
+          "phase": "Aufstieg",
+          "homeMarkedWithStar": true,
+          "awayMarkedWithStar": false
         }
       ],
       "ranking": [
@@ -672,7 +676,7 @@
           "time": "09:00",
           "home": "Gerlafingen",
           "away": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 4,
@@ -680,7 +684,7 @@
           "time": "09:00",
           "home": "Delémont",
           "away": "Estavayer-le-Lac",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 5,
@@ -688,7 +692,7 @@
           "time": "",
           "home": "Grolley",
           "away": "Gerlafingen",
-          "result": "0:0"
+          "result": ""
         },
         {
           "round": 5,
@@ -696,7 +700,7 @@
           "time": "09:00",
           "home": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
           "away": "Estavayer-le-Lac",
-          "result": "0:0"
+          "result": ""
         }
       ],
       "ranking": [
@@ -760,10 +764,10 @@
         {
           "round": 2,
           "date": "27.05.",
-          "time": "10:00",
+          "time": "",
           "home": "Tela",
           "away": "Langenthal",
-          "result": "0:0"
+          "result": "6:0"
         },
         {
           "round": 2,
@@ -790,12 +794,30 @@
           "result": "5:1"
         }
       ],
+      "playoffs": [
+        {
+          "round": 4,
+          "date": "08.06.",
+          "time": "10:00",
+          "home": "Grosshöchstetten",
+          "away": "Gerlafingen",
+          "result": "",
+          "phase": "Aufstieg",
+          "homeMarkedWithStar": true,
+          "awayMarkedWithStar": false,
+          "displayOrder": [
+            "Gerlafingen",
+            "Grosshöchstetten"
+          ],
+          "importantNote": "Im Screenshot steht 'Gerlafingen - * Grosshöchstetten'. Der Stern zeigt, dass Grosshöchstetten Heimteam ist, obwohl es rechts steht."
+        }
+      ],
       "ranking": [
         {
           "rank": 1,
           "team": "Tela",
-          "points": 11,
-          "sets": "22 - 4"
+          "points": 17,
+          "sets": "34 - 4"
         },
         {
           "rank": 2,
@@ -807,7 +829,7 @@
           "rank": 3,
           "team": "Langenthal",
           "points": 5,
-          "sets": "12 - 14"
+          "sets": "12 - 26"
         },
         {
           "rank": 4,

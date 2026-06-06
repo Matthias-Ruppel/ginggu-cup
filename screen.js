@@ -139,6 +139,22 @@ function screenResult(m, year = DEFAULT_SEASON_YEAR) {
   return isOpenResult(m) ? '-' : escapeHtml(result);
 }
 
+function formatTeamLabel(team, m) {
+  const marked =
+    (team === m.home && m.homeMarkedWithStar) ||
+    (team === m.away && m.awayMarkedWithStar);
+
+  return `${marked ? '* ' : ''}${escapeHtml(team || '')}`;
+}
+
+function formatMatchName(m) {
+  const teams = Array.isArray(m.displayOrder) && m.displayOrder.length
+    ? m.displayOrder
+    : [m.home, m.away];
+
+  return teams.map(team => formatTeamLabel(team, m)).join(' – ');
+}
+
 function matchLine(m, year = DEFAULT_SEASON_YEAR) {
   const home = isHomeMatch(m);
   const missing = isPastOpenResult(m, year);
@@ -147,7 +163,7 @@ function matchLine(m, year = DEFAULT_SEASON_YEAR) {
   return `<li class="${home ? 'home' : 'away'} ${missing ? 'missing-screen-result' : ''}">
     <span>
       <strong>${phase}${escapeHtml(m.date || '')}${m.time ? ' · ' + escapeHtml(m.time) : ''}</strong><br>
-      ${escapeHtml(m.home || '')} – ${escapeHtml(m.away || '')}
+      ${formatMatchName(m)}
       ${missing ? '<br><em>Resultat offen / prüfen</em>' : ''}
     </span>
     <span class="screen-result">${screenResult(m, year)}</span>
@@ -291,7 +307,7 @@ fetch('data/interclub.json')
           <div class="screen-card next-match">
             <h3>Nächstes TCG-Spiel</h3>
             <p>
-              ${n ? `${phase}${escapeHtml(n.home || '')} – ${escapeHtml(n.away || '')}<br>${escapeHtml(n.date || '')}${n.time ? ' · ' + escapeHtml(n.time) + ' Uhr' : ''}` : 'Noch kein Spiel erfasst'}
+              ${n ? `${phase}${formatMatchName(n)}<br>${escapeHtml(n.date || '')}${n.time ? ' · ' + escapeHtml(n.time) + ' Uhr' : ''}` : 'Noch kein Spiel erfasst'}
             </p>
             ${home ? '<span class="home-badge big">Heimspiel</span>' : ''}
           </div>
