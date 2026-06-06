@@ -5,6 +5,7 @@ const SCREEN_VARIANT = getScreenVariant();
 let slides = [];
 let current = 0;
 let timer = null;
+let railInterclubHtml = '';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -102,6 +103,20 @@ function tcgMatches(team) {
   return [...(team.matches || []), ...(team.playoffs || [])].filter(isTcgMatch);
 }
 
+function phaseLabel(m) {
+  return m.phase || 'Gruppenspiel';
+}
+
+function railTcgMatches(data, year = DEFAULT_SEASON_YEAR) {
+  return (data.teams || [])
+    .flatMap(team => tcgMatches(team).map(match => ({
+      ...match,
+      teamName: team.name || team.title || ''
+    })))
+    .filter(match => isOpenResult(match) && !isPastOpenResult(match, year))
+    .sort((a, b) => matchSortValue(a, year) - matchSortValue(b, year));
+}
+
 function nextTcgMatch(team, year = DEFAULT_SEASON_YEAR) {
   const futureOpen = tcgMatches(team)
     .filter(m => isOpenResult(m) && !isPastOpenResult(m, year))
@@ -155,6 +170,33 @@ function formatMatchName(m) {
   return teams.map(team => formatTeamLabel(team, m)).join(' – ');
 }
 
+function railInterclubBlock(data, year = DEFAULT_SEASON_YEAR) {
+  const matches = railTcgMatches(data, year);
+
+  return `<section class="screen-v2-interclub">
+    <div class="screen-v2-block-head">
+      <p class="screen-v2-kicker">Interclubbegegnungen</p>
+      <span>${matches.length}</span>
+    </div>
+    <ul class="screen-v2-interclub-list">
+      ${matches.length
+        ? matches.map(match => {
+          const home = isHomeMatch(match);
+          return `<li class="${home ? 'home' : 'away'}">
+            <div>
+              <strong>${escapeHtml(match.date || '')}${match.time ? ' · ' + escapeHtml(match.time) : ''}</strong>
+              <span>${escapeHtml(match.teamName)}</span>
+              <em>${escapeHtml(phaseLabel(match))}</em>
+              <p>${formatMatchName(match)}</p>
+            </div>
+            ${home ? '<span class="home-badge">Heim</span>' : ''}
+          </li>`;
+        }).join('')
+        : '<li class="away empty"><div><p>Keine offenen TCG-Begegnungen erfasst.</p></div></li>'}
+    </ul>
+  </section>`;
+}
+
 function matchLine(m, year = DEFAULT_SEASON_YEAR) {
   const home = isHomeMatch(m);
   const missing = isPastOpenResult(m, year);
@@ -193,6 +235,8 @@ function renderSlide() {
             <img src="assets/Logo_transparent_weiss.png" alt="TC Gerlafingen Logo">
             <span class="screen-v2-clock">${getDateTime()}</span>
           </div>
+
+          ${railInterclubHtml}
 
           <section class="screen-v2-event">
             <p class="screen-v2-kicker">Nächstes Event</p>
@@ -253,6 +297,7 @@ fetch('data/interclub.json')
   .then(r => r.json())
   .then(data => {
     const year = seasonYear(data);
+    railInterclubHtml = railInterclubBlock(data, year);
 
     slides.push({
       type: 'welcome',
