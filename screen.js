@@ -2,6 +2,7 @@ const TCG = 'Gerlafingen';
 const DEFAULT_SEASON_YEAR = 2026;
 const LAST_PUSH_DATE = '06.06.2026';
 const SCREEN_VARIANT = getScreenVariant();
+const MAX_RAIL_INTERCLUB_MATCHES = 7;
 let slides = [];
 let current = 0;
 let timer = null;
@@ -154,29 +155,21 @@ function screenResult(m, year = DEFAULT_SEASON_YEAR) {
   return isOpenResult(m) ? '-' : escapeHtml(result);
 }
 
-function formatTeamLabel(team, m) {
-  const marked =
-    (team === m.home && m.homeMarkedWithStar) ||
-    (team === m.away && m.awayMarkedWithStar);
-
-  return `${marked ? '* ' : ''}${escapeHtml(team || '')}`;
-}
-
 function formatMatchName(m) {
-  const teams = Array.isArray(m.displayOrder) && m.displayOrder.length
-    ? m.displayOrder
-    : [m.home, m.away];
-
-  return teams.map(team => formatTeamLabel(team, m)).join(' – ');
+  return [m.home, m.away].map(team => escapeHtml(team || '')).join(' – ');
 }
 
 function railInterclubBlock(data, year = DEFAULT_SEASON_YEAR) {
-  const matches = railTcgMatches(data, year);
+  const allMatches = railTcgMatches(data, year);
+  const matches = allMatches.slice(0, MAX_RAIL_INTERCLUB_MATCHES);
+  const countLabel = allMatches.length > matches.length
+    ? `${matches.length}/${allMatches.length}`
+    : String(matches.length);
 
   return `<section class="screen-v2-interclub">
     <div class="screen-v2-block-head">
       <p class="screen-v2-kicker">Interclubbegegnungen</p>
-      <span>${matches.length}</span>
+      <span>${countLabel}</span>
     </div>
     <ul class="screen-v2-interclub-list">
       ${matches.length
@@ -195,6 +188,22 @@ function railInterclubBlock(data, year = DEFAULT_SEASON_YEAR) {
         : '<li class="away empty"><div><p>Keine offenen TCG-Begegnungen erfasst.</p></div></li>'}
     </ul>
   </section>`;
+}
+
+function railEventsFooter() {
+  return `<footer class="screen-v2-events-footer">
+    <p class="screen-v2-kicker">Nächste Events</p>
+    <div class="screen-v2-events-footer-grid">
+      <article>
+        <strong>4. Crazy-Tennis Turnier</strong>
+        <span>Freitag, 19. Juni 2026</span>
+      </article>
+      <article>
+        <strong>Ginggu-Tagesturnier</strong>
+        <span>Sonntag, 09. August 2026</span>
+      </article>
+    </div>
+  </footer>`;
 }
 
 function matchLine(m, year = DEFAULT_SEASON_YEAR) {
@@ -238,25 +247,12 @@ function renderSlide() {
 
           ${railInterclubHtml}
 
-          <section class="screen-v2-event">
-            <p class="screen-v2-kicker">Nächstes Event</p>
-            <h2>4. Crazy-Tennis Turnier</h2>
-            <p class="screen-v2-date">Freitag, 19. Juni 2026</p>
-            <p class="screen-v2-teaser">Spass, Bewegung und ein etwas anderes Tennis-Erlebnis für unsere Mitglieder.</p>
-            <div class="screen-v2-register">Details im Clubkalender beachten</div>
-          </section>
-
-          <section class="screen-v2-mini">
-            <p class="screen-v2-kicker">Danach</p>
-            <h3>Ginggu-Tagesturnier</h3>
-            <p>Sonntag, 09. August 2026</p>
-          </section>
-
           <div class="screen-v2-progress">
             <span></span>
             <span>${current + 1}/${slides.length}</span>
           </div>
         </aside>
+        ${railEventsFooter()}
       </div>`;
     return;
   }

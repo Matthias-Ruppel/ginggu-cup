@@ -90,20 +90,8 @@ function formatDateTime(m) {
   return `${date}${time ? ' - ' + time : ''}`;
 }
 
-function formatTeamLabel(team, m) {
-  const marked =
-    (team === m.home && m.homeMarkedWithStar) ||
-    (team === m.away && m.awayMarkedWithStar);
-
-  return `${marked ? '* ' : ''}${escapeHtml(team || '')}`;
-}
-
 function formatMatchName(m) {
-  const teams = Array.isArray(m.displayOrder) && m.displayOrder.length
-    ? m.displayOrder
-    : [m.home, m.away];
-
-  return teams.map(team => formatTeamLabel(team, m)).join(' - ');
+  return [m.home, m.away].map(team => escapeHtml(team || '')).join(' - ');
 }
 
 function formatResult(m, year = DEFAULT_SEASON_YEAR) {
