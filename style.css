@@ -1,11 +1,27 @@
-:root{
-  --blue:#225faa;
-  --blue-dark:#143c70;
-  --yellow:#f6c343;
-  --bg:#f4f7fb;
-  --text:#1f2937;
-  --muted:#667085;
-  --line:#d9e2ef;
+﻿:root{
+  --tcg-color-primary:#00508a;
+  --tcg-color-primary-dark:#003f6b;
+  --tcg-color-primary-light:#e7f1f8;
+  --tcg-color-secondary:#1f6f9f;
+  --tcg-color-secondary-light:#d9ecf7;
+  --tcg-color-interclub:#f6c343;
+  --tcg-color-interclub-rgb:246,195,67;
+  --tcg-color-interclub-muted:#fff3cd;
+  --tcg-color-bg:#f4f8fb;
+  --tcg-color-surface:#fff;
+  --tcg-color-surface-muted:#eef5f9;
+  --tcg-color-text:#002b49;
+  --tcg-color-text-muted:#5c6f7d;
+  --tcg-color-border:#d4e1ea;
+  --tcg-color-navy:#071b2c;
+  --tcg-color-navy-surface:#0d2a42;
+  --blue:var(--tcg-color-primary);
+  --blue-dark:var(--tcg-color-primary-dark);
+  --yellow:var(--tcg-color-interclub);
+  --bg:var(--tcg-color-bg);
+  --text:var(--tcg-color-text);
+  --muted:var(--tcg-color-text-muted);
+  --line:var(--tcg-color-border);
   --white:#fff;
   --green:#dcfce7;
   --green-text:#166534;
@@ -77,8 +93,8 @@ a{
 
 .button.primary,
 .button.nav.active{
-  background:var(--yellow);
-  color:#1f2937;
+  background:var(--blue);
+  color:#fff;
 }
 
 .button.secondary,
@@ -115,10 +131,10 @@ a{
 .subhero .hero-actions .button.nav.active,
 .hero a.button.nav.active,
 .subhero a.button.nav.active{
-  background:var(--yellow);
-  color:#1f2937 !important;
-  border-color:var(--yellow);
-  box-shadow:0 0 0 3px rgba(246,195,67,.25);
+  background:#fff;
+  color:var(--blue-dark) !important;
+  border-color:#fff;
+  box-shadow:0 0 0 3px rgba(231,241,248,.28);
 }
 
 .container{
@@ -132,7 +148,7 @@ a{
   border-radius:22px;
   padding:24px;
   box-shadow:0 10px 28px rgba(0,0,0,.08);
-  border-left:8px solid var(--yellow);
+  border-left:8px solid var(--tcg-color-secondary);
   margin-bottom:28px;
 }
 
@@ -158,7 +174,9 @@ a{
   border-top:6px solid var(--blue);
 }
 
-.event-card.featured{border-top-color:var(--yellow)}
+.event-card.featured{border-top-color:var(--tcg-color-secondary)}
+
+.event-card.interclub{border-top-color:var(--yellow)}
 
 .date-badge{
   display:inline-block;
@@ -170,8 +188,13 @@ a{
 }
 
 .featured .date-badge{
+  background:var(--tcg-color-secondary-light);
+  color:var(--blue-dark);
+}
+
+.interclub .date-badge{
   background:var(--yellow);
-  color:#222;
+  color:var(--blue-dark);
 }
 
 .weekday{
@@ -190,7 +213,7 @@ a{
   font-weight:700;
 }
 
-/* Übersichtskacheln: gleiche Höhe und ruhige Ausrichtung */
+/* Ãœbersichtskacheln: gleiche HÃ¶he und ruhige Ausrichtung */
 .team-card{
   min-height:340px;
   display:grid;
@@ -298,7 +321,7 @@ footer a{
 
 /* Clubhaus-Screen */
 .screen-body{
-  background:#07182e;
+  background:var(--tcg-color-navy);
   color:#fff;
   overflow:hidden;
   width:100vw;
@@ -351,8 +374,8 @@ footer a{
 .screen-badge{
   display:inline-block;
   width:max-content;
-  background:var(--yellow);
-  color:#18202f;
+  background:var(--tcg-color-primary-light);
+  color:var(--blue-dark);
   border-radius:999px;
   padding:.42vw .9vw;
   font-size:1.15vw;
@@ -429,7 +452,7 @@ footer a{
 
 .screen-team-header{
   background:var(--yellow);
-  color:#07182e;
+  color:var(--tcg-color-navy);
   border-radius:999px;
   padding:1vw 2vw;
   box-shadow:0 10px 30px rgba(0,0,0,.18);
@@ -508,7 +531,7 @@ footer a{
 .screen-match-list strong{font-size:1.02vw}
 
 .screen-match-list .home{
-  background:rgba(246,195,67,.12);
+  background:rgba(var(--tcg-color-interclub-rgb),.12);
   border-left:6px solid var(--yellow);
 }
 
@@ -527,7 +550,7 @@ footer a{
   display:inline-block;
   width:max-content;
   background:var(--yellow);
-  color:#07182e;
+  color:var(--tcg-color-navy);
   border-radius:999px;
   padding:.23vw .62vw;
   font-size:.78vw;
@@ -548,11 +571,11 @@ footer a{
 @keyframes homePulse{
   0%,100%{
     transform:scale(1);
-    box-shadow:0 0 0 0 rgba(246,195,67,.55);
+    box-shadow:0 0 0 0 rgba(var(--tcg-color-interclub-rgb),.55);
   }
   50%{
     transform:scale(1.04);
-    box-shadow:0 0 0 8px rgba(246,195,67,0);
+    box-shadow:0 0 0 8px rgba(var(--tcg-color-interclub-rgb),0);
   }
 }
 
@@ -615,7 +638,7 @@ footer a{
 }
 
 .screen-ranking-list li.tcg-rank{
-  background:rgba(246,195,67,.16);
+  background:rgba(var(--tcg-color-interclub-rgb),.16);
   border-left:5px solid var(--yellow);
   font-weight:900;
 }
@@ -635,13 +658,13 @@ footer a{
 
 /* Clubhaus-Screen: Termine 2026 im hellen Kachel-Design */
 .screen-light-slide{
-  background:#edf1f5;
+  background:var(--tcg-color-surface-muted);
   color:#112f57;
 }
 
 .screen-light-slide .screen-badge{
-  background:var(--yellow);
-  color:#102f59;
+  background:var(--tcg-color-primary-light);
+  color:var(--blue-dark);
 }
 
 .screen-light-slide + .screen-footer,
@@ -650,7 +673,7 @@ footer a{
 }
 
 .screen-body:has(.screen-light-slide) .screen-datetime{
-  color:#123c70;
+  color:var(--blue-dark);
   text-shadow:none;
 }
 
@@ -684,7 +707,7 @@ footer a{
 }
 
 .welcome-panel h1{
-  color:#123c70;
+  color:var(--blue-dark);
   font-size:5.2vw;
   margin:.4vh 0 1vh;
 }
@@ -723,7 +746,7 @@ footer a{
   display:flex;
   align-items:center;
   gap:.9vw;
-  color:#123c70;
+  color:var(--blue-dark);
   font-size:1.05vw;
   font-weight:900;
 }
@@ -741,7 +764,7 @@ footer a{
 }
 
 .dates-title h2{
-  color:#123c70;
+  color:var(--blue-dark);
   font-size:2.85vw;
   line-height:1;
   margin:0;
@@ -773,7 +796,11 @@ footer a{
   overflow:hidden;
 }
 
-.date-card.yellow{
+.date-card.highlight{
+  border-top-color:var(--tcg-color-secondary);
+}
+
+.date-card.interclub{
   border-top-color:var(--yellow);
 }
 
@@ -789,9 +816,14 @@ footer a{
   margin-bottom:1.9vh;
 }
 
-.date-card.yellow .date-pill{
+.date-card.highlight .date-pill{
+  background:var(--tcg-color-secondary-light);
+  color:var(--blue-dark);
+}
+
+.date-card.interclub .date-pill{
   background:var(--yellow);
-  color:#102f59;
+  color:var(--blue-dark);
 }
 
 .date-day{
@@ -803,7 +835,7 @@ footer a{
 }
 
 .date-card h3{
-  color:#123c70;
+  color:var(--blue-dark);
   font-size:1.38vw;
   line-height:1.18;
   margin:0 0 1.8vh;
@@ -817,7 +849,7 @@ footer a{
 }
 
 .date-card strong{
-  color:#123c70;
+  color:var(--blue-dark);
 }
 
 @media(max-aspect-ratio:16/9){
@@ -862,7 +894,7 @@ tr.missing-result td{
   width:max-content;
   border-radius:999px;
   background:var(--yellow);
-  color:#102f59;
+  color:var(--blue-dark);
   font-weight:900;
   line-height:1;
   white-space:nowrap;
@@ -903,7 +935,7 @@ tr.missing-result td{
 
 .screen-match-list li.missing-screen-result{
   background:rgba(255, 243, 205, .13);
-  border-left-color:#f6c343;
+  border-left-color:var(--yellow);
 }
 
 .screen-match-list li.missing-screen-result em{
@@ -919,7 +951,7 @@ tr.missing-result td{
 
 /* Clubhaus-Screen Variante 2: dauerhafte Event-Spalte */
 .screen-v2-body{
-  background:#07182e;
+  background:var(--tcg-color-navy);
   width:100vw;
   height:100vh;
   overflow:hidden;
@@ -931,7 +963,7 @@ tr.missing-result td{
   display:grid;
   grid-template-columns:minmax(0, 70vw) 30vw;
   grid-template-rows:minmax(0, 1fr) var(--screen-v2-footer-height);
-  background:#07182e;
+  background:var(--tcg-color-navy);
   color:#fff;
   overflow:hidden;
 }
@@ -942,7 +974,7 @@ tr.missing-result td{
   min-height:0;
   height:100%;
   overflow:hidden;
-  background:#07182e;
+  background:var(--tcg-color-navy);
 }
 
 .screen-v2-main .screen-slide{
@@ -953,13 +985,13 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-light-slide{
-  background:#0b213d;
+  background:var(--tcg-color-navy-surface);
   color:#fff;
 }
 
 .screen-v2-main .screen-badge{
-  background:#f6c343;
-  color:#07182e;
+  background:var(--tcg-color-primary-light);
+  color:var(--blue-dark);
 }
 
 .screen-v2-main .welcome-slide.screen-light-slide{
@@ -970,14 +1002,14 @@ tr.missing-result td{
   width:100%;
   min-height:58vh;
   border-radius:1.4vw;
-  background:#edf1f5;
-  border-top-color:#f6c343;
+  background:var(--tcg-color-surface-muted);
+  border-top-color:var(--tcg-color-secondary);
   box-shadow:0 18px 48px rgba(0,0,0,.28);
 }
 
 .screen-v2-main .welcome-panel h1{
   font-size:4.4vw;
-  color:#082f5f;
+  color:var(--blue-dark);
 }
 
 .screen-v2-main .welcome-panel p{
@@ -985,13 +1017,13 @@ tr.missing-result td{
 }
 
 .screen-v2-main .welcome-update{
-  background:#102f59;
+  background:var(--blue-dark);
   color:#fff;
 }
 
 .screen-v2-main .dates-slide.screen-light-slide{
   padding:1.6vh 1.6vw 2.6vh;
-  background:#0b213d;
+  background:var(--tcg-color-navy-surface);
 }
 
 .screen-v2-main .dates-header{
@@ -1016,8 +1048,8 @@ tr.missing-result td{
 .screen-v2-main .date-card{
   border-radius:1.1vw;
   padding:1.1vw 1.25vw;
-  background:#f5f8fc;
-  color:#06182d;
+  background:var(--tcg-color-bg);
+  color:var(--tcg-color-text);
   border-top-width:.48vw;
   box-shadow:0 12px 28px rgba(0,0,0,.22);
 }
@@ -1025,7 +1057,7 @@ tr.missing-result td{
 .screen-v2-main .date-card h3{
   font-size:1.23vw;
   margin-bottom:1.1vh;
-  color:#062d5a;
+  color:var(--blue-dark);
 }
 
 .screen-v2-main .date-card p{
@@ -1042,7 +1074,7 @@ tr.missing-result td{
 
 .screen-v2-main .team-slide{
   grid-template-rows:auto auto 1fr;
-  background:#07182e;
+  background:var(--tcg-color-navy);
 }
 
 .screen-v2-main .screen-team-name{
@@ -1050,13 +1082,13 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-team-header{
-  background:#f6c343;
-  color:#06182d;
+  background:var(--yellow);
+  color:var(--tcg-color-text);
   box-shadow:0 14px 38px rgba(0,0,0,.38);
 }
 
 .screen-v2-main .screen-team-group{
-  color:#06182d;
+  color:var(--tcg-color-text);
 }
 
 .screen-v2-main .screen-card{
@@ -1072,7 +1104,7 @@ tr.missing-result td{
 
 .screen-v2-main .screen-card.next-match{
   height:13.8vh;
-  border-top:.48vw solid #f6c343;
+  border-top:.48vw solid var(--yellow);
 }
 
 .screen-v2-main .screen-card.next-match p{
@@ -1100,8 +1132,8 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-match-list .home{
-  background:rgba(246,195,67,.16);
-  border-left-color:#f6c343;
+  background:rgba(var(--tcg-color-interclub-rgb),.16);
+  border-left-color:var(--yellow);
 }
 
 .screen-v2-main .screen-match-list .away{
@@ -1115,7 +1147,7 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-result{
-  color:#f6c343;
+  color:var(--yellow);
 }
 
 .screen-v2-main .screen-ranking-head{
@@ -1135,14 +1167,14 @@ tr.missing-result td{
 }
 
 .screen-v2-main .screen-ranking-list li.tcg-rank{
-  background:rgba(246,195,67,.18);
+  background:rgba(var(--tcg-color-interclub-rgb),.18);
   color:#fff;
-  border-left-color:#f6c343;
+  border-left-color:var(--yellow);
 }
 
 .screen-v2-main .screen-match-list li.missing-screen-result{
   background:rgba(255, 243, 205, .15);
-  border-left-color:#f6c343;
+  border-left-color:var(--yellow);
 }
 
 .screen-v2-main .screen-match-list li.missing-screen-result em,
@@ -1157,7 +1189,7 @@ tr.missing-result td{
   display:grid;
   grid-template-rows:auto minmax(0, 1fr) auto;
   gap:.9vh;
-  background:#0b213d;
+  background:var(--tcg-color-navy-surface);
   border-left:1px solid rgba(255,255,255,.16);
   box-shadow:-18px 0 44px rgba(0,0,0,.3);
   overflow:hidden;
@@ -1219,7 +1251,7 @@ tr.missing-result td{
   justify-content:center;
   border-radius:999px;
   background:var(--yellow);
-  color:#07182e;
+  color:var(--tcg-color-navy);
   font-size:.8vw;
   font-weight:950;
 }
@@ -1247,7 +1279,7 @@ tr.missing-result td{
 
 .screen-v2-interclub-list li.home{
   border-left-color:var(--yellow);
-  background:rgba(246,195,67,.16);
+  background:rgba(var(--tcg-color-interclub-rgb),.16);
 }
 
 .screen-v2-interclub-list li.empty{
@@ -1280,7 +1312,7 @@ tr.missing-result td{
   margin:.18vh 0 .22vh;
   padding:.15vw .42vw;
   border-radius:999px;
-  background:rgba(246,195,67,.18);
+  background:rgba(var(--tcg-color-interclub-rgb),.18);
   color:#ffe7a3;
   font-size:.58vw;
   line-height:1;
@@ -1308,14 +1340,19 @@ tr.missing-result td{
   margin:0 0 1vh !important;
   padding:.42vw .72vw;
   border-radius:.55vw .55vw .18vw .18vw;
-  background:#fff8df;
-  color:#123c70 !important;
+  background:var(--tcg-color-primary-light);
+  color:var(--blue-dark) !important;
   font-size:1vw !important;
   line-height:1 !important;
   font-weight:950;
   text-transform:uppercase;
   letter-spacing:.07em;
   box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+
+.screen-v2-interclub .screen-v2-kicker{
+  background:var(--yellow);
+  color:var(--tcg-color-navy) !important;
 }
 
 .screen-v2-progress{
@@ -1337,7 +1374,7 @@ tr.missing-result td{
   align-items:center;
   gap:1.2vw;
   padding:.55vh 2vw;
-  background:#081d36;
+  background:var(--tcg-color-navy);
   border-top:1px solid rgba(255,255,255,.16);
   box-shadow:0 -16px 36px rgba(0,0,0,.24);
   overflow:hidden;
@@ -1366,7 +1403,7 @@ tr.missing-result td{
   padding:.25vw .9vw;
   border-radius:.85vw;
   background:rgba(255,255,255,.08);
-  border-left:5px solid var(--yellow);
+  border-left:5px solid var(--tcg-color-secondary);
   min-height:0;
   transform:translateY(-.65vh);
 }
@@ -1393,3 +1430,5 @@ tr.missing-result td{
   font-weight:850;
   text-align:center;
 }
+
+

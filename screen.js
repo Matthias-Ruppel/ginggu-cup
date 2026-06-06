@@ -318,10 +318,10 @@ fetch('data/interclub.json')
         </div>
         <div class="dates-card-grid">
           <article class="date-card blue"><span class="date-pill">19. Juni</span><p class="date-day">Freitag</p><h3>4. Crazy-Tennis Turnier</h3><p>Spass, Bewegung und ein etwas anderes Tennis-Erlebnis für unsere Mitglieder.</p></article>
-          <article class="date-card yellow"><span class="date-pill">09. August</span><p class="date-day">Sonntag</p><h3>Ginggu-Tagesturnier</h3><p>Damen, Herren und Mixed – kompakt, sportlich und gesellig an einem Tag.</p></article>
+          <article class="date-card highlight"><span class="date-pill">09. August</span><p class="date-day">Sonntag</p><h3>Ginggu-Tagesturnier</h3><p>Damen, Herren und Mixed – kompakt, sportlich und gesellig an einem Tag.</p></article>
           <article class="date-card blue"><span class="date-pill">06. September</span><p class="date-day">Sonntag</p><h3>Finaltag Einzel-Clubmeisterschaften</h3><p>Auf allen Plätzen. Die Finalspiele der Einzel-Clubmeisterschaften.</p></article>
-          <article class="date-card blue"><span class="date-pill">02./03. Mai – 27./28. Juni</span><p class="date-day">Wochenenden</p><h3>Interclub Saison 2026</h3><p>Details nach der Auslosung im TCG-Kalender. Resultate und Ranglisten findest Du unter Interclub 2026.</p></article>
-          <article class="date-card yellow"><span class="date-pill">25.–27. September</span><p class="date-day">Freitag bis Sonntag</p><h3>5. Ginggu-Cup</h3><p>Swiss Tennis Turnier auf allen Plätzen – mit starken Matches und Clubleben pur.</p></article>
+          <article class="date-card interclub"><span class="date-pill">02./03. Mai – 27./28. Juni</span><p class="date-day">Wochenenden</p><h3>Interclub Saison 2026</h3><p>Details nach der Auslosung im TCG-Kalender. Resultate und Ranglisten findest Du unter Interclub 2026.</p></article>
+          <article class="date-card highlight"><span class="date-pill">25.–27. September</span><p class="date-day">Freitag bis Sonntag</p><h3>5. Ginggu-Cup</h3><p>Swiss Tennis Turnier auf allen Plätzen – mit starken Matches und Clubleben pur.</p></article>
         </div>
       </section>`
     });
