@@ -1369,6 +1369,20 @@ tr.missing-result td{
   white-space:nowrap;
 }
 
+.status-note{
+  display:inline-block;
+  margin-left:.45rem;
+  padding:.16rem .5rem;
+  border-radius:999px;
+  background:#fde8ea;
+  color:#8a1f2d;
+  border:1px solid #f5b8c0;
+  font-size:.76rem;
+  line-height:1;
+  font-weight:800;
+  white-space:nowrap;
+}
+
 .screen-v2-events-footer-grid{
   display:grid;
   grid-template-columns:1fr 1fr;

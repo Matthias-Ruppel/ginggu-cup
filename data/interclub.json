@@ -1,6 +1,6 @@
 {
   "season": "Interclub 2026",
-  "updated": "06.06.2026",
+  "updated": "08.06.2026",
   "teams": [
     {
       "id": "damen-2l",
@@ -89,7 +89,7 @@
           "time": "09:00",
           "home": "Born Kappel",
           "away": "Bally Schönenwerd 1",
-          "result": ""
+          "result": "1:5"
         },
         {
           "round": 4,
@@ -97,7 +97,7 @@
           "time": "09:30",
           "home": "Worbenbad",
           "away": "Belchen 1",
-          "result": ""
+          "result": "6:0"
         },
         {
           "round": 4,
@@ -105,7 +105,7 @@
           "time": "09:00",
           "home": "Scheuren 2",
           "away": "Gerlafingen",
-          "result": ""
+          "result": "2:4"
         },
         {
           "round": 5,
@@ -136,38 +136,38 @@
         {
           "rank": 1,
           "team": "Worbenbad",
-          "points": 16,
-          "sets": "33 - 7"
+          "points": 22,
+          "sets": "45 - 8"
         },
         {
           "rank": 2,
           "team": "Bally Schönenwerd 1",
-          "points": 13,
-          "sets": "27 - 12"
+          "points": 18,
+          "sets": "38 - 15"
         },
         {
           "rank": 3,
           "team": "Belchen 1",
           "points": 12,
-          "sets": "27 - 15"
+          "sets": "28 - 27"
         },
         {
           "rank": 4,
           "team": "Born Kappel",
-          "points": 9,
-          "sets": "19 - 19"
+          "points": 10,
+          "sets": "22 - 30"
         },
         {
           "rank": 5,
           "team": "Gerlafingen",
-          "points": 2,
-          "sets": "6 - 32"
+          "points": 6,
+          "sets": "14 - 36"
         },
         {
           "rank": 6,
           "team": "Scheuren 2",
-          "points": 2,
-          "sets": "6 - 33"
+          "points": 4,
+          "sets": "10 - 41"
         }
       ]
     },
@@ -234,7 +234,7 @@
           "time": "13:00",
           "home": "Aarberg",
           "away": "Tela 2",
-          "result": ""
+          "result": "6:3"
         },
         {
           "round": 4,
@@ -270,27 +270,27 @@
         },
         {
           "rank": 2,
+          "team": "Aarberg",
+          "points": 15,
+          "sets": "33 - 31"
+        },
+        {
+          "rank": 3,
           "team": "Schützenmatt SO",
           "points": 11,
           "sets": "26 - 17"
         },
         {
-          "rank": 3,
-          "team": "Aarberg",
-          "points": 9,
-          "sets": "20 - 23"
-        },
-        {
           "rank": 4,
-          "team": "Olten 1",
-          "points": 8,
-          "sets": "19 - 40"
+          "team": "Tela 2",
+          "points": 10,
+          "sets": "22 - 37"
         },
         {
           "rank": 5,
-          "team": "Tela 2",
-          "points": 7,
-          "sets": "14 - 24"
+          "team": "Olten 1",
+          "points": 8,
+          "sets": "19 - 40"
         }
       ]
     },
@@ -455,7 +455,7 @@
           "time": "13:30",
           "home": "Saignelégier",
           "away": "Lyss",
-          "result": ""
+          "result": "6:3"
         },
         {
           "round": 4,
@@ -463,7 +463,7 @@
           "time": "13:00",
           "home": "Wander BE 1",
           "away": "Dufour 2",
-          "result": ""
+          "result": "9:0"
         },
         {
           "round": 5,
@@ -486,14 +486,14 @@
         {
           "rank": 1,
           "team": "Wander BE 1",
-          "points": 17,
-          "sets": "34 - 5"
+          "points": 26,
+          "sets": "52 - 5"
         },
         {
           "rank": 2,
           "team": "Saignelégier",
-          "points": 14,
-          "sets": "30 - 28"
+          "points": 20,
+          "sets": "42 - 34"
         },
         {
           "rank": 3,
@@ -503,15 +503,15 @@
         },
         {
           "rank": 4,
-          "team": "Dufour 2",
-          "points": 7,
-          "sets": "17 - 24"
+          "team": "Lyss",
+          "points": 8,
+          "sets": "18 - 39"
         },
         {
           "rank": 5,
-          "team": "Lyss",
-          "points": 5,
-          "sets": "12 - 27"
+          "team": "Dufour 2",
+          "points": 7,
+          "sets": "17 - 42"
         }
       ]
     },
@@ -580,10 +580,12 @@
           "time": "09:00",
           "home": "Old Boys BS 2",
           "away": "Gerlafingen",
-          "result": "",
+          "result": "6:0",
           "phase": "Aufstieg",
           "homeMarkedWithStar": true,
-          "awayMarkedWithStar": false
+          "awayMarkedWithStar": false,
+          "status": "aufstieg-verpasst",
+          "statusLabel": "Aufstieg verpasst"
         }
       ],
       "ranking": [
@@ -676,7 +678,7 @@
           "time": "09:00",
           "home": "Gerlafingen",
           "away": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
-          "result": ""
+          "result": "5:2"
         },
         {
           "round": 4,
@@ -684,7 +686,7 @@
           "time": "09:00",
           "home": "Delémont",
           "away": "Estavayer-le-Lac",
-          "result": ""
+          "result": "5:2"
         },
         {
           "round": 5,
@@ -707,32 +709,32 @@
         {
           "rank": 1,
           "team": "Delémont",
-          "points": 17,
-          "sets": "35 - 10"
+          "points": 22,
+          "sets": "46 - 17"
         },
         {
           "rank": 2,
           "team": "Estavayer-le-Lac",
-          "points": 12,
-          "sets": "24 - 7"
+          "points": 14,
+          "sets": "31 - 18"
         },
         {
           "rank": 3,
           "team": "SO-ACTIVE SPORTZENTRUM SOLOTHURN",
-          "points": 7,
-          "sets": "14 - 16"
+          "points": 9,
+          "sets": "18 - 26"
         },
         {
           "rank": 4,
-          "team": "Grolley",
-          "points": 4,
-          "sets": "10 - 34"
+          "team": "Gerlafingen",
+          "points": 7,
+          "sets": "18 - 28"
         },
         {
           "rank": 5,
-          "team": "Gerlafingen",
-          "points": 2,
-          "sets": "8 - 24"
+          "team": "Grolley",
+          "points": 4,
+          "sets": "10 - 34"
         }
       ]
     },

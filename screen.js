@@ -1,6 +1,6 @@
 const TCG = 'Gerlafingen';
 const DEFAULT_SEASON_YEAR = 2026;
-const LAST_PUSH_DATE = '06.06.2026';
+const LAST_PUSH_DATE = '08.06.2026';
 const SCREEN_VARIANT = getScreenVariant();
 const MAX_RAIL_INTERCLUB_MATCHES = 7;
 let slides = [];
@@ -150,7 +150,7 @@ function rankingLine(r) {
 }
 
 function screenResult(m, year = DEFAULT_SEASON_YEAR) {
-  if (isPastOpenResult(m, year)) return 'prüfen';
+  if (isPastOpenResult(m, year)) return 'fehlt';
   const result = String(m.result ?? '').trim();
   return isOpenResult(m) ? '-' : escapeHtml(result);
 }
@@ -215,7 +215,8 @@ function matchLine(m, year = DEFAULT_SEASON_YEAR) {
     <span>
       <strong>${phase}${escapeHtml(m.date || '')}${m.time ? ' · ' + escapeHtml(m.time) : ''}</strong><br>
       ${formatMatchName(m)}
-      ${missing ? '<br><em>Resultat offen / prüfen</em>' : ''}
+      ${m.statusLabel ? `<br><em>${escapeHtml(m.statusLabel)}</em>` : ''}
+      ${missing ? '<br><em>Resultat noch nicht eingetragen</em>' : ''}
     </span>
     <span class="screen-result">${screenResult(m, year)}</span>
     ${home ? '<span class="home-badge">Heimspiel</span>' : '<span></span>'}
@@ -355,7 +356,7 @@ fetch('data/interclub.json')
 
           <div class="screen-grid lower">
             <div class="screen-card">
-              <h3>TCG-Spiele${missingCount ? ` · ${missingCount} Resultat offen` : ''}</h3>
+              <h3>TCG-Spiele${missingCount ? ` · ${missingCount} Resultat fehlt` : ''}</h3>
               <ul class="screen-match-list">
                 ${matches.map(m => matchLine(m, year)).join('')}
               </ul>
