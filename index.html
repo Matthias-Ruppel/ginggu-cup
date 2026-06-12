@@ -3,68 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TC Gerlafingen – Turniere & Interclub</title>
+<title>Ginggu-Cup 2026 – TC Gerlafingen</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="tcg-global.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero">
-  <img src="logo.png" alt="TC Gerlafingen Logo">
-  <h1>Turniere, Ginggu-Cup & Interclub</h1>
-  <p>Alle wichtigen Termine, Turnierinfos und Interclub-Resultate auf einen Blick.</p>
-  <nav class="hero-actions" aria-label="Hauptnavigation">
-    <a class="button nav active" href="index.html">Übersicht</a>
-    <a class="button nav" href="interclub.html">Interclub 2026</a>
-    <a class="button nav" href="screen.html">Clubhaus-Screen</a>
-  </nav>
-</header>
+<div class="site-shell">
 
-<main class="container">
-  <section class="intro-card">
-    <h2>Willkommen auf der Turnierseite des TC Gerlafingen</h2>
-    <p>Diese Seite ist die zentrale Informationsseite für Ginggu-Cup, Clubturniere, Clubmeisterschaften und die Interclub-Saison.</p>
-  </section>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.tc-gerlafingen.ch/" aria-label="TC Gerlafingen Webseite">
+        <img class="brand-logo" src="assets/tcg-logo-white-on-blue.png" alt="TC Gerlafingen">
+        <span class="brand-title">Ginggu-Cup 2026</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Navigation öffnen</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="#tagesturnier">Tagesturnier</a>
+        <a href="#ginggu-cup">5. Ginggu-Cup</a>
+        <a class="nav-cta" href="https://www.tc-gerlafingen.ch/anlaesse-turniere/jahresprogramm">Jahresprogramm</a>
+      </nav>
+    </div>
+  </header>
 
-  <section id="termine">
-    <h2 class="section-title">Termine 2026</h2>
-    <div class="event-grid">
-      <article class="event-card">
-        <span class="date-badge">19. Juni</span>
-        <p class="weekday">Freitag</p>
-        <h3>4. Crazy-Tennis Turnier</h3>
-        <p>Spass, Bewegung und ein etwas anderes Tennis-Erlebnis für unsere Mitglieder.</p>
-      </article>
-      <article class="event-card featured">
-        <span class="date-badge">09. August</span>
-        <p class="weekday">Sonntag</p>
-        <h3>Ginggu-Tagesturnier</h3>
-        <p>Damen, Herren und Mixed – kompakt, sportlich und gesellig an einem Tag.</p>
-      </article>
-      <article class="event-card">
-        <span class="date-badge">06. September</span>
-        <p class="weekday">Sonntag</p>
-        <h3>Finaltag Einzel-Clubmeisterschaften</h3>
-        <p>Auf allen Plätzen. Die Finalspiele der Einzel-Clubmeisterschaften.</p>
-      </article>
-      <article class="event-card interclub">
-        <span class="date-badge">bis 27./28. Juni</span>
-        <p class="weekday">Wochenenden</p>
-        <h3>Interclub Saison 2026</h3>
-        <p>Die Saison läuft. Resultate und Ranglisten findest Du unter Interclub 2026.</p>
-      </article>
-      <article class="event-card featured">
-        <span class="date-badge">25.–27. September</span>
-        <p class="weekday">Freitag bis Sonntag</p>
-        <h3>5. Ginggu-Cup</h3>
-        <p>Swiss Tennis Turnier auf allen Plätzen – mit starken Matches und Clubleben pur.</p>
-      </article>
+  <section class="gc-hero">
+    <div class="container gc-hero-inner">
+      <p class="gc-hero-kicker">TC Gerlafingen · Saison 2026</p>
+      <h1>Ginggu-Cup 2026</h1>
+      <p class="gc-hero-sub">Zwei Highlights im Tennissommer von Gerlafingen</p>
+      <div class="gc-hero-dates">
+        <span>09. August</span>
+        <span class="gc-hero-sep">·</span>
+        <span>25.–27. September</span>
+      </div>
     </div>
   </section>
-</main>
 
-<footer>
-  <p>&copy; 2026 TC Gerlafingen – Turniere, Ginggu-Cup & Interclub</p>
-  <p><a href="mailto:info@ginggu-cup.ch">info@ginggu-cup.ch</a></p>
-</footer>
+  <main class="container gc-events" id="events">
+
+    <article id="tagesturnier" class="gc-card">
+      <div class="gc-card-date">
+        <span class="gc-day">09</span>
+        <span class="gc-month">August</span>
+        <span class="gc-weekday">Sonntag</span>
+      </div>
+      <div class="gc-card-body">
+        <h2>Ginggu-Tagesturnier</h2>
+        <p class="gc-card-meta">Clubturnier · TC Gerlafingen</p>
+        <p>Damen, Herren und Mixed – kompakt, sportlich und gesellig an einem Tag. Das perfekte Warm-up für den grossen Ginggu-Cup im Herbst.</p>
+      </div>
+    </article>
+
+    <article id="ginggu-cup" class="gc-card gc-card--featured">
+      <div class="gc-card-date">
+        <span class="gc-day">25–27</span>
+        <span class="gc-month">September</span>
+        <span class="gc-weekday">Fr–So</span>
+      </div>
+      <div class="gc-card-body">
+        <span class="gc-edition-badge">5. Ausgabe</span>
+        <h2>5. Ginggu-Cup</h2>
+        <p class="gc-card-meta">Swiss Tennis Turnier · TC Gerlafingen</p>
+        <p>Swiss Tennis Turnier auf allen Plätzen – mit starken Matches, breitem Kategorienprogramm und Clubleben pur. Drei Tage Tennisfestival in Gerlafingen.</p>
+        <a class="gc-cta" href="https://www.tc-gerlafingen.ch/anlaesse-turniere/jahresprogramm">Mehr Infos →</a>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <strong>TC Gerlafingen</strong>
+      <span>&copy; 2026 TC Gerlafingen</span>
+      <a href="mailto:info@ginggu-cup.ch">info@ginggu-cup.ch</a>
+    </div>
+  </footer>
+
+</div>
+<script src="gc.js"></script>
 </body>
 </html>
